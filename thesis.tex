@@ -1,0 +1,39 @@
+\documentclass[11pt,draft,oneside]{fithesis}
+\usepackage[plainpages=false, pdfpagelabels]{hyperref}
+\thesistitle{Tvorba dokumentu v XML}
+\thesissubtitle{Bakalářská práce}
+\thesisstudent{Jméno Příjmení}
+\thesiswoman{false}
+\thesisfaculty{fi}
+\thesisyear{jaro 2003}
+\thesisadvisor{Jméno Příjmení}
+
+\begin{document}
+\FrontMatter
+\ThesisTitlePage
+
+\begin{ThesisDeclaration}
+\DeclarationText
+\AdvisorName
+\end{ThesisDeclaration}
+
+\begin{ThesisThanks}
+Zde bude uvedeno \uv{poděkování} ... 
+\end{ThesisThanks}
+
+Obdobně jako poděkování se mohou vysadit shrnutí a klíčová 
+slova pomocí prostředí Thesisacti a ThesisKeyWordsi.
+
+\MainMatter
+\tableofcontents
+\chapter*{Úvod}
+Text ...
+
+% Následují další kapitoly a podkapitoly, popřípadě závěr, dodatky, 
+% seznam literatury či použitých obrázků nebo tabulek.
+
+\bibliographystyle{plain}  % bibliografický styl 
+\bibliography{mujbisoubor} % soubor s citovanými
+                           % položkami bibliografie 
+
+\end{document}
