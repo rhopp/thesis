@@ -137,8 +137,6 @@ Struktura SimpleDB databází je možno přirovnat k tabulkovému procesoru.
 \section{Vlastnosti databáze SimpleDB}
 
 
-
-
 \chapter{Srovnání možností připojení k Amazon SimpleDB}
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
 \chapter{Kód}
