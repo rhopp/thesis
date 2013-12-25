@@ -1,4 +1,4 @@
-\documentclass[oneside,draft,11pt]{fithesis2}  
+\documentclass[oneside,11pt]{fithesis2}  
 \usepackage[czech]{babel}
 \usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}  
@@ -14,12 +14,12 @@
 \usepackage{lmodern}	 % část bodu a) [vhodný font]
 
  
-\thesistitle{Kiosk Framework} 
-\thesissubtitle{Bakalářská práce}  
+\thesistitle{Relační přístup k Amazon SimpleDB} 
+\thesissubtitle{Diplomová práce}  
 \thesisstudent{Radim Hopp}    
 \thesiswoman{false}          
 \thesisfaculty{fi}  
-\thesisyear{Podzim 2010}  
+\thesisyear{Podzim 2013}  
 \thesisadvisor{Mgr. Marek Grác}  
 \thesislang{cs}            
 
@@ -132,12 +132,72 @@ Struktura SimpleDB databází je možno přirovnat k tabulkovému procesoru.
  \item \textbf{Hodnoty (Values)}
  
  Hodnoty si lze představit jako jednotlivé buňky tabulky. Tady se ovšem analogie s tabulkovým procesorem rozchází, neboť jedna \uv{buňka} může nabývat více hodnot najednou.
+ 
+\end{itemize}
+Navíc má každý prvek domény (řádek tabulky) povinný atribut \verb<ItemName<, který musí být v dané doméně unikátní.
+
+SimpleDB nepoužívá žádné jiné datové typy krome typu \verb<String<, takže i čísla jsou v databázi uloženy a je s nimi nakládáno jako s textovými řetězci. To s sebou nese řadu problémů a hlavně zátěž na vývojáře aplikace tyto problémy řešit. Typickým příkladem takového problému je, že čísla nejdou řadit lexikograficky ( lexikograficky: 10<2, což je špatně). Řešením je doplnění nul před čísla (00010>00002, což je správně).
+
+\section{Vlastnosti databáze Amazon SimpleDB}
+\subsection*{SimpleDB jako služba}
+Databáze Amazon SimpleDB je dodávaná jako služba. To znamená, že Amazon neposkytuje možnost nasadit tuto databázi ve vlastním prostředí, ale provozuje ji pouze na svých serverech. Uživatel databáze se tedy nemusí starat o nastavování ani o hardware, ale například ani o škálování, nebo o replikaci dat, jelikož Amazon automaticky distribuuje a synchronizuje data v několika datových centrech umístěných v různých geografických zónách, čímž omezuje nejen riziko ztráty dat, ale také zvyšuje rychlost přístupu k datům v různých místech na světě. Tím pádem se může uživatel databáze plně zaměřit na práci s vlastními daty.
+\subsection*{Flexibilita}
+Flexibilita je další výhoda databáze Amazon SimpleDB. Jelikož je to NoSQL databáze není potřeba mít pevně dané schéma, jak tomu bývá u SQL databází, ale nové atributy a entity mohou být přidávány takzvaně za pochodu.
+\subsection*{Indexování}
+SimpleDB automaticky indexuje veškeré data v ní uložené, čímž tato povinnost odpadá z beder vývojářů aplikace a zvyšuje rychlost navracení výsledků čtecích operací.	
+\subsection*{Konzistence}
+Amazon pro zápis zaručuje konzistenci takovou, že úspěšně provedený zápis (použitím příkazů jako např. \emph{PutAttributes}, \emph{BatchPutAttributes}, \emph{CreateDomain}, \dots) znamená, že všechny kopie databáze byly změněny. Toto pojetí konzistence ovšem nezaručuje chování při překrytí dvou či více zápisů najednou. Pouze zaručuje, že výsledné data budou na všech kopiích databáze rovná hodnotě jednoho z těchto zápisů (toho, který databáze obdržela nejpozději). toto bude níže ilustrováno na příkladě.
+Při čtení si uživatel může zvolit mezi konzistentním a eventuálně konzistentním čtením. Konzistentní čtení zaručuje, že vrátí hodnotu po provedení posledního dosud přijatého zápisu. Eventuálně konzistentní čtení na druhou stranu vrátí hodnotu, která je aktuálně uloená na dotazovaném serveru (tj. může vrátit již neplatnou hodnotu).
+\subsubsection*{Příklad konzistence}
+Na obrázku 3.1 je uveden příklad, kdy se překrývají dva zápisy. V této situaci není možné určit, jestli pro provedení obou zápisů bude výsledná hodnota atributu \verb<Barva< rovna \verb<červená<, nebo \verb<zelená< z toho důvodu, že není zaručeno, kterou instrukci zpracuje SimpleDB jako první. Například kvůli vysoké latenci sítě prvního klienta bude nejprve přijata a zpracována instrukce \verb<W2< druhého klienta a následně přepsána instrukcí \verb<W1<, tedy veškeré následné konzistentní čtení vrátí \verb<Barva=červená<.
+
+Jak bylo ukázáno, konzistentní čtení v tomto případě mohlo vrátit jak výsledek \verb<W1<, tak výsledek \verb<W2<. Oproti tomu, výsledek eventuálně konzitentního čtení může být kromě \verb<W1< či \verb<W2< také \verb<nic<. Pravděpodobnost prázdného výsledku se s časem minimalizuje, neboli čím déle po zápisu je čteno, tím větší je pravděpodobnost korektního výsledku.
+\begin{figure}[h]
+ \caption{Ilustrace chování databáze SimpleDB}
+ \centering
+ \includegraphics[scale=0.9]{ConsistencyExample}
+\end{figure}
+%\includegraphics{ConsistencyExample}
+
+Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lze shrnout do tabulky:
+\begin{figure}[h]
+ \caption{Tabulka vlastností konzistentního a ev. konzistentního čtení}
+ \vspace{5mm}
+ \begin{tabular}{l|l}
+    Eventuálně konzistentní čtení & Konzistentní čtení\\ \hline
+    Možné nekorektní výsledky & Vždy korektní výsledek\\ 
+    Rychlejší odezva & Možná pomalejší odezva \\
+    Větší dataová propustnost & Možná menší datová prostupnost
+ \end{tabular}
+\end{figure}
+
+\subsection*{Omezení databáze SimpleDB}
+Kromě výše zmíněného chování, které by se v jistých situacích dalo považovat za omezení, je asi největším omezením velikost domény, jak co se místa na disku týče, tak také maximální počet atributů. Konkrétně je horní hranice 10 GB pro data a 1 miliarda atributů na jednu doménu. Domén je možno vytvořit až 250 na jeden uživatelský účet.
+
+
+\chapter{Komunikace s databází Amazon SimpleDB}
+\subsection*{Přehled příkazů SimpleDB}
+\begin{itemize}
+ \item \textbf{CreateDomain} slouží k vytvoření nové domény.
+ \item \textbf{DeleteDomain} vymaže danou doménu.
+ \item \textbf{ListDomains} vrátí seznam domén asociovaných s daným uživatelským účtem.
+ \item \textbf{DomainMetadata} slouží k získání informací o dané doméně (datum vytvoření, počet položek v doméně, počet atributů, \dots)
+ \item \textbf{PutAttributes} vloží novou položku s danými hotnotami atributů, či upraví již stávající položku.
+ \item \textbf{Select} 
 \end{itemize}
 
-\section{Vlastnosti databáze SimpleDB}
 
+Prace s daty 
 
-\chapter{Srovnání možností připojení k Amazon SimpleDB}
+Unikatni ItemName
+
+Automaticke indexovani
+
+conditional put
+
+prace s cisly
+
+Vsechno string!
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
 \chapter{Kód}
 \chapter{Tutoriál}
