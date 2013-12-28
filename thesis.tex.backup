@@ -183,22 +183,36 @@ Kromě výše zmíněného chování, které by se v jistých situacích dalo po
  \item \textbf{ListDomains} vrátí seznam domén asociovaných s daným uživatelským účtem.
  \item \textbf{DomainMetadata} slouží k získání informací o dané doméně (datum vytvoření, počet položek v doméně, počet atributů, \dots)
  \item \textbf{PutAttributes} vloží novou položku s danými hotnotami atributů, či upraví již stávající položku.
- \item \textbf{Select} 
+ \item \textbf{Select} se podobá běžnému \verb<SELECT< příkazu, který je dobře známý z SQL jazyků. Je ovšem mírně omezen a to například absencí \verb<JOIN< klauzule. Přesný přehled možností příkazu \verb<SELECT< databáze SimpleDB je uveden v dokumentaci\footnote{http://awsdocs.s3.amazonaws.com/SDB/latest/sdb-dg.pdf}
+ \item \textbf{GetAttributes} vrátí hodnoty požadovaných atributů jedné dané položky. Umožňuje specifikovat jeden, či více požadovaných atributů, nebo také všechny atributy dané položky.
 \end{itemize}
 
+\subsection*{Podmíněné vkládání a mazání dat}
+SimpleDB v aktuální verzi (od 24. února 2010) podporuje takzvaný podmíněný zápis a mazání dat. 
 
-Prace s daty 
+Při tomto podmíněném zápise (mazání) se spolu s běžnými parametry odešle také podmínka a očekávaný výsledek vyhodnocení dané podmínky. Zápis se poté provede pouze tehdy, je-li vyhodnocená podmínka rovna očekávanému výsledku.
 
-Unikatni ItemName
+Tato vlastnost se dá použít například pro implementaci čítače (přečte aktuální stav čítače a pokusí se zapsat nový stav čítače za podmínky, že stav čítače byl nezměněn), což by bez podmíněného vložení byl netriviální úkol. Také se tímto rozšiřují možnosti kontroly konkurenčního přístupu k datům (pomocí optimistických protokolů).
 
-Automaticke indexovani
+\subsection*{Bezpečnost}
+Pro autentizaci má každý uživatel \uv{ID přístupového klíče} (20 alfanumerických znaků) a \uv{tajný přístupový klíč} (40 alfanumerických znaků), kterými podepisuje kažý požadavek vůči SimpleDB. Sama Amazon SimpleDB nemá nástroj pro autorizaci, ten je ovšem integrován do správy identit a přístupu AWS (AWS Identity and Access Management - systém pro správu uživatelů a jejich práv v rámci celého AWS), takže je možné omezit práva jednotlivým uživatelům. Jediným problémem může být skutečnost, že nelze definovat přístupové práva pro jiný AWS účet -- pro každého uživatele domény musí být vytvořen uživatel v rámci AWS účtu vlastnícího doménu.
 
-conditional put
+\subsubsection*{Proces autentizace}
+\begin{enumerate}
+ \item Vytvoření řetězce dotazu
+ \item Kanonizování řetězce dotazu (seřazení parametrů, zakódování parametrů a jejich hodnot URL kódováním\footnote{Podle RFC 3986, kapitola 2 -- http://tools.ietf.org/html/rfc3986}), \dots)
+ \item Vypočítání HMAC\footnote{Podle RFC 2104 -- http://www.ietf.org/rfc/rfc2104.txt} z kanonizovaného textového řetězce za použití \uv{tajného přístupového klíče} jako klíče a SHA256 nebo SHA1 jako hashovacího algoritmu.
+ \ Tento podpis se připojí k původnímu požadavku jako parametr \verb<signature< spolu s ID přístupového klíče jako \verb<AWSAccessKeyId<.
+\end{enumerate}
+Zde je ukázán proces autentizace pouze zjednodušeně. Přesný návod jak sestrojit validná požadavek je dostupný v dokumentaci SimpleDB.
 
-prace s cisly
-
-Vsechno string!
+\subsection*{Knihovny pro komunikaci}
+Amazon poskytuje knihovny pro komunikaci se SimpleDB (a ostatními AWS službami) v několika jazycích (Java, PHP, Python, Ruby a .NET). 
+Knihovna pro jazyk Java, která byla v této práci použita, nejenže poskytuje model pro práci s doménami, atributy a podobně, ale také významně usnadňuje autentizační proces (není nutné \uv{ručně} počítat podpis).
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
+V této kapitole bude obecně ukázáno, jakým způsobem byly mapovány Teiid dotazy na dotazy databáze SimpleDB. Konkrétně se jedná o příkazy \verb<SELECT<, \verb<UPDATE< a \verb<DELETE<.
+\subsection*{SELECT}
+test
 \chapter{Kód}
 \chapter{Tutoriál}
 \chapter{Závěr}

@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {3.1}\slshape Struktura datab\IeC {\'a}ze SimpleDB}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}\slshape Vlastnosti datab\IeC {\'a}ze Amazon SimpleDB}{6}{section.3.2}
 \contentsline {chapter}{\numberline {4}\bfseries Komunikace s datab\IeC {\'a}z\IeC {\'\i } Amazon SimpleDB}{9}{chapter.4}
-\contentsline {chapter}{\numberline {5}\bfseries Mapov\IeC {\'a}n\IeC {\'\i } Teiid dotaz\IeC {\r u} na SimpleDB dotazy}{10}{chapter.5}
-\contentsline {chapter}{\numberline {6}\bfseries K\IeC {\'o}d}{11}{chapter.6}
-\contentsline {chapter}{\numberline {7}\bfseries Tutori\IeC {\'a}l}{12}{chapter.7}
-\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{13}{chapter.8}
+\contentsline {chapter}{\numberline {5}\bfseries Mapov\IeC {\'a}n\IeC {\'\i } Teiid dotaz\IeC {\r u} na SimpleDB dotazy}{11}{chapter.5}
+\contentsline {chapter}{\numberline {6}\bfseries K\IeC {\'o}d}{12}{chapter.6}
+\contentsline {chapter}{\numberline {7}\bfseries Tutori\IeC {\'a}l}{13}{chapter.7}
+\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{14}{chapter.8}
