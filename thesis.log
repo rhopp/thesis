@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  28 DEC 2013 14:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  28 DEC 2013 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,35 +310,59 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (./thesis.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count107
+\lst@gtempboxa=\box27
+\lst@token=\toks21
+\lst@length=\count108
+\lst@currlwidth=\dimen113
+\lst@column=\count109
+\lst@pos=\count110
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count111
+\lst@lineno=\count112
+\lst@maxwidth=\dimen116
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count113
+\lst@skipnumbers=\count114
+\lst@framebox=\box28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+ (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 28.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<t1.cmap>>
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 28.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -346,17 +370,17 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count107
+\c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 28.
+LaTeX Info: Redefining \microtypecontext on input line 29.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -373,17 +397,17 @@ File: mt-cmr.cfg 2011/04/09 v2.1 microtype config. file: Computer Modern Roman
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen113
-\scratchbox=\box28
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen114
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count116
+\scratchdimen=\dimen117
+\scratchbox=\box30
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen118
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -399,6 +423,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count122
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -415,7 +440,7 @@ xt4): destination with the same identifier (name{page.i}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.38 \end{ThesisDeclaration}
+l.39 \end{ThesisDeclaration}
                              [1
 
 ] [2
@@ -466,34 +491,34 @@ Kapitola 1.
 ]
 Kapitola 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 [][][]\T1/lmr/m/n/9 (+20) kompletní se-znam pro-dukt· a pro-jekt· ob-sa-ºe-ných
  v Red Hat JBoss
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 73--73
+Underfull \hbox (badness 8170) in paragraph at lines 74--74
 \T1/lmr/m/n/9 (+20) En-ter-prise Data Ser-vi-ces Plat-form i s po-u-ºi-tými ver
 -zemi k na-lez-nutí na
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 77.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 78.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 77.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
  [3
 
 ]
-Underfull \hbox (badness 2799) in paragraph at lines 104--104
+Underfull \hbox (badness 2799) in paragraph at lines 105--105
 [][][]\T1/lmr/m/n/9 (+20) RQH je ko-mu-nitní pro-jekt ve-dený pod jboss.org pro
  správu více ser-ver·,
  []
 
 [4]
 Kapitola 3.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 137.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 138.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -505,11 +530,11 @@ Package microtype Info: Loading generic settings for font family
  [5
 
 ] [6]
-<ConsistencyExample.pdf, id=139, 401.5pt x 160.6pt>
+<ConsistencyExample.pdf, id=154, 401.5pt x 160.6pt>
 File: ConsistencyExample.pdf Graphic file (type pdf)
 
 <use ConsistencyExample.pdf>
-Package pdftex.def Info: ConsistencyExample.pdf used on input line 158.
+Package pdftex.def Info: ConsistencyExample.pdf used on input line 159.
 (pdftex.def)             Requested size: 361.34665pt x 144.53865pt.
 
 Underfull \vbox (badness 7907) has occurred while \output is active []
@@ -523,40 +548,54 @@ Kapitola 5.
 [11
 
 ]
-Kapitola 6.
-[12
+Overfull \hbox (6.98819pt too wide) in paragraph at lines 252--253
+\T1/lmr/m/n/10.95 (-20) jed-nou (díky []\T1/lmtt/m/n/10.95 WHERE \T1/lmr/m/n/10
+.95 (-20) klau-zuli) a p°í-kazy []\T1/lmtt/m/n/10.95 PutAttributes \T1/lmr/m/n/
+10.95 (-20) a []\T1/lmtt/m/n/10.95 BatchPutAttributes
+ []
 
-]
-Kapitola 7.
+[12]
+Kapitola 6.
 [13
 
 ]
+Kapitola 7.
+[14
+
+]
 Kapitola 8.
-(./thesis.bbl [14
+(./thesis.bbl [15
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
- [15
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+ [16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: ABFF3C413C3E0C8F5363EE3D27C5FA56;1638.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 95E46BB4D221711828D279259FF77CAA;2006
+(rerunfilecheck)             After:  697A02AAE3ED1F02D21EE53416FFD099;2099.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
  ) 
 Here is how much of TeX's memory you used:
- 12513 strings out of 493515
- 179226 string characters out of 3144460
- 274730 words of memory out of 3000000
- 15487 multiletter control sequences out of 15000+200000
- 55974 words of font info for 85 fonts, out of 3000000 for 9000
+ 13856 strings out of 493515
+ 198210 string characters out of 3144460
+ 295155 words of memory out of 3000000
+ 16798 multiletter control sequences out of 15000+200000
+ 59698 words of font info for 92 fonts, out of 3000000 for 9000
  954 hyphenation exceptions out of 8191
  35i,8n,35p,752b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
@@ -593,10 +632,10 @@ exlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/lm/lmro10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (20 pages, 327191 bytes).
+Output written on thesis.pdf (21 pages, 337758 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 17522 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 20106 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -12,6 +12,7 @@
 \usepackage{cmap}	 % bod b) [do PDF bude přidáván potřebný font resource]
 \usepackage[T1]{fontenc} % část bodu a) [vhodné kódování fontů]
 \usepackage{lmodern}	 % část bodu a) [vhodný font]
+\usepackage{listings}
 
  
 \thesistitle{Relační přístup k Amazon SimpleDB} 
@@ -86,9 +87,9 @@ Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názv
  
  Tato část je zodpovědná za běh query enginu v rámci aplikačního serveru (WildFly nebo Red Hat JBoss Enterprise Application Platform) a zaručuje škálovatelnost a snadnou správu. Součástí je administrační konzole, ve které je možno jednoduše nastavit například deploynutou virtuální databázi nebo nastavení vláken query enginu.
  
- \item \textbf{Konektory}
+ \item \textbf{Konektory a překladače}
  
- Teiid přichází s řadou konektorů, díky kterým je schopen napojit se na řadu různých zdrojů dat. Základním kamenem jsou konektory pro většinu relačních databází, webové služby, textových souborů a LDAP\footnote{Lightweight Directory Access Protocol)}.
+ Teiid přichází s řadou konektorů a překladačů, díky kterým je schopen napojit se na řadu různých zdrojů dat. Konektory zajišťují napojení na zdroj dat, překladače potom obstarávají získávání dat podle Teiid požadavků. Základním kamenem jsou konektory pro většinu relačních databází, webové služby, textových souborů a LDAP\footnote{Lightweight Directory Access Protocol)}.
  
  Cíl této diplomové práce je rozšířit tuto sekci o connector pro NoSQL databázi Amazon SimpleDB.
  
@@ -210,8 +211,46 @@ Zde je ukázán proces autentizace pouze zjednodušeně. Přesný návod jak ses
 Amazon poskytuje knihovny pro komunikaci se SimpleDB (a ostatními AWS službami) v několika jazycích (Java, PHP, Python, Ruby a .NET). 
 Knihovna pro jazyk Java, která byla v této práci použita, nejenže poskytuje model pro práci s doménami, atributy a podobně, ale také významně usnadňuje autentizační proces (není nutné \uv{ručně} počítat podpis).
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
-V této kapitole bude obecně ukázáno, jakým způsobem byly mapovány Teiid dotazy na dotazy databáze SimpleDB. Konkrétně se jedná o příkazy \verb<SELECT<, \verb<UPDATE< a \verb<DELETE<.
-\subsection*{SELECT}
+V této kapitole bude obecně ukázáno, jakým způsobem byly mapovány Teiid dotazy na dotazy databáze SimpleDB. Konkrétně se jedná o příkazy \verb<SELECT<, \verb<INSERT<, \verb<UPDATE< a \verb<DELETE<.
+\section{Vícehodnotové atributy}
+Teiid přistupuje k datům jako běžná relační databáze, tedy jednomu řádku a sloupci odpovídá nejvýše jedna hodnota. Z tohoto důvodu je nutné ošetřit přístup k vícehodnotovým atributům. Nabízí se několik řešení:
+\begin{enumerate}
+ \item Byl-li by dopředu znám maximální počet hodnot u jednotlivých atributů, mohl by Teiid vnímat vícehodnotové atributy jako více sloupců tabulky (pro každou z možných hodnot jeden sloupec). Tímto přístupem by se ovšem zafixovalo schéma a přišli bychom o jednu z hlavních výhod databáze SimpleDB (SimpleDB netrvá na pevném schématu).
+ \item Zakódovat všechny hodnoty vícehodnotového atributu do jediného textového řetězce, který by byl lidsky i strojově čitelný. Tímto odpadá problém se změnou počtu hodnot atributu.
+\end{enumerate}
+Ve finální implementaci byl zvolen druhý přístup a hlouběji bude probrán níže.
+
+\section{SELECT}
+Jelikož SimpleDB podporuje mírně omezený \verb|SELECT|, stačí vždy pouze poupravit řetězec příkazu \verb|SELECT| generovaný Teiidem, aby byl srozumitelný pro SimpleDB. Naštěstí lze pro každý překladač nadefinovat sadu podporovaných vlastností. Nepodporované vlastnosti obslouží sám Query Engine (např. překladač nepodporuje \verb<JOIN< klauzuli. Query Engine tedy rozloží dotaz s \verb<JOIN< klauzulí na dva jednoduché dotazy, ty poté předá překladači a výsledné data zpracuje programově v paměti).
+
+Struktura příkazu SELECT databáze SimpleDB:
+\begin{Verbatim}[frame=leftline,fontsize=\small]
+select output_list
+from domain_name
+where [expression]
+[sort_instructions]
+limit [limit] 
+\end{Verbatim}
+Ze struktury je zřejmé, že žádné velké změny nebude třeba provádět. Je nutné definovat, že překladač nepodporuje \verb<JOIN< klauzuli a poté zajistit, aby byly korektně prováděny jednoduché SQL dotazy na které byl původní dotaz rozložen. Zde vyvstává pár problémů:
+\begin{enumerate}
+ \item Dotazu obsahujícímu atribut \verb<itemName()< (povinný unikátní atribut, který má každá položka) musí být tento atribut odebrán -- tento atribut je automaticky vracen v odpovědi databáze ikdyž není specifikován. Naopak pokud je požadován spolu s jinými atributy, databáze vrátí chybu. Toto platí s výjimkou dotazu, kdy je \verb<itemName()< jediným požadovaným atributem.
+ 
+ Tento dotaz je korektním dotazem na databázi SimpleDB a vrátí hodnoty atributu \verb<itemName()< všech položek v doméně \verb<TestDomain<:
+ \begin{Verbatim}[frame=leftline,fontsize=\small]
+  SELECT itemName() FROM TestDomain
+  \end{Verbatim}
+ Tento dotaz vrátí chybovou hlášku \verb<InvalidQueryExpression<:
+  \begin{Verbatim}[frame=leftline,fontsize=\small]
+  SELECT itemName(), attribute1 FROM TestDomain
+  \end{Verbatim}
+ \item Další problém může vyvstat ve výrazu ve \verb<WHERE< části. Těmto potížím se dá vyhnnout správným nastavením schopností překladače. 
+\end{enumerate}
+
+\section{INSERT}
+Zde je situace stále celkem jednoduchá, neboť \verb<INSERT< vždy vkládá jeden nový řádek, což je téměř ekvivalentní příkazu \verb<PutAttributes<. Je zde akorát potřeba získat z Teiid příkazu \verb<INSERT< seznam sloupců, jejich hodnot a název domény do které má proběhnout vložení. Vzhledem ke zvolenému řešení problému vícehodnotových atributů není zde nutné se jimi zaobírat.
+\section{UPDATE}
+U \verb<UPDATE< je situace poněkud složitější, neboť je možné měnit více položek najednou (díky \verb<WHERE< klauzuli) a příkazy \verb<PutAttributes< a \verb<BatchPutAttributes< neumožňují měnit více položek specifikovaných pomocí kritéria najednou. Je tedy nutné nejprve pomocí \verb<SELECT< příkazu nad požadovanou doménou a kritérii z Teiid \verb<UPDATE< dotazu získat jména všech upravovaných položek (atribut \verb<itemName()<). Teprve poté lze pomocí několika \verb<PutAttributes<, či jediného \verb<BatchPutAttributes< dané položky upravit.
+\section{DELETE}
 
 \chapter{Kód}
 \chapter{Tutoriál}
