@@ -11,6 +11,8 @@
 \contentsline {section}{\numberline {5.2}\slshape SELECT}{11}{section.5.2}
 \contentsline {section}{\numberline {5.3}\slshape INSERT}{12}{section.5.3}
 \contentsline {section}{\numberline {5.4}\slshape UPDATE}{12}{section.5.4}
-\contentsline {chapter}{\numberline {6}\bfseries K\IeC {\'o}d}{13}{chapter.6}
-\contentsline {chapter}{\numberline {7}\bfseries Tutori\IeC {\'a}l}{14}{chapter.7}
-\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{15}{chapter.8}
+\contentsline {section}{\numberline {5.5}\slshape DELETE}{13}{section.5.5}
+\contentsline {chapter}{\numberline {6}\bfseries Implementace}{14}{chapter.6}
+\contentsline {section}{\numberline {6.1}\slshape Konektor}{14}{section.6.1}
+\contentsline {chapter}{\numberline {7}\bfseries Tutori\IeC {\'a}l}{17}{chapter.7}
+\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{18}{chapter.8}

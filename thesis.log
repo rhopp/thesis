@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  28 DEC 2013 20:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  30 DEC 2013 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,7 +530,7 @@ Package microtype Info: Loading generic settings for font family
  [5
 
 ] [6]
-<ConsistencyExample.pdf, id=154, 401.5pt x 160.6pt>
+<ConsistencyExample.pdf, id=170, 401.5pt x 160.6pt>
 File: ConsistencyExample.pdf Graphic file (type pdf)
 
 <use ConsistencyExample.pdf>
@@ -554,52 +554,54 @@ Overfull \hbox (6.98819pt too wide) in paragraph at lines 252--253
 10.95 (-20) a []\T1/lmtt/m/n/10.95 BatchPutAttributes
  []
 
-[12]
+[12] [13]
 Kapitola 6.
-[13
-
-]
-Kapitola 7.
 [14
 
 ]
+Overfull \hbox (1.80008pt too wide) in paragraph at lines 274--275
+[]\T1/lmr/m/n/10.95 (-20) T°ída \T1/lmtt/m/n/10.95 SimpleDBManagedConnectionFac
+tory \T1/lmr/m/n/10.95 (-20) roz-²i-°uje abs-traktní t°ídu
+ []
+
+[15] [16]
+Kapitola 7.
+[17
+
+]
 Kapitola 8.
-(./thesis.bbl [15
+(./thesis.bbl [18
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
- [16
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+ [19
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 95E46BB4D221711828D279259FF77CAA;2006
-(rerunfilecheck)             After:  697A02AAE3ED1F02D21EE53416FFD099;2099.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 83C3C8C0D6489E9F8EC7B630966EBBBE;2337.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 13856 strings out of 493515
- 198210 string characters out of 3144460
- 295155 words of memory out of 3000000
- 16798 multiletter control sequences out of 15000+200000
+ 13867 strings out of 493515
+ 198338 string characters out of 3144460
+ 295158 words of memory out of 3000000
+ 16801 multiletter control sequences out of 15000+200000
  59698 words of font info for 92 fonts, out of 3000000 for 9000
  954 hyphenation exceptions out of 8191
- 35i,8n,35p,752b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+ 35i,8n,35p,889b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
 , replaced by a fixed one
@@ -632,10 +634,10 @@ exlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/lm/lmro10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (21 pages, 337758 bytes).
+Output written on thesis.pdf (24 pages, 346817 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 20106 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 20130 words of extra memory for PDF output out of 20736 (max. 10000000)
 
