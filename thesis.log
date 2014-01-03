@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  30 DEC 2013 10:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  3 JAN 2014 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,16 +477,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
-)
-\tf@toc=\write5
-\openout5 = `thesis.toc'.
-
  [1
 
 
-]
+])
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
+
+
+[2]
 Kapitola 1.
-[2
+[3
 
 ]
 Kapitola 2.
@@ -508,7 +509,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
- [3
+ [4
 
 ]
 Underfull \hbox (badness 2799) in paragraph at lines 105--105
@@ -516,7 +517,7 @@ Underfull \hbox (badness 2799) in paragraph at lines 105--105
  správu více ser-ver·,
  []
 
-[4]
+[5]
 Kapitola 3.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 138.
 
@@ -527,25 +528,29 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5
+ [6
 
-] [6]
-<ConsistencyExample.pdf, id=170, 401.5pt x 160.6pt>
+] [7]
+<ConsistencyExample.pdf, id=280, 401.5pt x 160.6pt>
 File: ConsistencyExample.pdf Graphic file (type pdf)
 
 <use ConsistencyExample.pdf>
-Package pdftex.def Info: ConsistencyExample.pdf used on input line 159.
+Package pdftex.def Info: ConsistencyExample.pdf used on input line 158.
 (pdftex.def)             Requested size: 361.34665pt x 144.53865pt.
 
-Underfull \vbox (badness 7907) has occurred while \output is active []
+Underfull \vbox (badness 4995) has occurred while \output is active []
 
- [7 <./ConsistencyExample.pdf>] [8]
+ [8 <./ConsistencyExample.pdf>] [9]
 Kapitola 4.
-[9
 
-] [10]
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 180.
+
+[10
+
+] [11]
 Kapitola 5.
-[11
+[12
 
 ]
 Overfull \hbox (6.98819pt too wide) in paragraph at lines 252--253
@@ -554,9 +559,9 @@ Overfull \hbox (6.98819pt too wide) in paragraph at lines 252--253
 10.95 (-20) a []\T1/lmtt/m/n/10.95 BatchPutAttributes
  []
 
-[12] [13]
+[13] [14]
 Kapitola 6.
-[14
+[15
 
 ]
 Overfull \hbox (1.80008pt too wide) in paragraph at lines 274--275
@@ -564,37 +569,141 @@ Overfull \hbox (1.80008pt too wide) in paragraph at lines 274--275
 tory \T1/lmr/m/n/10.95 (-20) roz-²i-°uje abs-traktní t°ídu
  []
 
-[15] [16]
+[16] <TranslatorStructure.pdf, id=339, 430.48328pt x 381.8767pt>
+File: TranslatorStructure.pdf Graphic file (type pdf)
+
+<use TranslatorStructure.pdf>
+Package pdftex.def Info: TranslatorStructure.pdf used on input line 299.
+(pdftex.def)             Requested size: 344.38708pt x 305.50177pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./TranslatorStructure.pdf>]
+Overfull \hbox (7.13179pt too wide) in paragraph at lines 353--354
+\T1/lmtt/m/n/10.95 QueryExpression command, ExecutionContext executionContext,
+ []
+
+
+Overfull \hbox (26.10262pt too wide) in paragraph at lines 353--354
+\T1/lmtt/m/n/10.95 RuntimeMetadata metadata, final SimpleDBConnection connectio
+n) 
+ []
+
+[19]
+Overfull \hbox (4.25743pt too wide) in paragraph at lines 359--361
+[]\T1/lmtt/m/n/10.95 public UpdateExecution createUpdateExecution(final Command
+ 
+ []
+
+
+Overfull \hbox (10.00616pt too wide) in paragraph at lines 359--361
+\T1/lmtt/m/n/10.95 command, ExecutionContext executionContext, RuntimeMetadata
+ []
+
+
+Overfull \hbox (6.01324pt too wide) in paragraph at lines 362--363
+\T1/lmtt/m/n/10.95 ResultSet Execution \T1/lmr/m/n/10.95 (-20) li²í pouze v me-
+tod¥ zís-ká-vání dat. Místo \T1/lmtt/m/n/10.95 List<?>
+ []
+
+
+Overfull \hbox (7.05592pt too wide) in paragraph at lines 365--366
+\T1/lmr/m/n/10.95 (-20) kazu, který zpra-co-vá-vají -- \T1/lmtt/m/n/10.95 Simpl
+eDBInsertExecute\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 SimpleDBDeleteExec
+ute
+ []
+
+
+Overfull \hbox (8.88274pt too wide) in paragraph at lines 369--370
+\T1/lmr/m/n/10.95 (-20) mocí \T1/lmtt/m/n/10.95 SimpleDBInsertVisitor \T1/lmr/m
+/n/10.95 (-20) získá ko-lekci dvo-jic \T1/lmtt/m/n/10.95 <jménoAtributu, hodnot
+a
+ []
+
+[20] [21]
+Overfull \hbox (14.05156pt too wide) in paragraph at lines 414--415
+[]\T1/lmtt/m/n/10.95 AbstractLanguageVisitor \T1/lmr/m/n/10.95 (-20) je prázd-n
+ou im-ple-men-tací roz-hraní \T1/lmtt/m/n/10.95 Language
+ []
+
+
+Overfull \hbox (5.76495pt too wide) in paragraph at lines 415--416
+[]\T1/lmtt/m/n/10.95 HierarchyVisitor \T1/lmr/m/n/10.95 (-20) je pod-t°í-dou \T
+1/lmtt/m/n/10.95 AbstractLanguageVisitor \T1/lmr/m/n/10.95 (-20) a je oproti
+ []
+
+
+Overfull \hbox (77.74712pt too wide) in paragraph at lines 417--418
+[]\T1/lmtt/m/n/10.95 SQLStringVisitor \T1/lmr/m/n/10.95 (-20) je roz-²í-°e-ním 
+zá-kladní abs-traktní t°ídy \T1/lmtt/m/n/10.95 AbstractLanguageVisitor\T1/lmr/m
+/n/10.95 (-20) ,
+ []
+
+[22]
+Overfull \hbox (20.36572pt too wide) in paragraph at lines 430--431
+[]\T1/lmr/m/n/10.95 (-20) Implementace v \T1/lmtt/m/n/10.95 SQLStringVisitor \T
+1/lmr/m/n/10.95 (-20) vy-pi-suje slou-pec ve for-mátu \T1/lmtt/m/n/10.95 'tabul
+ka'
+ []
+
+
+Overfull \hbox (0.52023pt too wide) in paragraph at lines 434--435
+[]\T1/lmr/m/n/10.95 (-20) Jelikoº Te-iid pod-po-ruje ope-rá-tor \T1/lmtt/m/n/10
+.95 NOT \T1/lmr/m/n/10.95 (-20) (a v \T1/lmtt/m/n/10.95 SimpleDBExecutionFactor
+y
+ []
+
+[23]
+Overfull \hbox (89.98653pt too wide) in paragraph at lines 450--451
+[]\T1/lmr/m/n/10.95 (-20) Pro zís-kání t¥chto hod-not je im-ple-men-to-vána sta
+-tická me-toda \T1/lmtt/m/n/10.95 getColumnsValuesMap(Insert
+ []
+
+
+Overfull \hbox (12.88387pt too wide) in paragraph at lines 464--465
+\T1/lmtt/m/n/10.95 WHERE \T1/lmr/m/n/10.95 (-20) klau-zule vloºí °e-t¥-zec vy-g
+e-ne-ro-vaný po-mocí \T1/lmtt/m/n/10.95 SimpleDBSQLVisitoru
+ []
+
+[24] [25]
 Kapitola 7.
-[17
+[26
 
 ]
 Kapitola 8.
-(./thesis.bbl [18
+(./thesis.bbl [27
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
- [19
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 486.
+ [28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 486.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 83C3C8C0D6489E9F8EC7B630966EBBBE;2337.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
+(rerunfilecheck)             Checksum: 48C3E2F5C8935B2851D085E269AE0360;6017.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
  ) 
 Here is how much of TeX's memory you used:
- 13867 strings out of 493515
- 198338 string characters out of 3144460
- 295158 words of memory out of 3000000
- 16801 multiletter control sequences out of 15000+200000
- 59698 words of font info for 92 fonts, out of 3000000 for 9000
+ 13923 strings out of 493515
+ 199186 string characters out of 3144460
+ 298182 words of memory out of 3000000
+ 16829 multiletter control sequences out of 15000+200000
+ 62935 words of font info for 96 fonts, out of 3000000 for 9000
  954 hyphenation exceptions out of 8191
  35i,8n,35p,889b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
@@ -630,14 +739,15 @@ ive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/lm/lmro10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (24 pages, 346817 bytes).
+exlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmro10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on thesis.pdf (33 pages, 493443 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 20130 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 403 compressed objects within 5 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 20823 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="TranslatorStructure.pdf">
+  <defs
+     id="defs3">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path3952"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutS"
+       style="overflow:visible">
+      <path
+         id="path3955"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3810"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3952-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3952-8"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3952-0"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3952-0-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="339.85018"
+     inkscape:cy="692.78271"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1854"
+     inkscape:window-height="1060"
+     inkscape:window-x="64"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:0.15566041;stroke:#000000;stroke-width:0.86785477;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3007"
+       width="407.33807"
+       height="175.84642"
+       x="180.64819"
+       y="75.153252" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="430.53271"
+       y="88.494881"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="430.53271"
+         y="88.494881">org.teiid.language.visitor</tspan><tspan
+         sodipodi:role="line"
+         x="430.53271"
+         y="100.99488"
+         id="tspan3013">Teiid Language Visitor Framework</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3021"
+       width="78.53936"
+       height="27.526657"
+       x="341.43158"
+       y="86.656342" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="381.08005"
+       y="96.505333"
+       id="text3015"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3017"
+         x="381.08005"
+         y="96.505333">&lt;&lt;rozhraní&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="381.08005"
+         y="109.00533"
+         id="tspan3019">Language Visitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3031"
+       width="117.17769"
+       height="31.819805"
+       x="322.49121"
+       y="143.36102" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="381.08005"
+       y="156.24048"
+       id="text3023"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3025"
+         x="381.08005"
+         y="156.24048">&lt;&lt;abstraktní třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="381.08005"
+         y="168.74048"
+         id="tspan3027">AbstractLanguageVisitor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.41373348000000010;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.41373348000000010, 1.41373348000000010;stroke-dashoffset:0;marker-end:url(#TriangleOutM)"
+       d="m 381.08005,142.5441 0,-23.96571"
+       id="path3033"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89455991999999984;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4627"
+       width="87.378197"
+       height="29.294424"
+       x="194.95944"
+       y="193.73251" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE;text-anchor:middle;text-align:center"
+       x="236.68279"
+       y="204.84419"
+       id="text4621"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4623"
+         x="201.52544"
+         y="204.84419">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="201.52544"
+         y="217.34419"
+         id="tspan4625">SQLStringVisitor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.84899133px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="m 243.13878,193.50912 77.20877,-18.09716"
+       id="path4629"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.88440973000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5013"
+       width="101.79586"
+       height="30.367292"
+       x="471.42349"
+       y="193.78568" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="521.83472"
+       y="205.34927"
+       id="text5003"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5005"
+         x="521.83472"
+         y="205.34927">&lt;&lt;abstraktní třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="521.83472"
+         y="217.84927"
+         id="tspan5007">HierarchyVisitor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="M 527.85714,193.79075 439.64286,175.21932"
+       id="path5015"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#000000;fill-opacity:0.13679247;stroke:#000000;stroke-width:0.66264278;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5208"
+       width="123.08907"
+       height="164.62022"
+       x="129.16975"
+       y="321.20273" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="134.85536"
+       y="335.15387"
+       id="text5210"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5212"
+         x="134.85536"
+         y="335.15387">org.teiid.translator</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87373102;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283"
+       width="96.995468"
+       height="30.830482"
+       x="137.37033"
+       y="356.86176" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="185.86807"
+       y="368.99399"
+       id="text5214"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216"
+         x="185.86807"
+         y="368.99399">&lt;&lt;abstraktní třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="185.86807"
+         y="381.49399"
+         id="tspan5218">UpdateExecution</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87373102;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-4"
+       width="96.995468"
+       height="30.830482"
+       x="137.87541"
+       y="441.63278" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="185.86807"
+       y="453.28799"
+       id="text5214-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-8"
+         x="185.86807"
+         y="453.28799">&lt;&lt;abstraktní třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="185.86807"
+         y="465.78799"
+         id="tspan5218-7">ResultSetExecution</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87373102;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-46"
+       width="96.995468"
+       height="30.830482"
+       x="138.38048"
+       y="401.02872" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="185.86807"
+       y="411.6738"
+       id="text5214-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-0"
+         x="185.86807"
+         y="411.6738">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="185.86807"
+         y="424.1738"
+         id="tspan5218-9">ExecutionFactory</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.13679247;stroke:#000000;stroke-width:0.66264278;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5208-0"
+       width="123.08907"
+       height="164.62022"
+       x="541.51654"
+       y="385.17374" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="548.00775"
+       y="397.27826"
+       id="text5328"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5330"
+         x="548.00775"
+         y="397.27826">org.teiid.language</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87373102;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-7"
+       width="96.995468"
+       height="30.830482"
+       x="552.03796"
+       y="408.12698" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="600.53571"
+       y="420.25922"
+       id="text5214-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-80"
+         x="600.53571"
+         y="420.25922">&lt;&lt;rozhraní&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="600.53571"
+         y="432.75922"
+         id="tspan5218-0">LanguageObject</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.36925793;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-7-2"
+       width="117.20807"
+       height="62.659836"
+       x="544.08722"
+       y="473.70813" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="602.05096"
+       y="487.93942"
+       id="text5214-5-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="602.05096"
+         y="487.93942"
+         id="tspan5218-0-6">Třídy implementující</tspan><tspan
+         sodipodi:role="line"
+         x="602.05096"
+         y="500.43942"
+         id="tspan5388">rozhraní LanguageObject</tspan><tspan
+         sodipodi:role="line"
+         x="602.05096"
+         y="512.93945"
+         id="tspan5390">např.: Select, Comparison,</tspan><tspan
+         sodipodi:role="line"
+         x="602.05096"
+         y="525.43945"
+         id="tspan5392">ColumnReference, ...</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.97440946;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.9488189, 0.97440945;stroke-dashoffset:0;marker-end:url(#TriangleOutM)"
+       d="m 605.25472,473.6409 0,-31.93287"
+       id="path5394"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#000000;fill-opacity:0.15566041;stroke:#000000;stroke-width:0.90974617;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3007-6"
+       width="271.93573"
+       height="289.44669"
+       x="259.0018"
+       y="260.38358" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="304.56097"
+       y="273.02948"
+       id="text5602"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5604"
+         x="304.56097"
+         y="273.02948">SimpleDB překladač</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89908618;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8"
+       width="102.79119"
+       height="30.805128"
+       x="423.76126"
+       y="300.05331" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="475.78186"
+       y="312.17288"
+       id="text5214-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2"
+         x="475.78186"
+         y="312.17288">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="475.78186"
+         y="324.67288"
+         id="tspan5218-1">SimpleDBInsertVisitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89577371;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-6"
+       width="102.02419"
+       height="30.808439"
+       x="424.26468"
+       y="337.9324" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="475.27679"
+       y="350.05362"
+       id="text5214-2-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-4"
+         x="475.27679"
+         y="350.05362">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="475.27679"
+         y="362.55362"
+         id="tspan5218-1-0">SimpleDBDeleteVisitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89678383;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-8"
+       width="102.25778"
+       height="30.80743"
+       x="424.14792"
+       y="373.79333" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="475.27679"
+       y="385.91403"
+       id="text5214-2-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-8"
+         x="475.27679"
+         y="385.91403">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="475.27679"
+         y="398.41403"
+         id="tspan5218-1-5">SimpleDBUpdateVisitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89630151;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-4"
+       width="102.14621"
+       height="30.807911"
+       x="424.26495"
+       y="410.15857" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="474.26663"
+       y="422.27951"
+       id="text5214-2-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-0"
+         x="474.26663"
+         y="422.27951">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="474.26663"
+         y="434.77951"
+         id="tspan5218-1-6">SimpleDBSQLVisitor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="m 424.19643,389.77289 -8.34821,0 0,-179.87793 52.36607,0"
+       id="path5694"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 424.10714,352.18361 -8.39285,0"
+       id="path6068"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 423.66072,314.86218 -7.76786,0"
+       id="path6070"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="m 424.10714,426.55861 -13.57142,0 0,-216.78992 -125.29389,0"
+       id="path6072"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89908618;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-66"
+       width="102.79119"
+       height="30.805128"
+       x="265.49472"
+       y="300.59232" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="317.51532"
+       y="312.71188"
+       id="text5214-2-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-2"
+         x="317.51532"
+         y="312.71188">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="317.51532"
+         y="325.21188"
+         id="tspan5218-1-8">SimpleDBInsertVisitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89908618;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-66-9"
+       width="102.79119"
+       height="30.805128"
+       x="265.03296"
+       y="337.85245" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="317.05356"
+       y="349.97202"
+       id="text5214-2-0-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-2-7"
+         x="317.05356"
+         y="349.97202">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="317.05356"
+         y="362.47202"
+         id="tspan5218-1-8-1">SimpleDBDeleteVisitor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89908618;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-66-2"
+       width="102.79119"
+       height="30.805128"
+       x="264.49728"
+       y="373.74533" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="316.51788"
+       y="385.8649"
+       id="text5214-2-0-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-2-4"
+         x="316.51788"
+         y="385.8649">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="316.51788"
+         y="398.3649"
+         id="tspan5218-1-8-0">SimpleDBUpdateVisitor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0;marker-end:url(#TriangleOutM)"
+       d="m 367.721,397.8979 53.57143,0"
+       id="path6350-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0;marker-end:url(#TriangleOutM)"
+       d="m 368.25671,362.18361 53.57143,0"
+       id="path6350-08"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0;marker-end:url(#TriangleOutM)"
+       d="m 367.54243,324.86218 53.57143,0"
+       id="path6350-3"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="369.72079"
+       y="322.71497"
+       id="text6584"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6586"
+         x="369.72079"
+         y="322.71497"
+         style="font-size:6px">Využívá</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="368.98077"
+       y="360.26736"
+       id="text6584-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6586-8"
+         x="368.98077"
+         y="360.26736">Využívá</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="369.35394"
+       y="394.90018"
+       id="text6584-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6586-6"
+         x="369.35394"
+         y="394.90018"
+         style="font-size:6px">Využívá</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.51511729;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-4-8"
+       width="142.69112"
+       height="63.019054"
+       x="309.92209"
+       y="452.38931" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.69052541;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5283-8-66-7"
+       width="102.99975"
+       height="18.134243"
+       x="327.50125"
+       y="488.35645" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="379.62613"
+       y="500.58029"
+       id="text5214-2-0-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-2-0"
+         x="379.62613"
+         y="500.58029">&lt;&lt;anonymní třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="379.62613"
+         y="513.08032"
+         id="tspan5218-1-8-2" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="381.08005"
+       y="466.47369"
+       id="text5214-2-5-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5216-2-0-2"
+         x="381.08005"
+         y="466.47369">&lt;&lt;třída&gt;&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="381.08005"
+         y="478.97369"
+         id="tspan5218-1-6-7">SimpleDBExecutionFactory</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 310.17814,484.65645 142.17897,0"
+       id="path6666"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-4)"
+       d="m 327.32143,497.18361 -50.35714,0 0,-37.85714 -39.82143,0"
+       id="path6668"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-4)"
+       d="m 309.35922,465.21102 -13.63706,0 0,-47.31312 -58.22216,0"
+       id="path6864"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;marker-end:url(#TriangleOutM-4)"
+       d="m 430.32498,498.04097 52.52794,0 0,-53.03301"
+       id="path7058"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="485.77402"
+       y="471.41925"
+       id="text6584-5-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6586-6-9"
+         x="485.77402"
+         y="471.41925"
+         style="font-size:6px">Využívá</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;marker-end:url(#TriangleOutM-4)"
+       d="m 526.42857,425.21932 9.64286,0 0,-110.17857 74.10714,0 0,67.14286"
+       id="path7273"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+       d="m 526.54202,315.20336 9.34391,0"
+       id="path7467"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+       d="m 526.03694,352.70527 9.47018,0"
+       id="path7469"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:3,1;stroke-dashoffset:0"
+       d="m 526.16321,387.93434 9.72272,0"
+       id="path7471"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="542.85712"
+       y="310.39789"
+       id="text7473"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7475"
+         x="542.85712"
+         y="310.39789">přistupují k datům</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-4);stroke-miterlimit:4;stroke-dasharray:6,1;stroke-dashoffset:0"
+       d="m 401.42857,452.36218 0,-141.78571 -29.82143,0"
+       id="path7477"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99427927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.9656757, 0.99427928;stroke-dashoffset:0;marker-end:url(#TriangleOutM-4)"
+       d="m 401.41223,345.82361 -31.03158,0"
+       id="path7671"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99427927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.9656757, 0.99427928;stroke-dashoffset:0;marker-end:url(#TriangleOutM-4)"
+       d="m 401.09136,381.24208 -31.03158,0"
+       id="path7671-2"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:6px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:Syntax LT CE;-inkscape-font-specification:Syntax LT CE"
+       x="-443.24527"
+       y="397.5477"
+       id="text7889"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan7891"
+         x="-443.24527"
+         y="397.5477">generuje</tspan></text>
+  </g>
+</svg>
