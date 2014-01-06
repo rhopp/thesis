@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  3 JAN 2014 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  6 JAN 2014 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -40,8 +40,8 @@ LaTeX Info: Redefining \em on input line 826.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (./fit11.clo
-File: fit11.clo 2008/12/15 fithesis2 (size option)
+) (./fit12.clo
+File: fit12.clo 2008/12/15 fithesis2 (size option)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/08 v3.8m The Babel package
@@ -157,6 +157,7 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `final' set `true' on input line 4319.
 Package hyperref Info: Option `plainpages' set `false' on input line 4319.
 Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4319.
 Package hyperref Info: Option `unicode' set `true' on input line 4319.
@@ -210,36 +211,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 )
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2013/03/13 v2.5 Micro-typographical refinements (RS)
-\MT@toks=\toks20
-\MT@count=\count101
-LaTeX Info: Redefining \textls on input line 771.
-\MT@outer@kern=\dimen110
-LaTeX Info: Redefining \textmicrotypecontext on input line 1290.
-\MT@listname@count=\count102
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2013/03/13 v2.5 Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 889.
-LaTeX Info: Redefining \lslig on input line 889.
-\MT@outer@space=\skip44
-)
-Package microtype Info: Loading configuration file microtype.cfg.
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2013/03/13 v2.5 microtype main configuration file (RS)
-))
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count103
+\FV@CodeLineNo=\count101
 \FV@InFile=\read1
 \FV@TabBox=\box26
-\c@FancyVerbLine=\count104
-\FV@StepNumber=\count105
+\c@FancyVerbLine=\count102
+\FV@StepNumber=\count103
 \FV@OutFile=\write3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -258,24 +239,52 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count106
+\Gread@gobject=\count104
 ))
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
 )
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2013/03/13 v2.5 Micro-typographical refinements (RS)
+\MT@toks=\toks20
+\MT@count=\count105
+LaTeX Info: Redefining \textls on input line 771.
+\MT@outer@kern=\dimen112
+LaTeX Info: Redefining \textmicrotypecontext on input line 1290.
+\MT@listname@count=\count106
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2013/03/13 v2.5 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 889.
+LaTeX Info: Redefining \lslig on input line 889.
+\MT@outer@space=\skip44
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2013/03/13 v2.5 microtype main configuration file (RS)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty
 Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
 
 
 Package cmap Warning: fontenc already loaded - some fonts may be unprocessed.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tex-gyre/tgpagella.sty
+Package: tgpagella 2009/09/27 v1.2 TeX Gyre Pagella as default roman family
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-))
+)
+LaTeX Font Info:    Try loading font information for T1+qpl on input line 100.
+
+(/usr/share/texlive/texmf-dist/tex/latex/tex-gyre/t1qpl.fd
+File: t1qpl.fd 2009/09/25 v1.2 font definition file for T1/qpl
+)<<t1.cmap>>)
 (/usr/share/texlive/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -338,31 +347,31 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
  (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 31.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)<<t1.cmap>>
+)
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -372,29 +381,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 29.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
 
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2011/04/09 v2.1 microtype config. file: Computer Modern Roman 
-(RS)
-)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -423,9 +418,24 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+LaTeX Info: Redefining \microtypecontext on input line 31.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2011/04/09 v2.1 microtype config. file: Computer Modern Roman 
+(RS)
+)
 \c@lstlisting=\count122
 Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
@@ -440,7 +450,7 @@ xt4): destination with the same identifier (name{page.i}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \end{ThesisDeclaration}
+l.41 \end{ThesisDeclaration}
                              [1
 
 ] [2
@@ -471,7 +481,7 @@ LaTeX Font Info:    Try loading font information for OMX+lmex on input line 2.
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(Font)              <12> on input line 2.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 2.
@@ -492,34 +502,28 @@ Kapitola 1.
 ]
 Kapitola 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
-[][][]\T1/lmr/m/n/9 (+20) kompletní se-znam pro-dukt· a pro-jekt· ob-sa-ºe-ných
- v Red Hat JBoss
+Underfull \hbox (badness 1688) in paragraph at lines 75--75
+[][][]\T1/lmr/m/n/10 (+20) kompletní se-znam pro-dukt· a pro-jekt· ob-sa-ºe-nýc
+h v Red Hat JBoss
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 74--74
-\T1/lmr/m/n/9 (+20) En-ter-prise Data Ser-vi-ces Plat-form i s po-u-ºi-tými ver
--zemi k na-lez-nutí na
+Underfull \hbox (badness 1721) in paragraph at lines 75--75
+\T1/lmr/m/n/10 (+20) En-ter-prise Data Ser-vi-ces Plat-form i s po-u-ºi-tými ve
+r-zemi k na-lez-nutí na
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 79.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
  [4
 
-]
-Underfull \hbox (badness 2799) in paragraph at lines 105--105
-[][][]\T1/lmr/m/n/9 (+20) RQH je ko-mu-nitní pro-jekt ve-dený pod jboss.org pro
- správu více ser-ver·,
- []
-
-[5]
+] [5]
 Kapitola 3.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 138.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 139.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -528,184 +532,236 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [6
 
-] [7]
-<ConsistencyExample.pdf, id=280, 401.5pt x 160.6pt>
+Overfull \hbox (3.52127pt too wide) in paragraph at lines 139--140
+\T1/lmr/m/n/12 (-20) Navíc má kaºdý pr-vek do-mény (°á-dek ta-bulky) po-vinný a
+tri-but []\T1/lmtt/m/n/12 ItemName\T1/lmr/m/n/12 (-20) ,
+ []
+
+[6
+
+] [7] <ConsistencyExample.pdf, id=298, 401.5pt x 160.6pt>
 File: ConsistencyExample.pdf Graphic file (type pdf)
 
 <use ConsistencyExample.pdf>
-Package pdftex.def Info: ConsistencyExample.pdf used on input line 158.
+Package pdftex.def Info: ConsistencyExample.pdf used on input line 159.
 (pdftex.def)             Requested size: 361.34665pt x 144.53865pt.
 
-Underfull \vbox (badness 4995) has occurred while \output is active []
 
- [8 <./ConsistencyExample.pdf>] [9]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <./ConsistencyExample.pdf>]
 Kapitola 4.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 180.
-
 [10
 
-] [11]
+] [11] [12]
 Kapitola 5.
-[12
+[13
 
-]
-Overfull \hbox (6.98819pt too wide) in paragraph at lines 252--253
-\T1/lmr/m/n/10.95 (-20) jed-nou (díky []\T1/lmtt/m/n/10.95 WHERE \T1/lmr/m/n/10
-.95 (-20) klau-zuli) a p°í-kazy []\T1/lmtt/m/n/10.95 PutAttributes \T1/lmr/m/n/
-10.95 (-20) a []\T1/lmtt/m/n/10.95 BatchPutAttributes
- []
-
-[13] [14]
+] [14] [15]
 Kapitola 6.
-[15
+[16
 
 ]
-Overfull \hbox (1.80008pt too wide) in paragraph at lines 274--275
-[]\T1/lmr/m/n/10.95 (-20) T°ída \T1/lmtt/m/n/10.95 SimpleDBManagedConnectionFac
-tory \T1/lmr/m/n/10.95 (-20) roz-²i-°uje abs-traktní t°ídu
+Overfull \hbox (0.79964pt too wide) in paragraph at lines 276--277
+[]\T1/lmr/m/n/12 (-20) T°ída \T1/lmtt/m/n/12 SimpleDBManagedConnectionFactory \
+T1/lmr/m/n/12 (-20) roz-²i-°uje abs-traktní
  []
 
-[16] <TranslatorStructure.pdf, id=339, 430.48328pt x 381.8767pt>
+
+Overfull \hbox (5.54631pt too wide) in paragraph at lines 277--278
+[]\T1/lmr/m/n/12 (-20) Jako im-ple-men-tace roz-hraní \T1/lmtt/m/n/12 Connectio
+n \T1/lmr/m/n/12 (-20) zde slouºí t°ída \T1/lmtt/m/n/12 SimpleDB
+ []
+
+
+Overfull \hbox (2.4293pt too wide) in paragraph at lines 277--278
+\T1/lmtt/m/n/12 ConnectionImpl\T1/lmr/m/n/12 (-20) . Ta krom¥ im-ple-men-to-ván
+í roz-hraní \T1/lmtt/m/n/12 Connection
+ []
+
+[17]
+Overfull \hbox (22.95341pt too wide) in paragraph at lines 291--292
+\T1/lmtt/m/n/12 Adapter\T1/lmr/m/n/12 (-20) ), t°ídu im-ple-men-tu-jící roz-hra
+ní \T1/lmtt/m/n/12 ManagedConnectionFactory
+ []
+
+<TranslatorStructure.pdf, id=363, 430.48328pt x 381.8767pt>
 File: TranslatorStructure.pdf Graphic file (type pdf)
 
 <use TranslatorStructure.pdf>
-Package pdftex.def Info: TranslatorStructure.pdf used on input line 299.
+Package pdftex.def Info: TranslatorStructure.pdf used on input line 301.
 (pdftex.def)             Requested size: 344.38708pt x 305.50177pt.
+ [18] [19 <./TranslatorStructure.pdf>]
+Overfull \hbox (15.95667pt too wide) in paragraph at lines 320--321
+[]\T1/lmr/m/n/12 (-20) Dále tato t°ída ob-sa-huje me-todu \T1/lmtt/m/n/12 void 
+getMetadata(MetadataFactory
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./TranslatorStructure.pdf>]
-Overfull \hbox (7.13179pt too wide) in paragraph at lines 353--354
-\T1/lmtt/m/n/10.95 QueryExpression command, ExecutionContext executionContext,
+Overfull \hbox (2.44658pt too wide) in paragraph at lines 351--352
+\T1/lmtt/m/n/12 create ResultSetExecution \T1/lmr/m/n/12 (-20) a \T1/lmtt/m/n/1
+2 createUpdateExecution\T1/lmr/m/n/12 (-20) , kde ob¥ mají
  []
 
 
-Overfull \hbox (26.10262pt too wide) in paragraph at lines 353--354
-\T1/lmtt/m/n/10.95 RuntimeMetadata metadata, final SimpleDBConnection connectio
-n) 
- []
-
-[19]
-Overfull \hbox (4.25743pt too wide) in paragraph at lines 359--361
-[]\T1/lmtt/m/n/10.95 public UpdateExecution createUpdateExecution(final Command
- 
+Overfull \hbox (18.95018pt too wide) in paragraph at lines 355--356
+[]\T1/lmtt/m/n/12 public ResultSetExecution createResultSetExecution(final 
  []
 
 
-Overfull \hbox (10.00616pt too wide) in paragraph at lines 359--361
-\T1/lmtt/m/n/10.95 command, ExecutionContext executionContext, RuntimeMetadata
+Overfull \hbox (34.38768pt too wide) in paragraph at lines 355--356
+\T1/lmtt/m/n/12 QueryExpression command, ExecutionContext executionContext,
  []
 
 
-Overfull \hbox (6.01324pt too wide) in paragraph at lines 362--363
-\T1/lmtt/m/n/10.95 ResultSet Execution \T1/lmr/m/n/10.95 (-20) li²í pouze v me-
-tod¥ zís-ká-vání dat. Místo \T1/lmtt/m/n/10.95 List<?>
+Overfull \hbox (54.7652pt too wide) in paragraph at lines 355--356
+\T1/lmtt/m/n/12 RuntimeMetadata metadata, final SimpleDBConnection connection) 
+
+ []
+
+[20]
+Overfull \hbox (31.30019pt too wide) in paragraph at lines 361--363
+[]\T1/lmtt/m/n/12 public UpdateExecution createUpdateExecution(final Command 
  []
 
 
-Overfull \hbox (7.05592pt too wide) in paragraph at lines 365--366
-\T1/lmr/m/n/10.95 (-20) kazu, který zpra-co-vá-vají -- \T1/lmtt/m/n/10.95 Simpl
-eDBInsertExecute\T1/lmr/m/n/10.95 (-20) , \T1/lmtt/m/n/10.95 SimpleDBDeleteExec
-ute
+Overfull \hbox (37.47519pt too wide) in paragraph at lines 361--363
+\T1/lmtt/m/n/12 command, ExecutionContext executionContext, RuntimeMetadata
  []
 
 
-Overfull \hbox (8.88274pt too wide) in paragraph at lines 369--370
-\T1/lmr/m/n/10.95 (-20) mocí \T1/lmtt/m/n/10.95 SimpleDBInsertVisitor \T1/lmr/m
-/n/10.95 (-20) získá ko-lekci dvo-jic \T1/lmtt/m/n/10.95 <jménoAtributu, hodnot
-a
+Overfull \hbox (7.27574pt too wide) in paragraph at lines 361--363
+\T1/lmtt/m/n/12 metadata, final SimpleDBConnection connection) \T1/lmr/m/n/12 (
+-20) Zde se ob-
  []
 
-[20] [21]
-Overfull \hbox (14.05156pt too wide) in paragraph at lines 414--415
-[]\T1/lmtt/m/n/10.95 AbstractLanguageVisitor \T1/lmr/m/n/10.95 (-20) je prázd-n
-ou im-ple-men-tací roz-hraní \T1/lmtt/m/n/10.95 Language
- []
-
-
-Overfull \hbox (5.76495pt too wide) in paragraph at lines 415--416
-[]\T1/lmtt/m/n/10.95 HierarchyVisitor \T1/lmr/m/n/10.95 (-20) je pod-t°í-dou \T
-1/lmtt/m/n/10.95 AbstractLanguageVisitor \T1/lmr/m/n/10.95 (-20) a je oproti
+[21]
+Overfull \hbox (71.8279pt too wide) in paragraph at lines 373--374
+\T1/lmr/m/n/12 (-20) po-mocí vi-si-toru \T1/lmtt/m/n/12 SimpleDBUpdateVisitor \
+T1/lmr/m/n/12 (-20) mapu \T1/lmtt/m/n/12 jménoAtributu, hodnotaAtributu>
  []
 
 
-Overfull \hbox (77.74712pt too wide) in paragraph at lines 417--418
-[]\T1/lmtt/m/n/10.95 SQLStringVisitor \T1/lmr/m/n/10.95 (-20) je roz-²í-°e-ním 
-zá-kladní abs-traktní t°ídy \T1/lmtt/m/n/10.95 AbstractLanguageVisitor\T1/lmr/m
-/n/10.95 (-20) ,
- []
-
-[22]
-Overfull \hbox (20.36572pt too wide) in paragraph at lines 430--431
-[]\T1/lmr/m/n/10.95 (-20) Implementace v \T1/lmtt/m/n/10.95 SQLStringVisitor \T
-1/lmr/m/n/10.95 (-20) vy-pi-suje slou-pec ve for-mátu \T1/lmtt/m/n/10.95 'tabul
-ka'
+Overfull \hbox (19.6848pt too wide) in paragraph at lines 381--382
+[]\T1/lmr/m/n/12 (-20) P°íkaz \T1/lmtt/m/n/12 DELETE \T1/lmr/m/n/12 (-20) má kl
+au-zuli \T1/lmtt/m/n/12 WHERE \T1/lmr/m/n/12 (-20) ve for-mátu \T1/lmtt/m/n/12 
+itemName()=<hodnota> 
  []
 
 
-Overfull \hbox (0.52023pt too wide) in paragraph at lines 434--435
-[]\T1/lmr/m/n/10.95 (-20) Jelikoº Te-iid pod-po-ruje ope-rá-tor \T1/lmtt/m/n/10
-.95 NOT \T1/lmr/m/n/10.95 (-20) (a v \T1/lmtt/m/n/10.95 SimpleDBExecutionFactor
-y
- []
-
-[23]
-Overfull \hbox (89.98653pt too wide) in paragraph at lines 450--451
-[]\T1/lmr/m/n/10.95 (-20) Pro zís-kání t¥chto hod-not je im-ple-men-to-vána sta
--tická me-toda \T1/lmtt/m/n/10.95 getColumnsValuesMap(Insert
+Overfull \hbox (14.97038pt too wide) in paragraph at lines 385--386
+[]\T1/lmr/m/n/12 (-20) P°íkaz \T1/lmtt/m/n/12 DELETE \T1/lmr/m/n/12 (-20) má kl
+au-zuli \T1/lmtt/m/n/12 WHERE \T1/lmr/m/n/12 (-20) ve for-mátu ji-ném neº \T1/l
+mtt/m/n/12 itemName()=
  []
 
 
-Overfull \hbox (12.88387pt too wide) in paragraph at lines 464--465
-\T1/lmtt/m/n/10.95 WHERE \T1/lmr/m/n/10.95 (-20) klau-zule vloºí °e-t¥-zec vy-g
-e-ne-ro-vaný po-mocí \T1/lmtt/m/n/10.95 SimpleDBSQLVisitoru
+Overfull \hbox (18.15349pt too wide) in paragraph at lines 387--388
+[]\T1/lmr/m/n/12 (-20) V tomto p°í-pad¥ je nutné nej-prve zjis-tit hod-noty atr
+i-butu \T1/lmtt/m/n/12 itemName()
  []
 
-[24] [25]
+[22] [23]
+Overfull \hbox (0.59935pt too wide) in paragraph at lines 417--418
+[]\T1/lmtt/m/n/12 DelegatingHierarchyVisitor \T1/lmr/m/n/12 (-20) je roz-²í-°e-
+ním \T1/lmtt/m/n/12 HierarchyVisitor
+ []
+
+
+Overfull \hbox (109.92616pt too wide) in paragraph at lines 418--419
+[]\T1/lmtt/m/n/12 SQLStringVisitor \T1/lmr/m/n/12 (-20) je roz-²í-°e-ním zá-kla
+dní abs-traktní t°ídy \T1/lmtt/m/n/12 AbstractLanguageVisitor\T1/lmr/m/n/12 (-2
+0) ,
+ []
+
+[24]
+Overfull \hbox (16.85214pt too wide) in paragraph at lines 428--429
+[]\T1/lmr/m/n/12 (-20) Tato me-toda je p°e-tí-ºena kv·li nut-nosti od-stra-nit 
+atri-but \T1/lmtt/m/n/12 itemName()
+ []
+
+
+Overfull \hbox (27.00926pt too wide) in paragraph at lines 435--436
+[]\T1/lmr/m/n/12 (-20) Jelikoº Te-iid pod-po-ruje ope-rá-tor \T1/lmtt/m/n/12 NO
+T \T1/lmr/m/n/12 (-20) (a v \T1/lmtt/m/n/12 SimpleDBExecutionFactory
+ []
+
+
+Overfull \hbox (6.0449pt too wide) in paragraph at lines 447--448
+\T1/lmr/m/n/12 (-20) me-tod pro pa-ra-me-try typu \T1/lmtt/m/n/12 ColumnReferen
+ce \T1/lmr/m/n/12 (-20) a \T1/lmtt/m/n/12 ExpressionValueSource
+ []
+
+[25]
+Overfull \hbox (24.30988pt too wide) in paragraph at lines 451--452
+[]\T1/lmr/m/n/12 (-20) Pro zís-kání t¥chto hod-not je im-ple-men-to-vána sta-ti
+cká me-toda \T1/lmtt/m/n/12 getColumns
+ []
+
+[26]
+Overfull \hbox (6.16042pt too wide) in paragraph at lines 481--482
+\T1/lmr/m/n/12 (-20) stance na-v²t¥-vo-va-ného ob-jektu p°i-jímá také API t°ídu
+ \T1/lmtt/m/n/12 SimpleDBAPIClass
+ []
+
+
+Overfull \hbox (29.9878pt too wide) in paragraph at lines 486--487
+\T1/lmr/m/n/12 (-20) na \T1/lmtt/m/n/12 true\T1/lmr/m/n/12 (-20) . Na tuto pro-
+m¥n-nou se poté do-ta-zuje \T1/lmtt/m/n/12 SimpleDBDeleteExecute
+ []
+
+[27] <mavenStructure.pdf, id=410, 199.21928pt x 270.33498pt>
+File: mavenStructure.pdf Graphic file (type pdf)
+
+<use mavenStructure.pdf>
+Package pdftex.def Info: mavenStructure.pdf used on input line 493.
+(pdftex.def)             Requested size: 199.2188pt x 270.3343pt.
+ [28 <./mavenStructure.pdf>]
+Overfull \hbox (6.92377pt too wide) in paragraph at lines 509--511
+\T1/lmr/m/n/12 (-20) vení pro-jektu jako \T1/lmtt/m/n/12 rar \T1/lmr/m/n/12 (-2
+0) je po-u-ºit zá-suvný mo-dul \T1/lmtt/m/n/12 maven-rar-plugin
+ []
+
+[29] [30] [31]
 Kapitola 7.
-[26
+[32
 
 ]
 Kapitola 8.
-(./thesis.bbl [27
+(./thesis.bbl [33
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 486.
- [28
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
+ [34
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 486.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 570.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 570.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 48C3E2F5C8935B2851D085E269AE0360;6017.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
+(rerunfilecheck)             Checksum: 2D0F0B340A5F41BA7AD6DC5DC33D65BF;6881.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 570.
  ) 
 Here is how much of TeX's memory you used:
- 13923 strings out of 493515
- 199186 string characters out of 3144460
- 298182 words of memory out of 3000000
- 16829 multiletter control sequences out of 15000+200000
- 62935 words of font info for 96 fonts, out of 3000000 for 9000
+ 14015 strings out of 493515
+ 200727 string characters out of 3144460
+ 299099 words of memory out of 3000000
+ 16898 multiletter control sequences out of 15000+200000
+ 66379 words of font info for 98 fonts, out of 3000000 for 9000
  954 hyphenation exceptions out of 8191
- 35i,8n,35p,889b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,8n,35p,886b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -735,19 +791,18 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive
 /texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./fi-logo.514pk></usr/share/texl
-ive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmro10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (33 pages, 493443 bytes).
+ive/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/lm/lmro12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (39 pages, 522268 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 97 named destinations out of 1000 (max. 500000)
- 20823 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 563 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 20860 words of extra memory for PDF output out of 24883 (max. 10000000)
 

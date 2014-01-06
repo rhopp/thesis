@@ -1,15 +1,17 @@
-\documentclass[oneside,11pt]{fithesis2}  
+\documentclass[oneside,12pt,final]{fithesis2}  
 \usepackage[czech]{babel}
 \usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}  
 \usepackage[plainpages=false,pdfpagelabels,unicode]{hyperref}  
-\usepackage{microtype}
+%\usepackage{microtype}
 \usepackage{fancyvrb}
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{cmap,tgpagella}
 
-\usepackage{cmap}	 % bod b) [do PDF bude přidáván potřebný font resource]
+%\usepackage{cmap}	 % bod b) [do PDF bude přidáván potřebný font resource]
 \usepackage[T1]{fontenc} % část bodu a) [vhodné kódování fontů]
 \usepackage{lmodern}	 % část bodu a) [vhodný font]
 \usepackage{listings}
@@ -62,7 +64,6 @@ Pellentesque non posuere quam, et ultricies odio. Phasellus varius arcu ac arcu 
 
 Nam id volutpat metus, vitae sodales enim. Nullam tempor odio libero, id iaculis magna pellentesque accumsan. Vestibulum accumsan mauris quis urna sodales, placerat imperdiet metus tincidunt. Nullam consequat purus sit amet purus consectetur porttitor. Praesent fringilla vitae turpis rutrum rhoncus. Aenean tincidunt, mauris in mattis ornare, dui elit lobortis enim, et elementum libero nulla ut sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse commodo leo placerat rhoncus adipiscing. Etiam rhoncus rhoncus interdum. Sed sed nibh ut sapien varius sodales. Maecenas lacinia nunc eu neque tempus aliquet.
 
-Vestibulum tempus laoreet lectus. Mauris accumsan velit ac erat condimentum pellentesque. Suspendisse et lorem vitae lorem volutpat interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac tincidunt leo, sed vulputate mi. Maecenas et nulla egestas, adipiscing neque a, blandit massa. Nam ullamcorper, tortor id accumsan consectetur, tortor neque ultrices mi, a laoreet odio ipsum et tellus. Duis lobortis faucibus luctus.
 
 % Následují další kapitoly a podkapitoly, popřípadě závěr, dodatky, 
 % seznam literatury či použitých obrázků nebo tabulek.
@@ -177,7 +178,7 @@ Kromě výše zmíněného chování, které by se v jistých situacích dalo po
 
 
 \chapter{Komunikace s databází Amazon SimpleDB}
-\subsection{Přehled příkazů SimpleDB}
+\section{Přehled příkazů SimpleDB}
 \begin{itemize}
  \item \textbf{CreateDomain} slouží k vytvoření nové domény.
  \item \textbf{DeleteDomain} vymaže danou doménu.
@@ -188,17 +189,17 @@ Kromě výše zmíněného chování, které by se v jistých situacích dalo po
  \item \textbf{GetAttributes} vrátí hodnoty požadovaných atributů jedné dané položky. Umožňuje specifikovat jeden, či více požadovaných atributů, nebo také všechny atributy dané položky.
 \end{itemize}
 
-\subsection{Podmíněné vkládání a mazání dat}
+\section{Podmíněné vkládání a mazání dat}
 SimpleDB v aktuální verzi (od 24. února 2010) podporuje takzvaný podmíněný zápis a mazání dat. 
 
 Při tomto podmíněném zápise (mazání) se spolu s běžnými parametry odešle také podmínka a očekávaný výsledek vyhodnocení dané podmínky. Zápis se poté provede pouze tehdy, je-li vyhodnocená podmínka rovna očekávanému výsledku.
 
 Tato vlastnost se dá použít například pro implementaci čítače (přečte aktuální stav čítače a pokusí se zapsat nový stav čítače za podmínky, že stav čítače byl nezměněn), což by bez podmíněného vložení byl netriviální úkol. Také se tímto rozšiřují možnosti kontroly konkurenčního přístupu k datům (pomocí optimistických protokolů).
 
-\subsection{Bezpečnost}
+\section{Bezpečnost}
 Pro autentizaci má každý uživatel \uv{ID přístupového klíče} (20 alfanumerických znaků) a \uv{tajný přístupový klíč} (40 alfanumerických znaků), kterými podepisuje kažý požadavek vůči SimpleDB. Sama Amazon SimpleDB nemá nástroj pro autorizaci, ten je ovšem integrován do správy identit a přístupu AWS (AWS Identity and Access Management - systém pro správu uživatelů a jejich práv v rámci celého AWS), takže je možné omezit práva jednotlivým uživatelům. Jediným problémem může být skutečnost, že nelze definovat přístupové práva pro jiný AWS účet -- pro každého uživatele domény musí být vytvořen uživatel v rámci AWS účtu vlastnícího doménu.
 
-\subsubsection{Proces autentizace}
+\subsection{Proces autentizace}
 \begin{enumerate}
  \item Vytvoření řetězce dotazu
  \item Kanonizování řetězce dotazu (seřazení parametrů, zakódování parametrů a jejich hodnot URL kódováním\footnote{Podle RFC 3986, kapitola 2 -- http://tools.ietf.org/html/rfc3986}), \dots)
@@ -207,7 +208,7 @@ Pro autentizaci má každý uživatel \uv{ID přístupového klíče} (20 alfanu
 \end{enumerate}
 Zde je ukázán proces autentizace pouze zjednodušeně. Přesný návod jak sestrojit validná požadavek je dostupný v dokumentaci SimpleDB.
 
-\subsection{Knihovny pro komunikaci}
+\section{Knihovny pro komunikaci}
 Amazon poskytuje knihovny pro komunikaci se SimpleDB (a ostatními AWS službami) v několika jazycích (Java, PHP, Python, Ruby a .NET). 
 Knihovna pro jazyk Java, která byla v této práci použita, nejenže poskytuje model pro práci s doménami, atributy a podobně, ale také významně usnadňuje autentizační proces (není nutné \uv{ručně} počítat podpis).
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
@@ -269,6 +270,7 @@ Tento modul obsahuje pouze jednu java třídu a jedno rozhraní a to \verb<Simpl
  \item \verb<SimpleDBAPIClass< je třída zaobalující potřebné příkazy databáze SimpleDB. Za povšimnutí stojí hlavně metoda \texttt{Set<String> \\* getAttributeNames(String domainName)}, která vrací jména všech atributů v doméně, ovšem jediný způsob jak toho docílit je provedení příkazu \texttt{SELECT * FROM <domainName>} a z odpovědi získat jména všech atributů (nestačí dotázat se například na jednu položku, neboť kdyby daná položka neměla vyplněný nějaký atribut, tento atribut by v odpovědi nebyl obsažen).
 \end{itemize}
 \subsection{Modul connector-simpledb}
+\label{connector-simpledb}
 Jedná se o plnohodnotný, ikdyž poměrně jednoduchý, Java EE konektor pro SimpleDB. Konektory jsou běžně baleny jako RAR (Resource Adapter Archive), které lze poté nasadit na aplikační server pouhým nakopírováním do složky \texttt{deploy} serveru. Teiid poskytuje základní implementaci rozhraní potřebných pro vytvoření zákadního konektoru. Zde bylo důležité uzpůsobit tuto základní implementaci potřebám databáze SimpleDB. 
 \begin{itemize}
  \item Třída \texttt{SimpleDBManagedConnectionFactory} rozšiřuje abstraktní třídu \texttt{BasicManagedConnectionFactory} (základní Teiid implementace). V této třídě je nutno definovat proměnné, které jsou potřebné pro připojení ke zdroji -- tedy proměnné ve kterých bude uložen ID přístupového klíče a tajný přístupový klíč spolu s metodami pro jejich nastavení a získání (get a set metody). Požadované hodnoty budou aplikačním serverem získány z konfiguračního souboru serveru (typicky třeba \texttt{standalone.xml}) a injectovány do těchto proměnných. Další důležitou částí je implementace abstraktní metody \texttt{creteConnectionFactory()}, pomocí které je vytvořena instance \texttt{ConnectionFactory}. Ta slouží k generování jednotlivých připojení ke zdroji dat (SimpleDB).
@@ -288,7 +290,7 @@ Dependencies: org.jboss.teiid.common-core,org.jboss.teiid.api,
  
  V deployment descriptoru \texttt{ra.xml} definujeme hlavní třídu resource adapteru (tj. třída implementující rozhraní \texttt{Resource Adapter}), třídu implementující rozhraní \texttt{ManagedConnectionFactory} a definujeme proměnné potřebné k připojení k SimpleDB (ID přístupového klíče a tajný klíč). 
  
- \item Celý tento modul je poté běžně zkompilován a balen jako Resource Adapter Archive -- RAR (běžný Java archive -- JAR s příponou \texttt{.rar}), který může být nasazen na aplikační server zkopírováním do složky \texttt{deploy/}. Jelikož se zde ale nejedná o konektor třetí strany, ale o konektor, který bude dodáván s projektem Teiid jako jeden ze základních konektorů, nestačí zajistit, že bude sestaven jako RAR, ale je potřeba, aby ve výsledku byl zařazen mezi moduly aplikačního serveru. K tomu potřebné kroky budou popsány níže v kapitole zabývající se kompilováním a sestavováním projektu pomocí Apache Maven.
+ \item Celý tento modul je poté běžně zkompilován a balen jako Resource Adapter Archive -- RAR (běžný Java archive -- JAR s příponou \texttt{.rar}), který může být nasazen na aplikační server zkopírováním do složky \texttt{deploy/}. Jelikož se zde ale nejedná o konektor třetí strany, ale o konektor, který bude dodáván s projektem Teiid jako jeden ze základních konektorů, nestačí zajistit, že bude sestaven jako RAR, ale je potřeba, aby ve výsledku byl zařazen mezi moduly aplikačního serveru. K tomu potřebné kroky budou popsány níže v kapitole \ref{konfigurace} zabývající se kompilováním a sestavováním projektu pomocí Apache Maven.
 \end{itemize}
 
 \section{Překladač}
@@ -396,7 +398,6 @@ Návrhový vzor visitor (někdy též návštěvník) je jedním ze základních
 
 V tomto návrhovém vzoru jsou třídy rozdělené do dvou skupin -- navštěvované třídy a navštěvující třídy. Navštěvované třídy poskytují pouze základní funkcionalitu a navíc musí implementovat metodu, která příjme návštěvníka a předá mu data nutná k jeho správnému fungování. Návštěvníci pro každou třídu, které chce rozšířit funkcionalitu, implementuje metodu \texttt{visit} se vstupním parametrem navštěvované třídy.
 
-TADY MUZU NASYPAT OBRAZEK VISITORU
 
 \subsubsection{Jazykový visitor v Teiidu}
 Teiid disponuje rozhraním pro procházení a získávání dat ze stromů objektů jazyka založené na návrhovém vzoru visitor.
@@ -447,7 +448,7 @@ Vše co je potřeba na vykonání SimpleDB příkazu \texttt{PutAttributes} je j
 
 Při návštěvě \texttt{ColumnReference} (sloupců) se tvoří seznam názvů sloupců. Poté se při návštěvě \texttt{ExpressionValueSource} (ekvivalent klauzuli \texttt{VALUES}) tvoří mapa, kde jako klíč poslouží jméno atributu a jako hodnota hodnota atributu. Jelikož \texttt{HierarchyVisitor} prochází pomyslný strom Teiid příkazu do hloubky, je zajištěno, že seznam jmen atributů bude sestaven před začátkem zpracovávání vkládaných hodnot.
 
-Pro získání těchto hodnot je implementována statická metoda \texttt{getColumnsValuesMap(Insert insert)}, která instanciuje vlastní třídu předá ji objektu \texttt{Insert} jako návštěvníka, který ji projde. Následně vrátí získané hodnoty.
+Pro získání těchto hodnot je implementována statická metoda \texttt{getColumns\allowbreak ValuesMap(Insert insert)}, která instanciuje vlastní třídu předá ji objektu \texttt{Insert} jako návštěvníka, který ji projde. Následně vrátí získané hodnoty.
 
 \subsubsection{SimpleDBUpdateVisitor}
 Ikdyž je i tento visitor založen na \texttt{HierarchyVisitor} je zde situace poněkud složitější, než v případě \texttt{SimpleDBInsertVisitor} a to hlavně protože pokud v příkazu existuje podmínka, je nutné zjistit jména všech položek odpovídajících podmínce. Proto je zde zvolen jiný přístup, než u \texttt{SimpleDBInsertVisitor} (statické třídy pro získávání dat). Zde je navštěvování položek příkazu spuštěno v konstruktoru, tedy při vytvoření instance, a následně lze \texttt{get} metodami získat \uv{vydolované} data.
@@ -461,7 +462,7 @@ Přetížené metody \texttt{visit} jsou pro objekty typu \texttt{Update}, \text
 \begin{itemize}
  \item \texttt{Update} kromě implicitního zavolání metod \texttt{visit} pro objekty níže ve stromu příkazu (\texttt{SetClause, Condition}) si také uloží jméno domény do privátní proměnné.
  \item \texttt{SetClause} vytvoří a naplní mapu jmen atributů a jejich hodnot.
- \item \texttt{Comparison}
+ \item Hlavním úkolem metody \texttt{visit(Comparison obj)} je získání hodnot atributu \texttt{itemName()} všech položek vyhovující podmínce. To lze jednoduše zajistit \texttt{SELECT} dotazem přímo na databázi SimpleDB, kde se do \texttt{WHERE} klauzule vloží řetězec vygenerovaný pomocí \texttt{SimpleDBSQLVisitoru} pro danou podmínku, jak je vidět v následující ukázce kódu na řácích 4-6. Na řádcích 7-8 pak pouze probíhá uložení získaných jmen položek do privátní proměnné \texttt{itemNames}.
  \begin{Verbatim}[fontsize=\small,numbers=left]
 public void visit(Comparison obj) {
   ArrayList<String> columns = new ArrayList<String>();
@@ -475,6 +476,90 @@ public void visit(Comparison obj) {
 }
  \end{Verbatim}
 \end{itemize}
+
+\subsubsection{SimpleDBDeleteVisitor}
+Zde je použit stejný přístup jako u \texttt{SimpleDBUpdateVisitor}. Tedy spuštění procházení stromu v parametrickém konstruktoru, který kromě instance navštěvovaného objektu přijímá také API třídu \texttt{SimpleDBAPIClass} potřebnou pro komunikaci se SimpleDB.
+
+je zde potřeba rozlišovat mezi třemi základními situacemi:
+\begin{itemize}
+ \item Žádná \texttt{WHERE} klauzule -- tato situace je vyřešena již v executoru \texttt{SimpleDBDeleteExecute} dotázáním na existenci této klauzule a případným smazáním všech záznamů z domény.
+ \item V klauzuli \texttt{WHERE} je jednoduchá podmínka tvaru \texttt{itemName() = <hodnota>} nebo \texttt{<hodnota> = itemName()}. V tomto případě je nastavena hodnota privátní proměnné \texttt{boolean isSimpleDelete} na \texttt{true}. Na tuto proměnnou se poté dotazuje \texttt{SimpleDBDeleteExecute} a zařizuje se podle ní.
+ \item Posledním případem je složitější podmínka ve \texttt{WHERE} klauzuli. V tomto případě se \texttt{SimpleDBDeleteVisitor} chová téměř totožně jako \texttt{SimpleDBUpdateVisitor} a to tak, že se nejprve dotáže databáze SimpleDB jednoduchým \texttt{SELECT} příkazem s \texttt{WHERE} klauzulí daného \texttt{DELETE} příkazu (vygenerovanou pomocí \texttt{SimpleDBSQL\allowbreak Visitor}).
+\end{itemize}
+\section{Sestavení}
+Pro kompilaci a sestavení celého projektu je použit projekt Apache Maven. Maven kromě usnadnění a zautomatizování procesu sestavení také obstarává správu závislostí. Schopnosti mavenu je dále možné rozšířit pomocí zásuvných modulů (plug-inů).
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=1]{mavenStructure}
+ \caption{Maven struktura projektu Teiid}
+\end{figure}
+
+Projekt Teiid je rozdělen do takzvaných modulů. Moduly jsou jednotlivé logické celky vytvořené jako java projekty. Každý takový modul má svůj soubor pom.xml (Project Object Model) -- konfigurační soubor projektu. V tomto souboru jsou definovány identifikátory projektu (ID artefaktu, ID skupiny, verze, ...), identifikátory rodičovského POM souboru, závislostí a konfigurací jednotlivých maven zásuvných modulů.
+
+\subsection{Konfigurace jednotlivých SimpleDB modulů}
+\label{konfigurace}
+\begin{itemize}
+ \item \textbf{simpledb-api}
+ 
+ Zde není potřeba žádné speciální konfigurace. Stačí definovat v pom.xml závislosti, rodičovské pom.xml a v rodičovském pom.xml definovat tento projekt jako modul (přidat do tagu \texttt{<modules>}).
+ \item \textbf{connector-simpledb}
+ 
+ Tento modul má na konfiguraci zvláštní požadavky, neboť musí být sestaven jako rar archiv a následně nainstalován do lokálního repozitáře, aby pak byl dostupný v poslední fázi sestavení kompletního projektu Teiid.
+ 
+ Potřebné soubory \texttt{MANIFEST.MF} a \texttt{ra.xml} byly popsány již v kapitole \ref{connector-simpledb}, zbývá tedy nastavit Maven pomocí pom.xml.
+ K sestavení projektu jako \texttt{rar} je použit zásuvný modul \texttt{maven-rar-plugin} spuštěný v rámci maven fáze \texttt{install}. Toto vytvoří korektní \texttt{rar} archiv a následně (stále ve fázi \texttt{install}) je pomocí zásuvného modulo \texttt{maven-install-plugin} tento soubor nainstalován do lokálního maven repozitáře aby byl přístupný i ostatním projektům.
+ 
+ \item \textbf{translator-simpledb}
+ Překladač nevyžaduje žádné speciální nastavení. Stačilo tedy zajistit, aby v souboru \texttt{pom.xml} byl definován správný rodič (\texttt{org.jboss.teiid:connectors}) a v rodiči byl projekt \texttt{translator-simpledb} registrován jako modul.
+\end{itemize}
+
+\subsection{Nastavení zásuvného modulu maven assembly plugin}
+Projekt Teiid je dodáván v distribucích \texttt{Teiid Runtime} nebo \texttt{Teiid Embedded}. Další dodávané produkty jsou JDBC ovladač a 
+
+\texttt{Teiid Runtime} je Teiid připravený k okamžitému nasazení na aplikační server WildFly (verze 8 a vyšší), nebo Red Hat JBoss Enterprise Application Platform (verze 6.1 a vyšší). Obsahuje v sobě kromě zkompilovaných knihoven, modulů a dokumentace také výchozí konfigurační soubory včetně \texttt{standalone.xml}.
+
+\texttt{Teiid Embedded} je odlehčená verze Teiidu pro použití bez aplikačního serveru, schopna běžet jako samostatná java aplikace. Tímto bohužel přichází o vlastnosti jako autentizace, přístup přes administrační rozhraní a správu připojení (connection pooling).
+
+Sestavení těchto distribucí ze zkompilovaných artefaktů do finálních \texttt{.zip} souborů má na starosti Maven Assembly Plugin. 
+
+Z pohledu SimpleDB konektoru a překladače je potřeba zajistit 3 věci:
+
+\begin{itemize}
+ \item Upravit kostru konfiguračního souboru aplikačního serveru. To znamená přidat do souboru \texttt{standalone-teiid.xml} definici resource adapteru konektoru SimpleDB a zajistit, aby překladač byl uveden v subsystému teiidu.
+ \item Vytvořit konfigurační soubory modulů (\texttt{module descriptor}) pro každý modul překladače simpledb (api, konektor, překladač)
+  \begin{figure}[h]
+ \begin{Verbatim}[fontsize=\small]
+<moduleSet>
+  <includeSubModules>true</includeSubModules>
+  <useAllReactorProjects>true</useAllReactorProjects>
+  <includes>
+      <include>org.jboss.teiid.connectors:simpledb-api</include>
+  </includes>
+  <binaries>        
+    <includeDependencies>true</includeDependencies>
+    <unpack>false</unpack>
+      <dependencySets>
+	  <dependencySet>
+	      <useProjectArtifact>true</useProjectArtifact>
+	      <unpack>false</unpack>
+	      <useTransitiveDependencies>
+		false
+	      </useTransitiveDependencies>
+	      <useDefaultExcludes>true</useDefaultExcludes>
+	  </dependencySet>
+      </dependencySets>          
+    <outputDirectory>modules/system/layers/base/org/jboss/
+	      teiid/translator/simpledb/api/main</outputDirectory>
+    <fileMode>0644</fileMode>
+  </binaries>
+</moduleSet>  
+\end{Verbatim}
+ \caption{Ukázka konfiguračního souboru zásuvného modulu Maven Assembly}
+\end{figure}  
+ \item Upravit konfigurační soubor, podle kterého zásuvný modul maven assembly zkompletuje výsledné \texttt{.zip} soubory.   
+    
+\end{itemize}
+
 
 
 \chapter{Tutoriál}
