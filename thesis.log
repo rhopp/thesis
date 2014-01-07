@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  7 JAN 2014 11:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.10.8)  7 JAN 2014 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,39 +731,102 @@ Overfull \hbox (6.92377pt too wide) in paragraph at lines 509--511
 
 [29] [30] [31]
 Kapitola 7.
+<relationStructure.pdf, id=434, 470.9846pt x 185.5432pt>
+File: relationStructure.pdf Graphic file (type pdf)
+
+<use relationStructure.pdf>
+Package pdftex.def Info: relationStructure.pdf used on input line 585.
+(pdftex.def)             Requested size: 376.78818pt x 148.43474pt.
+
+Overfull \hbox (15.43819pt too wide) in paragraph at lines 585--586
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<simpledbStructure.pdf, id=436, 215.85645pt x 152.44453pt>
+File: simpledbStructure.pdf Graphic file (type pdf)
+
+<use simpledbStructure.pdf>
+Package pdftex.def Info: simpledbStructure.pdf used on input line 593.
+(pdftex.def)             Requested size: 172.68538pt x 121.95578pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [32
 
-]
+] <kompromisStructure.pdf, id=446, 362.30357pt x 170.46184pt>
+File: kompromisStructure.pdf Graphic file (type pdf)
+
+<use kompromisStructure.pdf>
+Package pdftex.def Info: kompromisStructure.pdf used on input line 602.
+(pdftex.def)             Requested size: 289.84323pt x 136.36964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \vskip 
+l.606 \vspace{150}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33 <./relationStructure.pdf> <./simpledbStructure.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./simpledbStructure.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>] [34 <./kompromisStructure.pdf>]
 Kapitola 8.
-(./thesis.bbl [33
+(./thesis.bbl [35
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
- [34
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 614.
+ [36
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 614.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 570.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 570.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2D0F0B340A5F41BA7AD6DC5DC33D65BF;6881.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 570.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 614.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 614.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 7022C06A3BB57629EE8E666165DAFE64;6888
+(rerunfilecheck)             After:  152D71423261B235E3EB524D38A5CCD1;6936.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 614.
  ) 
 Here is how much of TeX's memory you used:
- 14015 strings out of 493515
- 200726 string characters out of 3144460
- 299099 words of memory out of 3000000
- 16898 multiletter control sequences out of 15000+200000
+ 14039 strings out of 493515
+ 201217 string characters out of 3144460
+ 299314 words of memory out of 3000000
+ 16913 multiletter control sequences out of 15000+200000
  66379 words of font info for 98 fonts, out of 3000000 for 9000
  954 hyphenation exceptions out of 8191
  35i,8n,35p,886b,591s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
 , replaced by a fixed one
@@ -799,10 +862,10 @@ ive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/lm/lmro12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (39 pages, 522275 bytes).
+Output written on thesis.pdf (41 pages, 586397 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 108 named destinations out of 1000 (max. 500000)
- 20860 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 20875 words of extra memory for PDF output out of 24883 (max. 10000000)
 

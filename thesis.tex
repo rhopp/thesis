@@ -74,7 +74,7 @@ JBoss Teiid je otevřený software pro virtualizaci dat z více zdrojů. Tento p
 
 Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názvem Red Hat JBoss Enterprise Data Services Platform. Tento produkt kromě projektu Teiid v sobě obsahuje také JBoss Enterprise Application Platform a další produkty\footnote{kompletní seznam produktů a projektů obsažených v Red Hat JBoss Enterprise Data Services Platform i s použitými verzemi k naleznutí na https://access.redhat.com/site/articles/112333}
 
-\section{Části JBoss Teiid}
+\section{Části projektu JBoss Teiid}
 \begin{itemize}
  \item \textbf{Query engine}
  
@@ -561,8 +561,52 @@ Z pohledu SimpleDB konektoru a překladače je potřeba zajistit 3 věci:
 
 
 
-\chapter{Tutoriál}
+\chapter{Quickstart}
+Jelikož se SimpleDB profiluje jako velmi rychlá, velmi dobře škálovatelná databáze s omezeními co se týče struktury, velikosti dat a konzistence, je její nasazení vhodné v prostředích:
+\begin{itemize}
+ \item Kde je poměr čtení-zápis výrazně ve prospěch čtení -- čte se často a je požadována rychlost odpovědi, zapisuje se zřídka (kvůli konzistenci)
+ \item Kde je kladen vysoký důraz na rychlost čtení i na úkor konzistence (přístup \uv{nevadí, že nedostanu aktuální výsledek, hlavně když jej dostanu rychle})
+\end{itemize}
+Běžný přístup ve firemním prostředí je nasazení SimpleDB jako doplňkové databáze ke klasické relační databázi. V této situaci mohou být v SimpleDB uložena například metadata, případně často čtené položky.
+
+Inspirací pro zdroj data pro tutoriál byla firma Netflix. Netflix je firma živící se převážne streamováním filmů a seriálů a pro správu dat zvolil řešení firmy Amazon. Mezi jinými tedy i databázi SimpleDB\footnote{http://techblog.netflix.com/search/label/SimpleDB}.
+
+V rámci této diplomové práce byl jako zdroj dat zvolen \texttt{.csv} soubor s daty o filmech vydaných v lednu roku 2013. Soubor obsahuje:
+\begin{itemize}
+ \item Název filmu
+ \item Studio ve kterém byl film natočen (může se jednat o více studií)
+ \item Režisér a herecké obsazení (zde se jedná o čárkami oddělené jména)
+ \item Žánr filmu (žánrů může být více)
+ \item Box office, aneb kolik dolarů daný film vydělal.
+\end{itemize}
+Na obrázku \ref{relationStructure} je znázorněno, jakou strukturu by měla klasická relační databáze pro výše zmíněné data. 
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{relationStructure}
+ \caption{Struktura uložení dat v relační databázi}
+ \label{relationStructure}
+\end{figure}
+
+Na druhou stranu obrázek \ref{simpledbStructure} ukazuje jak by s velkou pravděpodobností byla uložena data v databázi SimpleDB. Normalizace databáze zde nehraje roli, duplikáty nejsou na škodu. Je zde kladen důraz na jednoduchost a rychlost.
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{simpledbStructure}
+ \caption{Struktura uložení dat v databázi SimpleDB}
+ \label{simpledbStructure}
+\end{figure}
+
+Aby byly ukázány aspekty obou přístupů -- jak relačního, tak přístupu z pohledu SimpleDB -- jsou vzorová data uloženy v databázi se strukturou ukázanou na obrázku \ref{kompromisStructure}. Takto bude možnost demonstrovat například schopnost spojování výsledků ze dvou a více vstupních množin (klauzule \texttt{JOIN} -- jedna ze základních schpností relačních databází, která databáze SimpleDB nepodporuje), nebo schopnost pracovat s vícehodnotovými atributy (což je výsadou databáze SimpleDB oproti relačním databázím).
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{kompromisStructure}
+ \caption{Výsledná (kompromisní) struktura databáze}
+ \label{kompromisStructure}
+\end{figure}
+\vspace{150}
+V rámci přípravy tutoriálu byl vytvořen java program \texttt{impotData}, který dokáže umístit vzorové data do uživatelovy instance databáze SimpleDB. Pro snadné použití byl projekt mavenizován a pro snadnou dostupnost byl spolu s tutoriálem umístěn na server GitHub, který je určen k hostování a verzování projektů pomoví verzovacího systému Git.
 \chapter{Závěr}
+
 \bibliographystyle{plain}  % bibliografický styl 
 \bibliography{mujbisoubor} % soubor s citovanými
                            % položkami bibliografie 

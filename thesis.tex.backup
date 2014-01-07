@@ -162,7 +162,7 @@ Jak bylo ukázáno, konzistentní čtení v tomto případě mohlo vrátit jak v
 %\includegraphics{ConsistencyExample}
 
 Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lze shrnout do tabulky:
-\begin{figure}[h]
+\begin{table}[h]
  \vspace{5mm}
  \begin{tabular}{l|l}
     Eventuálně konzistentní čtení & Konzistentní čtení\\ \hline
@@ -171,7 +171,7 @@ Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lz
     Větší dataová propustnost & Možná menší datová prostupnost
  \end{tabular}
  \caption{Tabulka vlastností konzistentního a ev. konzistentního čtení}
-\end{figure}
+\end{table}
 
 \subsection{Omezení databáze SimpleDB}
 Kromě výše zmíněného chování, které by se v jistých situacích dalo považovat za omezení, je asi největším omezením velikost domény, jak co se místa na disku týče, tak také maximální počet atributů. Konkrétně je horní hranice 10 GB pro data a 1 miliarda atributů na jednu doménu. Domén je možno vytvořit až 250 na jeden uživatelský účet.
@@ -527,8 +527,9 @@ Z pohledu SimpleDB konektoru a překladače je potřeba zajistit 3 věci:
 \begin{itemize}
  \item Upravit kostru konfiguračního souboru aplikačního serveru. To znamená přidat do souboru \texttt{standalone-teiid.xml} definici resource adapteru konektoru SimpleDB a zajistit, aby překladač byl uveden v subsystému teiidu.
  \item Vytvořit konfigurační soubory modulů (\texttt{module descriptor}) pro každý modul překladače simpledb (api, konektor, překladač)
-  \begin{figure}[h]
- \begin{Verbatim}[fontsize=\small]
+ \item Upravit konfigurační soubor, podle kterého zásuvný modul maven assembly zkompletuje výsledné \texttt{.zip} soubory. Níže je výňatek z tohoto konfiguačního souboru (tzv. assembly descriptor). V tomto konkrétním případě se jedná o instalaci artefaktu \texttt{simpledb-api} jako modulu aplikačního serveru JBoss AS (jak je vidět na řádcích 20-21):
+ \begin{Verbatim}[fontsize=\small,numbers=left]
+...
 <moduleSet>
   <includeSubModules>true</includeSubModules>
   <useAllReactorProjects>true</useAllReactorProjects>
@@ -553,16 +554,58 @@ Z pohledu SimpleDB konektoru a překladače je potřeba zajistit 3 věci:
     <fileMode>0644</fileMode>
   </binaries>
 </moduleSet>  
+...
 \end{Verbatim}
- \caption{Ukázka konfiguračního souboru zásuvného modulu Maven Assembly}
-\end{figure}  
- \item Upravit konfigurační soubor, podle kterého zásuvný modul maven assembly zkompletuje výsledné \texttt{.zip} soubory.   
     
 \end{itemize}
 
 
 
-\chapter{Tutoriál}
+\chapter{Quickstart}
+Jelikož se SimpleDB profiluje jako velmi rychlá, velmi dobře škálovatelná databáze s omezeními co se týče struktury, velikosti dat a konzistence, je její nasazení vhodné v prostředích:
+\begin{itemize}
+ \item Kde je poměr čtení-zápis výrazně ve prospěch čtení -- čte se často a je požadována rychlost odpovědi, zapisuje se zřídka (kvůli konzistenci)
+ \item Kde je kladen vysoký důraz na rychlost čtení i na úkor konzistence (přístup \uv{nevadí, že nedostanu aktuální výsledek, hlavně když jej dostanu rychle})
+\end{itemize}
+Běžný přístup ve firemním prostředí je nasazení SimpleDB jako doplňkové databáze ke klasické relační databázi. V této situaci mohou být v SimpleDB uložena například metadata, případně často čtené položky.
+
+Inspirací pro zdroj data pro tutoriál byla firma Netflix. Netflix je firma živící se převážne streamováním filmů a seriálů a pro správu dat zvolil řešení firmy Amazon. Mezi jinými tedy i databázi SimpleDB\footnote{http://techblog.netflix.com/search/label/SimpleDB}.
+
+V rámci této diplomové práce byl jako zdroj dat zvolen \texttt{.csv} soubor s daty o filmech vydaných v lednu roku 2013. Soubor obsahuje:
+\begin{itemize}
+ \item Název filmu
+ \item Studio ve kterém byl film natočen (může se jednat o více studií)
+ \item Režisér a herecké obsazení (zde se jedná o čárkami oddělené jména)
+ \item Žánr filmu (žánrů může být více)
+ \item Box office, aneb kolik dolarů daný film vydělal.
+\end{itemize}
+Na obrázku \ref{relationStructure} je znázorněno, jakou strukturu by měla klasická relační databáze pro výše zmíněné data. 
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{relationStructure}
+ \caption{Struktura uložení dat v relační databázi}
+ \label{relationStructure}
+\end{figure}
+
+Na druhou stranu obrázek \ref{simpledbStructure} ukazuje jak by s velkou pravděpodobností byla uložena data v databázi SimpleDB. Normalizace databáze zde nehraje roli, duplikáty nejsou na škodu. Je zde kladen důraz na jednoduchost a rychlost.
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{simpledbStructure}
+ \caption{Struktura uložení dat v databázi SimpleDB}
+ \label{simpledbStructure}
+\end{figure}
+
+Aby byly ukázány aspekty obou přístupů -- jak relačního, tak přístupu z pohledu SimpleDB -- jsou vzorová data uloženy v databázi se strukturou ukázanou na obrázku \ref{kompromisStructure}. Takto bude možnost demonstrovat například schopnost spojování výsledků ze dvou a více vstupních množin (klauzule \texttt{JOIN} -- jedna ze základních schpností relačních databází, která databáze SimpleDB nepodporuje), nebo schopnost pracovat s vícehodnotovými atributy (což je výsadou databáze SimpleDB oproti relačním databázím).
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.8]{kompromisStructure}
+ \caption{Výsledná (kompromisní) struktura databáze}
+ \label{kompromisStructure}
+\end{figure}
+\vspace{150}
+V rámci přípravy tutoriálu byl vytvořen java program \texttt{impotData}, který dokáže umístit vzorové data do uživatelovy instance databáze SimpleDB. Pro snadné použití byl projekt mavenizován a pro snadnou dostupnost byl spolu s tutoriálem umístěn na server GitHub, který je určen k hostování a verzování projektů pomoví verzovacího systému Git.
+
 \chapter{Závěr}
 \bibliographystyle{plain}  % bibliografický styl 
 \bibliography{mujbisoubor} % soubor s citovanými
