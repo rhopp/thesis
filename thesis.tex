@@ -162,7 +162,7 @@ Jak bylo ukázáno, konzistentní čtení v tomto případě mohlo vrátit jak v
 %\includegraphics{ConsistencyExample}
 
 Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lze shrnout do tabulky:
-\begin{figure}[h]
+\begin{table}[h]
  \vspace{5mm}
  \begin{tabular}{l|l}
     Eventuálně konzistentní čtení & Konzistentní čtení\\ \hline
@@ -171,7 +171,7 @@ Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lz
     Větší dataová propustnost & Možná menší datová prostupnost
  \end{tabular}
  \caption{Tabulka vlastností konzistentního a ev. konzistentního čtení}
-\end{figure}
+\end{table}
 
 \subsection{Omezení databáze SimpleDB}
 Kromě výše zmíněného chování, které by se v jistých situacích dalo považovat za omezení, je asi největším omezením velikost domény, jak co se místa na disku týče, tak také maximální počet atributů. Konkrétně je horní hranice 10 GB pro data a 1 miliarda atributů na jednu doménu. Domén je možno vytvořit až 250 na jeden uživatelský účet.
