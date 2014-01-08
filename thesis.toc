@@ -35,3 +35,5 @@
 \contentsline {subsection}{\numberline {6.3.2}\rmfamily Nastaven\IeC {\'\i } z\IeC {\'a}suvn\IeC {\'e}ho modulu maven assembly plugin}{29}{subsection.6.3.2}
 \contentsline {chapter}{\numberline {7}\bfseries Quickstart}{32}{chapter.7}
 \contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{35}{chapter.8}
+\contentsline {chapter}{\numberline {A}\bfseries Tutori\IeC {\'a}l}{37}{appendix.A}
+\contentsline {chapter}{\numberline {B}\bfseries Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD disku}{44}{appendix.B}
