@@ -9,9 +9,8 @@
 \contentsline {subsection}{\numberline {3.2.2}\rmfamily Flexibilita}{7}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}\rmfamily Indexov\IeC {\'a}n\IeC {\'\i }}{7}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}\rmfamily Konzistence}{8}{subsection.3.2.4}
-\contentsline {subsubsection}{ P\IeC {\v r}\IeC {\'\i }klad konzistence}{8}{section*.6}
-\contentsline {subsection}{\numberline {3.2.5}\rmfamily Omezen\IeC {\'\i } datab\IeC {\'a}ze SimpleDB}{8}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}\bfseries Komunikace s datab\IeC {\'a}z\IeC {\'\i } Amazon SimpleDB}{10}{chapter.4}
+\contentsline {subsection}{\numberline {3.2.5}\rmfamily Omezen\IeC {\'\i } datab\IeC {\'a}ze SimpleDB}{9}{subsection.3.2.5}
+\contentsline {chapter}{\numberline {4}\bfseries Komunikace s~datab\IeC {\'a}z\IeC {\'\i } Amazon SimpleDB}{10}{chapter.4}
 \contentsline {section}{\numberline {4.1}\slshape P\IeC {\v r}ehled p\IeC {\v r}\IeC {\'\i }kaz\IeC {\r u} SimpleDB}{10}{section.4.1}
 \contentsline {section}{\numberline {4.2}\slshape Podm\IeC {\'\i }n\IeC {\v e}n\IeC {\'e} vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a maz\IeC {\'a}n\IeC {\'\i } dat}{10}{section.4.2}
 \contentsline {section}{\numberline {4.3}\slshape Bezpe\IeC {\v c}nost}{11}{section.4.3}
@@ -31,12 +30,6 @@
 \contentsline {subsection}{\numberline {6.2.1}\rmfamily SimpleDBExecutionFactory}{19}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}\rmfamily Executory}{22}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}\rmfamily Visitory}{23}{subsection.6.2.3}
-\contentsline {subsubsection}{ N\IeC {\'a}vrhov\IeC {\'y} vzor Visitor}{23}{section*.7}
-\contentsline {subsubsection}{ Jazykov\IeC {\'y} visitor v Teiidu}{23}{section*.8}
-\contentsline {subsubsection}{ SimpleDBSQLVisitor}{25}{section*.9}
-\contentsline {subsubsection}{ SimpleDBInsertVisitor}{25}{section*.10}
-\contentsline {subsubsection}{ SimpleDBUpdateVisitor}{26}{section*.11}
-\contentsline {subsubsection}{ SimpleDBDeleteVisitor}{27}{section*.12}
 \contentsline {section}{\numberline {6.3}\slshape Sestaven\IeC {\'\i }}{28}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}\rmfamily Konfigurace jednotliv\IeC {\'y}ch SimpleDB modul\IeC {\r u}}{29}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}\rmfamily Nastaven\IeC {\'\i } z\IeC {\'a}suvn\IeC {\'e}ho modulu maven assembly plugin}{29}{subsection.6.3.2}
