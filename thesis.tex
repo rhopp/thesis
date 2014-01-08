@@ -629,13 +629,13 @@ Do stejného repozitáře byl také umístěn soubor \texttt{README.md} (formát
 
 Příloha A je pouze tutoriál převedený z Markdown do latexu. Originální Markdown soubor je v GitHub repozitáři, nebo na přiloženém CD.
 \chapter{Závěr}
-Výsledkem práce je funkční konektor (resource adapter) pro připojení k SimpleDB. Dále byl vytvořen modul Teiid překladače (translator) pro SimpleDB. Tyto části dohromady tvoří funkční modul projektu Teiid a již byly zařazeny do hlavní vývojové větve projektu. Teiid 8.7 jež v sobě bude obsahovat modul pro komunikaci s databází SimpleDB vytvořený v rámci této práce.
+Výsledkem práce je funkční konektor (resource adapter) pro připojení k SimpleDB. Dále byl vytvořen modul Teiid překladače (translator) pro SimpleDB ve kterém se povedlo zvládnout problematiku mapování Teiid SQL dotazů na dotazy databáze SimpleDB. Také zde byl úspěšně řešen problém multihodnotových atributů databáze SimpleDB. Tyto části dohromady tvoří funkční modul projektu Teiid a již byly zařazeny do hlavní vývojové větve projektu. Teiid 8.7 již v sobě bude obsahovat modul pro komunikaci s databází SimpleDB vytvořený v rámci této práce.
 
 Druhým výstupem je tutoriál v anglickém jazyce, hostovaný veřejně na serveru GitHub, který slouží jako uvedení do problematiky pro nové uživatele a demonstruje schopnosti vyvinutého Teiid modulu.
 
 Tato práce pro mě znamenala jedny z prvních krůčků do světa open-source a velkou zkušeností pro mě byla spolupráce s lidmi, kteří programují otevřený software, jelikož bych se otevřeným softwarem rád zabýval i v budoucnu.
 
-Dalším krokem ve vývoji Teiid modulu pro komunikaci se SimpleDB by bylo zaměření se na výkon, sepsání \uv{performance testů}. Také je možnost pokusit se začlenit tutoriál vyvinutý v rámci této práce mezi oficiální \uv{quickstarty}\footnote{https://github.com/teiid/teiid-quickstarts}.
+Dalším krokem ve vývoji Teiid modulu pro komunikaci se SimpleDB by bylo zaměření se na výkon -- sepsání \uv{performance testů} a optimalizace kódu. Také je možnost pokusit se začlenit tutoriál vyvinutý v rámci této práce mezi oficiální \uv{quickstarty}\footnote{https://github.com/teiid/teiid-quickstarts}.
 \nocite{*}
 \bibliographystyle{plain}  % bibliografický styl 
 \bibliography{mybib} % soubor s citovanými
