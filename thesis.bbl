@@ -1,3 +1,72 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{designPatterns}
+{\em Design patterns: elements of reusable object-oriented software}.
+\newblock Addison-Wesley, Massachusetts, c1995.
+\newblock 395\,s., ISBN: 02-016-3361-2.
+
+\bibitem{simpledbDeveloper}
+Amazon.
+\newblock Amazon simpledb developer guide.
+\newblock \url{http://awsdocs.s3.amazonaws.com/SDB/latest/sdb-dg.pdf}.
+\newblock [cit. 2014-08-01].
+
+\bibitem{teiidDoc}
+Teiid developers.
+\newblock Teiid developer's guide.
+\newblock
+  \url{https://docs.jboss.org/author/display/teiid86final/Developer's+Guide}.
+\newblock [cit. 2014-08-01].
+
+\bibitem{mavenAssembly}
+The Apache~Software Foundation.
+\newblock Maven assembly plugin documentation.
+\newblock dostupné na
+  \url{http://maven.apache.org/plugins/maven-assembly-plugin/}.
+\newblock [cit. 2014-08-01].
+
+\bibitem{javaEssentials}
+Arun Gupta.
+\newblock {\em Java EE 7 Essentials}.
+\newblock O'Reilly Media, Sebastopol, 1 edition, 2013.
+\newblock ISBN: 978-1449370176.
+
+\bibitem{nosqlNetflix}
+Yury Izrailevsky.
+\newblock Nosql at netflix.
+\newblock \url{http://techblog.netflix.com/2011/01/nosql-at-netflix.html}.
+\newblock [cit. 2014-08-01].
+
+\bibitem{JCEspec}
+Sun Microsystems.
+\newblock Java ee connector architecture specification.
+\newblock stáhnutelné z
+  \url{http://download.oracle.com/otndocs/jcp/connector_architecture-1.6-fr-eval-oth-JSpec/}.
+\newblock [cit. 2014-08-01].
+
+\bibitem{simpledb}
+James Murty.
+\newblock {\em Programming Amazon Web Services: S3, EC2, SQS, FPS, and
+  SimpleDB}.
+\newblock O'Reilly, Sebastopol, c2008.
+\newblock 582\,s. ISBN: 05-965-1581-2.
+
+\bibitem{powerTools}
+John~Ferguson Smart.
+\newblock {\em Java Power Tools}.
+\newblock O'Reilly, Sebastopol, c2009.
+\newblock ISBN: 978-0-596-52793-8.
+
+\bibitem{maven}
+Sonatype.
+\newblock {\em Maven: the definitive guide}.
+\newblock O'Reilly, Sebastopol, 1 edition, c2008.
+\newblock 452\,s., ISBN: 978-0-596-51733-5.
+
+\bibitem{nosqlStarter}
+Guarav Vaish.
+\newblock {\em Nosql starter}.
+\newblock Packt Publishing Limited, 1 edition, 2013.
+\newblock ISBN: 978-1849694988.
 
 \end{thebibliography}

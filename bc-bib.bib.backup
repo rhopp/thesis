@@ -1,0 +1,32 @@
+@misc{prvni,
+  author = "KDE",
+  title = "KDE System Administration [online]",
+  note = "[cit. 2009-11-15]",
+  howpublished = "\url {http://techbase.kde.org/KDE_System_Administration}"
+}
+@misc{Geiser,
+  author = "Geiser Reinhart",
+  title = " Givin some Kiosktool lovin' and how you can give some too [online]",
+  note = "[cit. 2009-11-15]",
+  howpublished = "\url {http://www.kdedevelopers.org/node/3907}. 2009, 03/02/2009 - 01:26"
+}
+@misc{readme,
+  author = "KDE",
+  title = "README.kiosk [online]",
+  note = "[cit. 2010-12-15]",
+  howpublished = "\url{http://websvn.kde.org/branches/KDE/4.5/kdelibs/kdecore/doc/README.kiosk?revision=1143427}"
+}
+
+@misc{uic,
+  author = "Trolltech",
+  title = "User Interface Compiler (uic) documentation",
+  note = "[cit. 2010-12-15]",
+  howpublished = "\url{http://doc.trolltech.com/4.2/uic.html}"
+}
+
+@misc{sycoca,
+  author = "Waldo Bastian",
+  title = "Sycoca - KDE's System Configuration Cache [online]",
+  note = "[cit. 2010-12-15]",
+  howpublished = "\url{http://developer.kde.org/documentation/library/kdeqt/kde3arch/ksycoca.html}"
+}

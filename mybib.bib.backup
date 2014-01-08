@@ -1,0 +1,69 @@
+@book{simpledb,
+  author = "James Murty",
+  title = "Programming Amazon Web Services: S3, EC2, SQS, FPS, and SimpleDB",
+  publisher = "O'Reilly",
+  address = "Sebastopol",
+  year = "c2008",
+  note = "582\,s.",
+  isbn = "05-965-1581-2"
+}
+@book{javaEssentials,
+  author = "Arun Gupta",
+  title = "Java EE 7 Essentials",
+  publisher = "O'Reilly Media",
+  address = "Sebastopol",
+  edition = "1",
+  year = "2013",
+  isbn = "978-1449370176"
+}
+@book{powerTools,
+  author = "John Ferguson Smart",
+  title = "Java Power Tools",
+  publisher = "O'Reilly",
+  address = "Sebastopol",
+  year = "c2009",
+  isbn = "978-0-596-52793-8"
+}
+@book{nosqlStarter,
+  author = "Guarav Vaish",
+  title = "Nosql starter",
+  edition = "1",
+  publisher = "Packt Publishing Limited",
+  year = "2013",
+  isbn = "978-1849694988"
+}
+@misc{simpledbDeveloper,
+  author = "Amazon",
+  title = "Amazon SimpleDB Developer Guide",
+  note = "[cit. 2014-08-01]",
+  howpublished = "\url{http://awsdocs.s3.amazonaws.com/SDB/latest/sdb-dg.pdf}"
+}
+@misc{nosqlNetflix,
+  author = "Yury Izrailevsky",
+  title = "NoSQL at Netflix",
+  note = "[cit. 2014-08-01]",
+  howpublished = "\url{http://techblog.netflix.com/2011/01/nosql-at-netflix.html}"
+}
+@book{maven,
+  author = "Sonatype",
+  title = "Maven: the definitive guide",
+  edition = "1",
+  publisher = "O'Reilly",
+  year = "c2008",
+  address = "Sebastopol",
+  note = "452\,s.",
+  isbn = "978-0-596-51733-5"
+}
+@misc{teiidDoc,
+  author = "Teiid developers",
+  title = "Teiid Developer's Guide",
+  note = "[cit. 2014-08-01]",
+  howpublished = "\url{https://docs.jboss.org/author/display/teiid86final/Developer's+Guide}"
+}
+
+@misc{JCEspec,
+  author = "Sun Microsystems",
+  title = "Java EE Connector Architecture Specification",
+  note = "[cit. 2014-08-01]",
+howpublished = "stáhnutelné z \url{http://download.oracle.com/otndocs/jcp/connector_architecture-1.6-fr-eval-oth-JSpec/}"
+}
