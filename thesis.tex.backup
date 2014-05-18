@@ -1,4 +1,4 @@
-\documentclass[oneside,12pt,final]{fithesis2}  
+\documentclass[oneside,12pt]{fithesis2}  
 \usepackage[czech]{babel}
 \usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}  
@@ -74,9 +74,38 @@ Součástí práce je také tutoriál, který čtenáře provede instalací Teii
 
 
 \chapter{JBoss Teiid}
+
 JBoss Teiid je otevřený software pro virtualizaci dat z~více zdrojů. Tento projekt je zaštiťován v~rámci JBoss komunitních projektů\footnote{http://www.jboss.org/overview/} spolu s~projekty jako WildFly nebo GateIn\footnote{kompletní seznam projektů na http://www.jboss.org/projects}.
 
-Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názvem Red Hat JBoss Enterprise Data Services Platform. Tento produkt kromě projektu Teiid v~sobě obsahuje také JBoss Enterprise Application Platform a další produkty\footnote{kompletní seznam produktů a projektů obsažených v~Red Hat JBoss Enterprise Data Services Platform i s~použitými verzemi k~naleznutí na https://access.redhat.com/site/articles/112333}
+Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názvem Red Hat JBoss Data Virtualization (dříve nazývaný Red Hat JBoss Enterprise Data Services Platform). Tento produkt kromě mírně upraveného komunitního projektu Teiid v~sobě obsahuje také JBoss Enterprise Application Platform (aplikační server založený na komunitním projektu WildFly) a další produkty\footnote{kompletní seznam produktů a projektů obsažených v~Red Hat JBoss Data Virtualization i s~použitými verzemi k~naleznutí na https://access.redhat.com/site/articles/703673}
+
+\section{Systémy datové federace}
+Datová federace úzce souvisí s datovou virtualizací (resp. je její specializací).
+\begin{quotation}
+ Datová virtualizace je pojem popisující jakýkoliv přístup k rízení dat, který umožňuje aplikaci získávat a manipulovat s daty bez znalosti technických detailů, jako třeba jak jsou formátována či kde jsou fyzicky uložena. \cite[volně přeloženo]{virtualizaceDat}
+\end{quotation}
+Takto definovaná virtualizace dat neříká nic o dílčích databázích či systémech, pouze říká, že existuje abstraktní vrstva, která zastiňuje strukturu, implementaci nebo třeba jazyk komunikace s databází. Takovouto vrstvou může být například aplikace komunikující s databází a vnějšku poskytující REST rozhraní. 
+
+Datová federace poskytuje přístup k více heterogenním \textbf{autonomním} zdrojům dat. To znamená, že jednotlivým zdrojům dat je v nějaké míře zajištěna samostatnost (což v případě obecné virtualizace dat nemusela být pravda). Je to tedy forma virtualizace dat (je to její specializací).
+
+Software zajišťující manipulaci s dílčími databázovými systémy v rámci datové federace se nazývá \textbf{systém datové federace} (FDBMS - Federated database management system)\cite{fdbms}. Tento software by měl splňovat několik základních požadavků:
+\begin{itemize}
+ \item Virtualizace dat
+ 
+ Jelikož je datová federace specializací datové virtualizace, měl by také software pro datovou federaci odstiňovat aplikace k němu přistupjící od implementačních, strukturních či jiných detailů jednotlivých databází a databázových systémů.
+ 
+ \item Samostatnost dílčích systémů
+ 
+ Oproti \uv{čisté} virtualizaci zaručuje systém datové federace jednotlivým databázovým systémům a zdrojům dat jistou autonomii. To znamená, že k jednotlivým podsystémům by se mělo dát přistupovat také samostatně, bez využití systému datové federace.
+ 
+ \item Schopnost pracovat s heterogenními systémy
+ 
+ Vedle autonomie jednotlivých subsytémů je dalším hlavním úkolem systémů datové federace schopnost komunikovat a pracovat s heterogenními systémy. Jednotlivé systému můžou být například soubory na disku, data přístupná z REST rozhraní či třeba SQL databáze. Je patrné, že ke každému z těchto datových systémů je nutné přistupovat různě. Zodpovědnost za správnou interpretaci dat nezávisle na schéma, implementaci, či rozdíly v datových typech jednotlivých systémů tak leží na bedrech systému datové federace.
+\end{itemize}
+
+\subsection{Heterogenita v jednotlivých podsystémech}
+
+
 
 \section{Části projektu JBoss Teiid}
 \begin{itemize}
@@ -91,7 +120,7 @@ Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názv
  \item \textbf{Server}
  
  Tato část je zodpovědná za běh query enginu v~rámci aplikačního serveru (WildFly nebo Red Hat JBoss Enterprise Application Platform) a zaručuje škálovatelnost a snadnou správu. Součástí je administrační konzole, ve které je možno jednoduše nastavit například nasazenou virtuální databázi nebo nastavení vláken query enginu.
- \vspace{10mm}
+
  \item \textbf{Konektory a překladače}
 
  Teiid přichází se~sadou konektorů a překladačů (connectors \& translators), díky kterým je schopen napojit se na řadu různých zdrojů dat. Konektory zajišťují napojení na zdroj dat, překladače potom obstarávají získávání dat podle Teiid požadavků. Základním kamenem jsou konektory pro většinu relačních databází, webové služby, textových souborů a LDAP\footnote{Lightweight Directory Access Protocol)}.
@@ -285,7 +314,7 @@ Jedná se o~plnohodnotný, ikdyž poměrně jednoduchý, Java EE konektor pro Si
  \item Třída \texttt{SimpleDBManagedConnectionFactory} rozšiřuje abstraktní třídu \texttt{BasicManagedConnectionFactory} (základní Teiid implementace). V~této třídě je nutno definovat proměnné, které jsou potřebné pro připojení ke zdroji -- tedy proměnné ve kterých bude uložen ID přístupového klíče a tajný přístupový klíč spolu s~metodami pro jejich nastavení a získání (get a set metody). Požadované hodnoty budou aplikačním serverem získány z~konfiguračního souboru serveru (typicky třeba \texttt{standalone.xml}) a vloženy pomocí 
  \texttt{set} metod do těchto proměnných. Další důležitou částí je implementace abstraktní metody \texttt{creteConnectionFactory()}, pomocí které je vytvořena instance \texttt{ConnectionFactory}. Ta slouží ke~generování jednotlivých připojení ke zdroji dat (SimpleDB).
  
- \item Jako implementace rozhraní \texttt{Connection} zde slouží třída \texttt{SimpleDB ConnectionImpl}. Ta kromě implementování rozhraní \texttt{Connection} rozšiřuje základní Teiid implementaci \texttt{BasicConnection}. Nám zde tedy stačí zajistit přístup k~instanci třídy \texttt{SimpleDBAPIClass}. To je splněno instanciováním v~konstruktoru a přiřazením do privátní proměnné, která je poté dostupná pomocí její \texttt{get} metody.
+ \item Jako implementace rozhraní \texttt{Connection} zde slouží třída \texttt{SimpleDB\allowbreak ConnectionImpl}. Ta kromě implementování rozhraní \texttt{Connection} rozšiřuje základní Teiid implementaci \texttt{BasicConnection}. Nám zde tedy stačí zajistit přístup k~instanci třídy \texttt{SimpleDBAPIClass}. To je splněno instanciováním v~konstruktoru a přiřazením do privátní proměnné, která je poté dostupná pomocí její \texttt{get} metody.
  
  S~takto připraveným připojením lze poté v~samotném překladači snadno volat metody definované v~\texttt{SimpleDBAPIClass} např. takto:
  \begin{Verbatim}[fontsize=\small]
@@ -385,7 +414,7 @@ Všechny tyto tři třídy využívají visitory (třídy vytvořené podle náv
 \begin{itemize}
 \item \texttt{SimpleDBInsertExecute} je nejjednodušší z~trojice executorů. Pouze pomocí \texttt{SimpleDBInsertVisitor} získá kolekci dvojic\\ \texttt{<jménoAtributu, hodnota\allowbreak Atributu>}, kde hodnota může být ve formátu \verb|^\[.+\]$|, což značí vícehodnotový atribut. Tuto kolekci poté předá metodě \texttt{perform Insert()} API třídy. O~správné zpracování vícehodnotových atributů se postará tato metoda.
 
-\item\texttt{SimpleDBUpdateExecute} je opět poměrně jednoduchá třída -- mezivrstva mezi visitorem a API třídou vykonávající samotný dotaz na SimpleDB. Pomocí visitoru zjistí, které položky odpovídají porovnání v~dotazu. Přesněji řečeno získá hodnotu atributu \texttt{itemName()} všech položek odpovídajících podmínce \texttt{WHERE}. Dále zkonstruuje mapu map \texttt{Map<String, Map<String, String>} -- pro každý název položky získá pomocí visitoru \texttt{SimpleDBUpdate\allowbreak Visitor} mapu \texttt{<jménoAtributu, hodnotaAtributu>} a s~touto mapou map provede pomocí metody \texttt{performUpdate()} API třídy samotné upravení dat v~databázi.
+\item \texttt{SimpleDBUpdateExecute} je opět poměrně jednoduchá třída -- mezivrstva mezi visitorem a API třídou vykonávající samotný dotaz na SimpleDB. Pomocí visitoru zjistí, které položky odpovídají porovnání v~dotazu. Přesněji řečeno získá hodnotu atributu \texttt{itemName()} všech položek odpovídajících podmínce \texttt{WHERE}. Dále zkonstruuje mapu map \texttt{Map<String, Map<String, String>} -- pro každý název položky získá pomocí visitoru \texttt{SimpleDBUpdate\allowbreak Visitor} mapu \texttt{<jménoAtributu, hodnotaAtributu>} a s~touto mapou map provede pomocí metody \texttt{performUpdate()} API třídy samotné upravení dat v~databázi.
 
 \item V~případě \texttt{SimpleDBDeleteExecute} je zde pro jednoduchost a efektivnost rozděleno vykonávání do tří nezávislých větví podle situací, které mohou nastat:
 \begin{itemize}
@@ -629,7 +658,13 @@ Do stejného repozitáře byl také umístěn soubor \texttt{README.md} (formát
 
 Příloha A je pouze tutoriál převedený z Markdown do latexu. Originální Markdown soubor je v GitHub repozitáři, nebo na přiloženém CD.
 \chapter{Závěr}
+Výsledkem práce je funkční konektor (resource adapter) pro připojení k SimpleDB. Dále byl vytvořen modul Teiid překladače (translator) pro SimpleDB ve kterém se povedlo zvládnout problematiku mapování Teiid SQL dotazů na dotazy databáze SimpleDB. Také zde byl úspěšně řešen problém multihodnotových atributů databáze SimpleDB. Tyto části dohromady tvoří funkční modul projektu Teiid a již byly zařazeny do hlavní vývojové větve projektu. Teiid 8.7 již v sobě bude obsahovat modul pro komunikaci s databází SimpleDB vytvořený v rámci této práce.
 
+Druhým výstupem je tutoriál v anglickém jazyce, hostovaný veřejně na serveru GitHub, který slouží jako uvedení do problematiky pro nové uživatele a demonstruje schopnosti vyvinutého Teiid modulu.
+
+Tato práce pro mě znamenala jedny z prvních krůčků do světa open-source a velkou zkušeností pro mě byla spolupráce s lidmi, kteří programují otevřený software, jelikož bych se otevřeným softwarem rád zabýval i v budoucnu.
+
+Dalším krokem ve vývoji Teiid modulu pro komunikaci se SimpleDB by bylo zaměření se na výkon -- sepsání \uv{performance testů} a optimalizace kódu. Také je možnost pokusit se začlenit tutoriál vyvinutý v rámci této práce mezi oficiální \uv{quickstarty}\footnote{https://github.com/teiid/teiid-quickstarts}.
 \nocite{*}
 \bibliographystyle{plain}  % bibliografický styl 
 \bibliography{mybib} % soubor s citovanými

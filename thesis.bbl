@@ -11,6 +11,14 @@ Amazon.
 \newblock \url{http://awsdocs.s3.amazonaws.com/SDB/latest/sdb-dg.pdf}.
 \newblock [cit. 2014-08-01].
 
+\bibitem{fdbms}
+James A.~Larson Amit P.~Seth.
+\newblock Federated database systems for managing distributed, heterogeneous,
+  and autonomous databases.
+\newblock dostupné na
+  \url{http://knoesis.wright.edu/library/download/SL90.pdf}.
+\newblock [cit. 2014-26-04].
+
 \bibitem{teiidDoc}
 Teiid developers.
 \newblock Teiid developer's guide.
@@ -40,7 +48,7 @@ Yury Izrailevsky.
 \bibitem{JCEspec}
 Sun Microsystems.
 \newblock Java ee connector architecture specification.
-\newblock stáhnutelné z
+\newblock dostupné na
   \url{http://download.oracle.com/otndocs/jcp/connector_architecture-1.6-fr-eval-oth-JSpec/}.
 \newblock [cit. 2014-08-01].
 
@@ -50,6 +58,13 @@ James Murty.
   SimpleDB}.
 \newblock O'Reilly, Sebastopol, c2008.
 \newblock 582\,s. ISBN: 05-965-1581-2.
+
+\bibitem{virtualizaceDat}
+Margaret Rouse.
+\newblock Exploring data virtualization tools and technologies.
+\newblock dostupné na
+  \url{http://searchdatamanagement.techtarget.com/definition/data-virtualization}.
+\newblock [cit. 2014-26-04].
 
 \bibitem{powerTools}
 John~Ferguson Smart.
