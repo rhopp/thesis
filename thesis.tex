@@ -1,4 +1,4 @@
-\documentclass[oneside,12pt]{fithesis2}  
+\documentclass[oneside,12pt, draft]{fithesis2}  
 \usepackage[czech]{babel}
 \usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}  
@@ -58,17 +58,17 @@ Amazon SimpleDB, JBoss Teiid, JBoss, databáze, relační přístup, NoSQL
 \chapter{Úvod}
 Opensource projekt JBoss Teiid je silným nástrojem pro usnadnění a zkvalitnění práce aplikací nad více heterogenními zdroji dat. Aplikacím poskytuje jednotné rozhraní pro práci s daty a zajišťuje komunikaci s jednotlivými zdroji dat. 
 
-Teiid již umí komunikovat s nejčastěji používanými zdroji dat, jakými jsou například relační databáze, LDAP či data uložena v souborech na disku. Bohužel ale nebyl prozatím vytvořen žádný modul Teiidu pro komunikaci s NoSQL databází Amazon SimpleDB ikdyž po takovémto modulu byla poptávka už v roce 2010\footnote{V systému JIRA projektu Teiid byl vytvořen požadavek už v dubnu 2010 -- https://issues.jboss.org/browse/TEIID-1070}. 
+Teiid již umí komunikovat s nejčastěji používanými zdroji dat, jakými jsou například relační databáze, LDAP či data uložena v souborech na disku. Bohužel ale nebyl prozatím vytvořen žádný modul do projektu Teiid pro komunikaci s NoSQL databází Amazon SimpleDB ikdyž po takovémto modulu byla poptávka už v roce 2010\footnote{V připomínkovacím systému JIRA projektu Teiid byl vytvořen požadavek už v dubnu 2010 -- https://issues.jboss.org/browse/TEIID-1070}. 
 
 Jedním z důvodů, proč tento modul ještě nebyl vytvořen může být jeho netriviálnost. Jelikož je SimpleDB takzvanou NoSQL databází, což znamená, že nevychází z klasického modelu tabulek a relací mezi nimi, a jelikož Teiid ze své přirozenosti přistupuje k datům relačně, vyvstává zde několik možných problémů, které se tato práce snaží řešit.
 
 Nejprve práce uvede čitatele do problému seznámením s projekty JBoss Teiid a Amazon SimpleDB, jejich fungováním, strukturou a fungováním.
 
-Stěžejí částí teoretické práce je prezentace způsobu mapování Teiid SQL dotazů na dotazy a příkazy databáze Amazon SimpleDB. V této sekci nalezne čtenář řešení například absence schopnosti databáze SimpleDB spojit dvě tabulky (v SQL jde o klauzuli \texttt{JOIN}).
+Stěžejní částí teoretické práce je prezentace způsobu mapování Teiid SQL dotazů na dotazy a příkazy databáze Amazon SimpleDB. V této sekci nalezne čtenář řešení například absence schopnosti databáze SimpleDB spojit dvě tabulky (v SQL jde o klauzuli \texttt{JOIN}).
 
 Praktická část práce detailně popisuje konkrétní implementaci modulů pro připojení a komunikaci s databází SimpleDB. 
 
-Součástí práce je také tutoriál, který čtenáře provede instalací Teiidu, jeho základním nastavením pro použití s implementovaným modulem, připojením k databázi SimpleDB a provedením základních i komplikovanějších dotazů proti databázi pomoci Teiidu nad vzorovými daty. V textu práce je popsána struktura vzorových dat a zdůvodněna jejich volba.
+Součástí práce je také tutoriál, který čtenáře provede instalací projektu Teiid, jeho základním nastavením pro použití s implementovaným modulem, připojením k databázi SimpleDB a provedením základních i komplikovanějších dotazů proti databázi pomocí projektu Teiid nad vzorovými daty. V textu práce je popsána struktura vzorových dat a zdůvodněna jejich volba.
 % Následují další kapitoly a podkapitoly, popřípadě závěr, dodatky, 
 % seznam literatury či použitých obrázků nebo tabulek.
 
@@ -82,11 +82,11 @@ Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názv
 \section{Systémy datové federace}
 Datová federace úzce souvisí s datovou virtualizací (resp. je její specializací).
 \begin{quotation}
- Datová virtualizace je pojem popisující jakýkoliv přístup k rízení dat, který umožňuje aplikaci získávat a manipulovat s daty bez znalosti technických detailů, jako třeba jak jsou formátována či kde jsou fyzicky uložena. \cite[volně přeloženo]{virtualizaceDat}
+ Datová virtualizace je pojem popisující jakýkoliv přístup k řízení dat, který umožňuje aplikaci získávat a manipulovat s daty bez znalosti technických detailů, jako třeba jak jsou formátována či kde jsou fyzicky uložena. \cite[volně přeloženo]{virtualizaceDat}
 \end{quotation}
 Takto definovaná virtualizace dat neříká nic o dílčích databázích či systémech, pouze říká, že existuje abstraktní vrstva, která zastiňuje strukturu, implementaci nebo třeba jazyk komunikace s databází. Takovouto vrstvou může být například aplikace komunikující s databází a vnějšku poskytující REST rozhraní. 
 
-Datová federace poskytuje přístup k více heterogenním \textbf{autonomním} zdrojům dat. To znamená, že jednotlivým zdrojům dat je v nějaké míře zajištěna samostatnost (což v případě obecné virtualizace dat nemusela být pravda). Je to tedy forma virtualizace dat (je to její specializací).
+Datová federace poskytuje přístup k více heterogenním \textbf{autonomním} zdrojům dat. To znamená, že jednotlivým zdrojům dat je v nějaké míře zajištěna samostatnost (což v případě obecné virtualizace dat nemusela být pravda). Je to tedy forma virtualizace dat (je její specializací).
 
 Software zajišťující manipulaci s dílčími databázovými systémy v rámci datové federace se nazývá \textbf{systém datové federace} (FDBMS - Federated database management system)\cite{fdbms}. Tento software by měl splňovat několik základních požadavků:
 \begin{itemize}
@@ -101,11 +101,9 @@ Software zajišťující manipulaci s dílčími databázovými systémy v rámc
  \item Schopnost pracovat s heterogenními systémy
  
  Vedle autonomie jednotlivých subsytémů je dalším hlavním úkolem systémů datové federace schopnost komunikovat a pracovat s heterogenními systémy. Jednotlivé systému můžou být například soubory na disku, data přístupná z REST rozhraní či třeba SQL databáze. Je patrné, že ke každému z těchto datových systémů je nutné přistupovat různě. Zodpovědnost za správnou interpretaci dat nezávisle na schéma, implementaci, či rozdíly v datových typech jednotlivých systémů tak leží na bedrech systému datové federace.
-\end{itemize}
+\end{itemize} 
 
-\subsection{Heterogenita schémat jednotlivých subsystémů}
-Jak se firma zvětšuje, 
-
+\section{JBoss Teiid a datová federace}
 
 
 \section{Části projektu JBoss Teiid}
@@ -215,6 +213,9 @@ Kromě výše zmíněného chování, které by se v~jistých situacích dalo po
 
 
 \chapter{Komunikace s~databází Amazon SimpleDB}
+V této kapitole jsou popsány základní kameny komunikace s databází Amazon SimpleDB jako jsou například příkazy, zabezpečení či autentizace. Tyto poznatky jsou dále použity v implementační části (kapitola \ref{implementace})
+
+\label{komunikace}
 \section{Přehled příkazů SimpleDB}
 \begin{itemize}
  \item \textbf{CreateDomain} slouží k~vytvoření nové domény.
@@ -244,9 +245,13 @@ Pro autentizaci má každý uživatel \uv{ID přístupového klíče} (20 alfanu
 \end{enumerate}
 Zde je ukázán proces autentizace pouze zjednodušeně. Přesný návod jak sestrojit validná požadavek je dostupný v~dokumentaci SimpleDB.
 
-\section{Knihovny pro komunikaci}
-Amazon poskytuje knihovny pro komunikaci se SimpleDB (a ostatními AWS službami) v~několika jazycích (Java, PHP, Python, Ruby a .NET). 
-Knihovna pro jazyk Java, která byla v~této práci použita, nejenže poskytuje model pro práci s~doménami, atributy a podobně, ale také významně usnadňuje autentizační proces (není nutné \uv{ručně} počítat podpis).
+\section{Výběr knihovny pro komunikaci s databází SimpleDB}
+Existují tři hlavní způsoby komunikace s databází SimpleDB v jazyce Java a to přímé volání REST API (popsaném v kapitole \ref{komunikace}), použití oficiálního Java API poskytovaného a podporovaného přímo společností Amazon nebo použití JDBC ovladače.
+
+Nejprve se budu věnovat JDBC ovladači. Tento poměrně běžný a standartní způsob komunikace Java programů s databázemi by se mohl zdát jako nejlepší a nejjednodušší řešení. Toto tvrzení by podporoval i fakt, že jedna ze základních funkcionalit projektu Teiid je i konektor a překladač pro JDBC drivery. Lze tak \uv{podstrčit} projektu Teiid \verb&jar& soubor s JDBC ovladačem pro Amazon SimpleDB a vlastnostmi nutnými pro připojení (ID přístupového klíče a tajný přístupový klíč) a Teiid se již postará o vše ostatní. Hlavním argumentem proti použití JDBC ovladače je fakt, že se jedná o již prakticky mrtvý projekt\footnote{Webová stránka projektu: https://code.google.com/p/simpledb-jdbc/ a https://github.com/beacon50/SimpleJDBC}, který byl vyvíjen pouze jedním člověkem. O \uv{mrtvosti} projektu svědčí déle než  4 roky netknuté bugy v připomínkovacím systému (anglicky Issue tracker, dostupný na stránce projektu). Tento přístup také za ostatními dvěma alternativami zaostává na poli podpory. Kdežto Java API i REST API jsou podporovány přímo firmou Amazon, není zde, u JDBC ovladače, žádné záruky, že bude podporován do budoucna.
+
+Tímto je zavrhnuto použití JDBC ovladače a zbývá rozhodnout, zda přistupovat k SimpleDB přímo pomocí volání REST API nebo pomocí Java API. Co se týče podpory, jsou na tom oba tyto přístupy stejně (oba oficiálně podporované firmou Amazon). V této práci bylo nakonec zvoleno Java API, převážně kvůli komfortu práce s kódem a následné čitelnosti kódu. Kdyby bylo použito přímé volání REST API, bylo by vhodné sepsat si vlastní Java API, což by zbytečně rozšiřovalo kódovou základnu projektu. Použití Java API z pohledu rozšíření kódu znamená pouze pár řádků v Maven konfiguraci, neboť je tato knihovna přítomna v Maven centrále\footnote{Detailně popsáno v kapitole \ref{sestaveni}}
+
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
 V~této kapitole bude obecně ukázáno, jakým způsobem byly mapovány Teiid dotazy na dotazy databáze SimpleDB. Konkrétně se jedná o~příkazy \verb<SELECT<, \verb<INSERT<, \verb<UPDATE< a \verb<DELETE<.
 \section{Vícehodnotové atributy}
@@ -535,6 +540,7 @@ Je zde potřeba rozlišovat mezi třemi základními situacemi:
  \item Posledním případem je složitější podmínka ve \texttt{WHERE} klauzuli. V~tomto případě se \texttt{SimpleDBDeleteVisitor} chová téměř totožně jako \texttt{SimpleDBUpdateVisitor} a to tak, že se nejprve dotáže databáze SimpleDB jednoduchým \texttt{SELECT} příkazem s~\texttt{WHERE} klauzulí daného \texttt{DELETE} příkazu (vygenerovanou pomocí \texttt{SimpleDBSQL\allowbreak Visitor}).
 \end{itemize}
 \section{Sestavení}
+\label{sestaveni}
 Pro kompilaci a sestavení celého projektu je použit projekt Apache Maven. Maven kromě usnadnění a zautomatizování procesu sestavení také obstarává správu závislostí. Schopnosti mavenu je dále možné rozšířit pomocí zásuvných modulů (plug-inů).
 \begin{figure}[h]
  \centering
