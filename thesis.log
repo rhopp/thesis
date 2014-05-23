@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.4.3)  20 MAY 2014 07:28
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.4.3)  23 MAY 2014 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -155,7 +155,6 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `draft' set `true' on input line 4319.
 Package hyperref Info: Option `plainpages' set `false' on input line 4319.
 Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4319.
 Package hyperref Info: Option `unicode' set `true' on input line 4319.
@@ -343,63 +342,80 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
- (./thesis.aux)
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count115
+\float@exts=\toks22
+\float@box=\box29
+\@float@everytoks=\toks23
+\@floatcapt=\box30
+)
+\@float@every@ukazka=\toks24
+\c@ukazka=\count116
+ (./thesis.aux
+
+LaTeX Warning: Label `getMetadata' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 31.
-(/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 36.
+ (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 36.
 
-
-Package hyperref Warning: Draft mode on.
-
-Package hyperref Info: Link coloring OFF on input line 31.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count115
+\c@section@level=\count117
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
+
+(./thesis.out) (./thesis.out)
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
+
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count118
 \scratchdimen=\dimen117
-\scratchbox=\box30
-\nofMPsegments=\count117
-\nofMParguments=\count118
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count119
+\scratchbox=\box32
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen118
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -415,14 +431,26 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 31.
+LaTeX Info: Redefining \microtypecontext on input line 36.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+\c@lstlisting=\count124
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
 
-Package microtype Warning: `draft' option active.
-(microtype)                Disabling all micro-typographic extensions.
-(microtype)                This might lead to different line and page breaks.
-
-\c@lstlisting=\count122
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
@@ -430,16 +458,22 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [1
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.i}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \end{ThesisDeclaration}
+                             [1
 
 ] [2
 
 ] [3
 
 ]
-Overfull \hbox (8.59007pt too wide) in paragraph at lines 52--53
-\T1/lmr/m/n/12 Amazon Sim-pleDB, JBoss Teiid, JBoss, datab·ze, re-la£nÌ p∞Ìstup
-, NoSQL |
+Overfull \hbox (0.79059pt too wide) in paragraph at lines 57--58
+\T1/lmr/m/n/12 (-20) Amazon Sim-pleDB, JBoss Teiid, JBoss, datab·ze, re-la£nÌ p
+∞Ìstup, NoSQL 
  []
 
 [4
@@ -469,606 +503,545 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
-
-Overfull \hbox (4.72401pt too wide) in paragraph at lines 37--37
- [][] []\T1/lmr/m/n/12 NastavenÌ z·-su-vnÈho mod-ulu maven as-sem-bly plu- |
- []
-
-[1
+ [1
 
 
 ])
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
 
  [2]
 Kapitola 1.
-
-Overfull \hbox (3.68532pt too wide) in paragraph at lines 61--62
-[]\T1/lmr/m/n/12 Teiid ji∫ umÌ ko-mu-niko-vat s ne-j£ast•ji pou∫Ì-van˝mi zdroji
- dat, jak˝mi|
- []
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 67.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 72.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [3
 
 ]
 Kapitola 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[][][]\T1/lmr/m/n/10 kompletnÌ sez-nam pro-dukt∑ a pro-jekt∑ ob-sa∫en˝ch v Red 
-Hat
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[][][]\T1/lmr/m/n/10 (+20) kompletnÌ sez-nam pro-dukt∑ a pro-jekt∑ ob-sa∫en˝ch 
+v Red Hat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-\T1/lmr/m/n/10 JBoss Data Vir-tu-al-iza-tion i s pou∫it˝mi verzemi k naleznutÌ 
-na
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\T1/lmr/m/n/10 (+20) JBoss Data Vir-tu-al-iza-tion i s pou∫it˝mi verzemi k nale
+znutÌ na
  []
 
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 98.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 93.
-
-Overfull \hbox (1.12668pt too wide) in paragraph at lines 99--100
-\T1/lmr/m/n/12 notliv˝m datab·-zov˝m sys-tÈm∑m a zdro-j∑m dat jis-tou au-tonomi
-i.|
- []
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 98.
+ [5] [6] [7]
+Package hyperref Info: bookmark level for unknown ukazka defaults to 0 on input
+ line 213.
 
 
-Overfull \hbox (6.01791pt too wide) in paragraph at lines 103--104
-[]\T1/lmr/m/n/12 Vedle au-tonomie jed-notliv˝ch sub-sytÈm∑ je dal≤Ìm hlavnÌm ˙k
-olem|
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \vskip 
+l.217 \vspace{150}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (20.34811pt too wide) in paragraph at lines 103--104
-\T1/lmr/m/n/12 ero-gen-nÌmi sys-tÈmy. Jed-notlivÈ sys-tÈmu m∑∫ou b˝t nap∞Ìk-lad
- soubory|
- []
+Underfull \vbox (badness 5741) has occurred while \output is active []
 
+ [8pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}
+) has been already used, duplicate ignored
 
-Overfull \hbox (0.38661pt too wide) in paragraph at lines 113--114
-[]\T1/lmr/m/n/12 Jedn· se o srdce pro-jektu, kterÈ zpra-cov-·v· re-la£nÌ, XML, 
-XQuery|
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+.2}) has been already used, duplicate ignored
 
-[5] [6] [7]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      ] [9]
 Kapitola 3.
 
-Overfull \hbox (0.40198pt too wide) in paragraph at lines 158--159
-[]\T1/lmr/m/n/12 Analogie k jednÈ tab-ulce v tab-ulkovÈm pro-ce-soru. Ob-sahuje
- ∞·dky|
+Overfull \hbox (3.52127pt too wide) in paragraph at lines 258--259
+\T1/lmr/m/n/12 (-20) NavÌc m· ka∫d˝ prvek domÈny (∞·dek tab-ulky) povinn˝ atrib
+ut []\T1/lmtt/m/n/12 ItemName\T1/lmr/m/n/12 (-20) ,
  []
 
+[10
 
-Overfull \hbox (3.20837pt too wide) in paragraph at lines 161--162
-[]\T1/lmr/m/n/12 ê·dky tab-ulky. Reprezen-tujÌ jed-notlivÈ ob-jekty ulo∫enÈ v d
-atab·zi|
- []
+]
+Underfull \vbox (badness 2158) has occurred while \output is active []
 
+ [11]
+<ConsistencyExample.pdf, id=326, 401.5pt x 160.6pt>
+File: ConsistencyExample.pdf Graphic file (type pdf)
 
-Overfull \hbox (11.1729pt too wide) in paragraph at lines 171--172
-\T1/lmr/m/n/12 NavÌc m· ka∫d˝ prvek domÈny (∞·dek tab-ulky) povinn˝ atribut []\
-T1/lmtt/m/n/12 ItemName\T1/lmr/m/n/12 ,|
- []
+<use ConsistencyExample.pdf>
+Package pdftex.def Info: ConsistencyExample.pdf used on input line 276.
+(pdftex.def)             Requested size: 361.34665pt x 144.53865pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+1}) has been already used, duplicate ignored
 
-[8
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.282 
+       <./ConsistencyExample.pdf>] [13pdfTeX warning (ext4): destination with t
+he same identifier (name{table.3.1}) has been already used, duplicate ignored
 
-] [9] <ConsistencyExample.pdf, id=58, 401.5pt x 160.6pt> [10]
-Overfull \hbox (9.5595pt too wide) in paragraph at lines 198--210
-[]\T1/lmr/m/n/12 Z·kladnÌ rozdÌl mezi konzis-tent-nÌm a even-tu·ln• konzis-tent
--nÌm £tenÌm|
- []
-
-[11]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.302 \chapter
+              {Komunikace s~datab√°z√≠ Amazon SimpleDB}]
 Kapitola 4.
 
-Overfull \hbox (15.3505pt too wide) in paragraph at lines 227--228
-\T1/lmr/m/n/12 polo∫ky. Umo∫¨uje speci-fiko-vat je-den, £i vÌce po∫adovan˝ch at
-ribut∑,|
+Overfull \hbox (7.09698pt too wide) in paragraph at lines 314--315
+\T1/lmr/m/n/12 (-20) polo∫ky. Umo∫¨uje speci-fiko-vat je-den, £i vÌce po∫adovan
+˝ch atribut∑,
  []
 
-[12
+[14
 
 ]
-Overfull \hbox (3.42136pt too wide) in paragraph at lines 235--236
-[]\T1/lmr/m/n/12 Tato vlast-nost se d· pou∫Ìt nap∞Ìk-lad pro im-ple-mentaci £Ì-
-ta£e (p∞e£te|
+Overfull \vbox (2.92499pt too high) has occurred while \output is active []
+
+
+[15]
+Underfull \hbox (badness 7344) in paragraph at lines 338--338
+[][][]\T1/lmr/m/n/10 (+20) Webov· str·nka pro-jektu: https://code.google.com/p/
+simpledb-jdbc/ a
  []
 
-
-Overfull \hbox (35.91182pt too wide) in paragraph at lines 243--244
-[]\T1/lmr/m/n/12 Kanonizov·nÌ ∞et•zce dotazu (se∞azenÌ parametr∑, za-kÛ-dov·nÌ 
-parametr∑|
- []
-
-
-Overfull \hbox (2.06735pt too wide) in paragraph at lines 244--245
-[]\T1/lmr/m/n/12 Vypo£Ìt·nÌ HMAC[] z kan-on-i-zo-vanÈho tex-tovÈho ∞et•zce za p
-ou∫itÌ|
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 251--251
-[][][]\T1/lmr/m/n/10 Webov· str·nka pro-jektu: https://code.google.com/p/simple
-db-jdbc/ a
- []
-
-[14] [15]
+[16]
 Kapitola 5.
-
-Overfull \hbox (7.20099pt too wide) in paragraph at lines 256--257
-\T1/lmr/m/n/12 Teiid dotazy na dotazy datab·ze Sim-pleDB. KonkrÈtn• se jedn· o 
-p∞Ìkazy|
- []
-
-[16
+[17
 
 ]
-Overfull \hbox (13.94885pt too wide) in paragraph at lines 278--279
-[]\T1/lmr/m/n/12 Dotazu ob-sahu-jÌcÌmu atribut []\T1/lmtt/m/n/12 itemName() \T1
-/lmr/m/n/12 (povinn˝ unik·tnÌ atribut,|
- []
-
-
-Overfull \hbox (25.86224pt too wide) in paragraph at lines 278--279
-\T1/lmr/m/n/12 datab·ze vr·tÌ chybu. Toto platÌ s v˝jimkou dotazu, kdy je []\T1
-/lmtt/m/n/12 itemName()|
- []
-
-
-Overfull \hbox (10.25781pt too wide) in paragraph at lines 280--281
-\T1/lmr/m/n/12 hod-noty atributu []\T1/lmtt/m/n/12 itemName() \T1/lmr/m/n/12 v≤
-ech polo∫ek v domÈn• []\T1/lmtt/m/n/12 TestDomain\T1/lmr/m/n/12 : |
- []
-
-
-Overfull \hbox (0.90738pt too wide) in paragraph at lines 288--289
-[]\T1/lmr/m/n/12 Dal≤Ì prob-lÈm m∑∫e vyv-s-tat ve \T1/lmtt/m/n/12 WHERE \T1/lmr
-/m/n/12 £·sti v˝razu. T•mto potÌ∫Ìm|
- []
-
-[17]
-Overfull \hbox (9.4631pt too wide) in paragraph at lines 296--297
-\T1/lmr/m/n/12 polo∫ek, kterÈ majÌ b˝t smaz·ny a ty n·sledn• po-mocÌ []\T1/lmtt
-/m/n/12 DeleteAttributes|
+Overfull \hbox (6.9519pt too wide) in paragraph at lines 365--366
+[]\T1/lmr/m/n/12 (-20) Dotazu ob-sahu-jÌcÌmu atribut []\T1/lmtt/m/n/12 itemName
+() \T1/lmr/m/n/12 (-20) (povinn˝ unik·tnÌ atribut,
  []
 
 [18]
+Overfull \hbox (4.49944pt too wide) in paragraph at lines 383--384
+\T1/lmr/m/n/12 (-20) polo∫ek, kterÈ majÌ b˝t smaz·ny a ty n·sledn• po-mocÌ []\T
+1/lmtt/m/n/12 DeleteAttributes
+ []
+
+[19]
 Kapitola 6.
 
-Overfull \hbox (0.83153pt too wide) in paragraph at lines 312--313
-[][]\T1/lmtt/m/n/12 SimpleDBAPIClass \T1/lmr/m/n/12 je t∞Ìda za-obalu-jÌcÌ pot∞
-ebnÈ p∞Ìkazy datab·ze|
+Overfull \hbox (13.10992pt too wide) in paragraph at lines 399--400
+\T1/lmtt/m/n/12 getAttributeNames(String domainName)\T1/lmr/m/n/12 (-20) , kter
+· vracÌ jmÈna v≤ech
  []
 
-
-Overfull \hbox (15.38287pt too wide) in paragraph at lines 312--313
-\T1/lmtt/m/n/12 getAttributeNames(String domainName)\T1/lmr/m/n/12 , kter· vrac
-Ì jmÈna v≤ech|
- []
-
-
-Overfull \hbox (14.17993pt too wide) in paragraph at lines 312--313
-\T1/lmr/m/n/12 jmÈna v≤ech atribut∑ (nes-ta£Ì dot·zat se nap∞Ìk-lad na jednu po
-lo∫ku,|
- []
-
-[19
+[20
 
 ]
-Overfull \hbox (17.00134pt too wide) in paragraph at lines 318--319
-\T1/lmr/m/n/12 Zde bylo d∑le∫itÈ uzp∑-so-bit tuto z·k-ladnÌ im-ple-mentaci pot∞
-e-b·m datab·ze|
+Overfull \hbox (1.7129pt too wide) in paragraph at lines 410--411
+[]\T1/lmr/m/n/12 (-20) Jako im-ple-men-tace rozhranÌ \T1/lmtt/m/n/12 Connection
+ \T1/lmr/m/n/12 (-20) zde slou∫Ì t∞Ìda \T1/lmtt/m/n/12 SimpleDB
+ []
+
+[21]
+Overfull \hbox (3.39032pt too wide) in paragraph at lines 426--427
+\T1/lmr/m/n/12 (-20) t∞Ìdu im-ple-men-tu-jÌcÌ rozhranÌ \T1/lmtt/m/n/12 ManagedC
+onnectionFactory \T1/lmr/m/n/12 (-20) a defin-
+ []
+
+<TranslatorStructure.pdf, id=399, 430.48328pt x 381.8767pt>
+File: TranslatorStructure.pdf Graphic file (type pdf)
+
+<use TranslatorStructure.pdf>
+Package pdftex.def Info: TranslatorStructure.pdf used on input line 436.
+(pdftex.def)             Requested size: 344.38708pt x 305.50177pt.
+ [22] [23pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.443 \begin{verbatim}
+                       <./TranslatorStructure.pdf>]
+Overfull \hbox (15.89935pt too wide) in paragraph at lines 455--456
+[]\T1/lmr/m/n/12 (-20) D·le tato t∞Ìda ob-sahuje metodu []\T1/lmtt/m/n/12 void 
+getMetadata(MetadataFactory
  []
 
 
-Overfull \hbox (27.62334pt too wide) in paragraph at lines 320--322
-\T1/lmr/m/n/12 £·stÌ je im-ple-men-tace ab-strak-tnÌ metody \T1/lmtt/m/n/12 cre
-teConnectionFactory()\T1/lmr/m/n/12 ,|
- []
-
-
-Overfull \hbox (2.56729pt too wide) in paragraph at lines 320--322
-\T1/lmr/m/n/12 po-mocÌ kterÈ je vytvo∞ena in-stance \T1/lmtt/m/n/12 ConnectionF
-actory\T1/lmr/m/n/12 . Ta slou∫Ì|
- []
-
-
-Overfull \hbox (5.86252pt too wide) in paragraph at lines 323--324
-[]\T1/lmr/m/n/12 Jako im-ple-men-tace rozhranÌ \T1/lmtt/m/n/12 Connection \T1/l
-mr/m/n/12 zde slou∫Ì t∞Ìda \T1/lmtt/m/n/12 SimpleDB|
- []
-
-
-Overfull \hbox (2.06865pt too wide) in paragraph at lines 323--324
-\T1/lmtt/m/n/12 ConnectionImpl\T1/lmr/m/n/12 . Ta krom• im-ple-men-tov·nÌ rozhr
-anÌ \T1/lmtt/m/n/12 Connection|
- []
-
-
-Overfull \hbox (3.66725pt too wide) in paragraph at lines 323--324
-\T1/lmr/m/n/12 priv·tnÌ prom•nnÈ, kter· je potÈ dos-tupn· po-mocÌ jejÌ \T1/lmtt
-/m/n/12 get \T1/lmr/m/n/12 metody. |
- []
-
-[20]
-Overfull \hbox (3.29141pt too wide) in paragraph at lines 325--326
-\T1/lmr/m/n/12 snadno volat metody defi-no-vanÈ v \T1/lmtt/m/n/12 SimpleDBAPICl
-ass \T1/lmr/m/n/12 nap∞. takto: |
- []
-
-
-Overfull \hbox (28.45543pt too wide) in paragraph at lines 339--340
-\T1/lmr/m/n/12 source adapteru (tj. t∞Ìda im-ple-men-tu-jÌcÌ rozhranÌ \T1/lmtt/
-m/n/12 Resource Adapter\T1/lmr/m/n/12 ),|
- []
-
-
-Overfull \hbox (8.92322pt too wide) in paragraph at lines 339--340
-\T1/lmr/m/n/12 t∞Ìdu im-ple-men-tu-jÌcÌ rozhranÌ \T1/lmtt/m/n/12 ManagedConnect
-ionFactory \T1/lmr/m/n/12 a defin-|
- []
-
-
-Overfull \hbox (10.28484pt too wide) in paragraph at lines 339--340
-\T1/lmr/m/n/12 u-jeme prom•nnÈ pot∞ebnÈ k p∞ipo-jenÌ k Sim-pleDB (ID p∞Ìs-tupov
-Èho|
- []
-
-
-Overfull \hbox (16.52914pt too wide) in paragraph at lines 341--342
-\T1/lmr/m/n/12 source Adapter Archive -- RAR (b•∫n˝ Java archive -- JAR s p∞Ìpo
-nou|
- []
-
-<TranslatorStructure.pdf, id=95, 430.48328pt x 381.8767pt> [21]
-Overfull \hbox (2.59448pt too wide) in paragraph at lines 353--354
-\T1/lmr/m/n/12 Z·kladnÌm kamenem Sim-pleDB p∞eklada£e je t∞Ìda \T1/lmtt/m/n/12 
-SimpleDBExecution|
- []
-
-
-Overfull \hbox (6.6161pt too wide) in paragraph at lines 355--356
-[]\T1/lmr/m/n/12 Nejprve v tÈto t∞Ìd• na-jdeme metody defin-u-jÌcÌ schop-nosti 
-p∞eklada£e.|
- []
-
-[22]
-Overfull \hbox (19.31183pt too wide) in paragraph at lines 368--369
-[]\T1/lmr/m/n/12 D·le tato t∞Ìda ob-sahuje metodu \T1/lmtt/m/n/12 void getMetad
-ata(MetadataFactory|
- []
-
-
-Overfull \hbox (14.92284pt too wide) in paragraph at lines 368--369
-\T1/lmr/m/n/12 vol·nÌm metody \T1/lmtt/m/n/12 getAttributeNames() \T1/lmr/m/n/1
-2 (metoda t∞Ìdy \T1/lmtt/m/n/12 SimpleDBAPIClass|
+Overfull \hbox (11.6864pt too wide) in paragraph at lines 455--456
+\T1/lmr/m/n/12 (-20) vol·nÌm metody \T1/lmtt/m/n/12 getAttributeNames() \T1/lmr
+/m/n/12 (-20) (metoda t∞Ìdy \T1/lmtt/m/n/12 SimpleDBAPIClass
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (119.51436pt too wide) in paragraph at lines 402--403
-[]\T1/lmr/m/n/12 PoslednÌ dv• im-ple-men-to-vanÈ metody v tÈto t∞Ìd• jsou metod
-y \T1/lmtt/m/n/12 createResultSetExecution|
+Overfull \hbox (11.11546pt too wide) in paragraph at lines 494--496
+\T1/lmr/m/n/12 (-20) jÌcÌ p∞Ìkazu \T1/lmtt/m/n/12 SELECT \T1/lmr/m/n/12 (-20) a
+ nad t•mito daty za-vol· metodu \T1/lmtt/m/n/12 performSelect
  []
 
+[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.6.2}) has been already used, duplicate ignored
 
-Overfull \hbox (0.71893pt too wide) in paragraph at lines 402--403
-\T1/lmr/m/n/12 metoda \T1/lmtt/m/n/12 void execute()\T1/lmr/m/n/12 , je-jÌ∫ im-
-ple-men-tace je odpov•dn· za prov·d•nÌ|
- []
-
-
-Overfull \hbox (15.22789pt too wide) in paragraph at lines 407--409
-\T1/lmr/m/n/12 jÌcÌ p∞Ìkazu \T1/lmtt/m/n/12 SELECT \T1/lmr/m/n/12 a nad t•mito 
-daty za-vol· metodu \T1/lmtt/m/n/12 performSelect|
- []
-
-[23]
-Overfull \hbox (2.95784pt too wide) in paragraph at lines 412--413
-\T1/lmtt/m/n/12 INSERT\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 UPDATE\T1/lmr/m/n/12 , \
-T1/lmtt/m/n/12 DELETE \T1/lmr/m/n/12 a BatchedUp-date (kter˝ ov≤em p∞eklada£|
- []
-
-
-Overfull \hbox (1.65729pt too wide) in paragraph at lines 414--415
-[]\T1/lmr/m/n/12 Op•t, podobn• jako u \T1/lmtt/m/n/12 createResultSetExecution 
-\T1/lmr/m/n/12 je zde pot∞eba|
- []
-
-[24]
-Overfull \hbox (14.04575pt too wide) in paragraph at lines 421--422
-[]\T1/lmtt/m/n/12 SimpleDBInsertExecute \T1/lmr/m/n/12 je ne-j-jednodu≤≤Ì z tro
--jice ex-ecu-tor∑. Pouze|
- []
-
-
-Overfull \hbox (0.72203pt too wide) in paragraph at lines 421--422
-\T1/lmr/m/n/12 potÈ p∞ed· metod• \T1/lmtt/m/n/12 perform Insert() \T1/lmr/m/n/1
-2 API t∞Ìdy. O spr·vnÈ zpra-|
- []
-
-[25]
-Overfull \hbox (8.43124pt too wide) in paragraph at lines 437--438
-\T1/lmtt/m/n/12 itemName() \T1/lmr/m/n/12 polo∫ek, je∫ odpovÌ-dajÌ pod-mÌnce kl
-auzule \T1/lmtt/m/n/12 WHERE\T1/lmr/m/n/12 .|
- []
-
-
-Overfull \hbox (3.83615pt too wide) in paragraph at lines 443--444
-\T1/lmtt/m/n/12 DELETE, INSERT \T1/lmr/m/n/12 m· jinÈ po∫a-davky, proto pro ka∫
-d˝ z nich byl vytvo∞en|
- []
-
-[26]
-Overfull \hbox (16.88892pt too wide) in paragraph at lines 466--467
-\T1/lmtt/m/n/12 LanguageObjectVisitor \T1/lmr/m/n/12 posky-tu-jÌcÌ n·stroje pro
- proch·zenÌ stromu|
- []
-
-
-Overfull \hbox (2.10347pt too wide) in paragraph at lines 467--468
-\T1/lmr/m/n/12 oproti jejÌ nadt∞Ìd• schopna pro-jÌt v≤echny uzly stromu jazykov
-˝ch|
- []
-
-
-Overfull \hbox (15.54727pt too wide) in paragraph at lines 469--470
-[]\T1/lmtt/m/n/12 SQLStringVisitor \T1/lmr/m/n/12 je roz≤Ì∞enÌm z·k-ladnÌ ab-st
-rak-tnÌ t∞Ìdy \T1/lmtt/m/n/12 Abstract|
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.502 \end{itemize}
+                   ] [26]
+Overfull \hbox (2.08502pt too wide) in paragraph at lines 524--525
+\T1/lmtt/m/n/12 itemName() \T1/lmr/m/n/12 (-20) polo∫ek, je∫ odpovÌ-dajÌ pod-mÌ
+nce klauzule \T1/lmtt/m/n/12 WHERE\T1/lmr/m/n/12 (-20) .
  []
 
 [27]
-Overfull \hbox (6.39781pt too wide) in paragraph at lines 476--478
-\T1/lmtt/m/n/12 SQLStringVisitor \T1/lmr/m/n/12 s p∞etÌ∫en˝ma meto-dama \T1/lmt
-t/m/n/12 visit \T1/lmr/m/n/12 pro ob-jekty \T1/lmtt/m/n/12 Select,|
+Overfull \hbox (12.79868pt too wide) in paragraph at lines 553--554
+\T1/lmtt/m/n/12 LanguageObjectVisitor \T1/lmr/m/n/12 (-20) posky-tu-jÌcÌ n·stro
+je pro proch·zenÌ stromu
  []
 
 
-Overfull \hbox (20.05159pt too wide) in paragraph at lines 481--482
-[]\T1/lmr/m/n/12 Tato metoda je p∞etÌ∫ena kv∑li nut-nosti odstranit atribut \T1
-/lmtt/m/n/12 itemName()|
- []
-
-
-Overfull \hbox (10.21315pt too wide) in paragraph at lines 484--485
-\T1/lmtt/m/n/12 'tabulka'.'sloupec'\T1/lmr/m/n/12 , co∫ pro Sim-pleDB nenÌ ∫·-d
-oucÌ a je pot∞eba|
- []
-
-
-Overfull \hbox (4.97137pt too wide) in paragraph at lines 488--489
-\T1/lmtt/m/n/12 Factory \T1/lmr/m/n/12 bylo defi-nov·no, ∫e n·≤ p∞eklada£ op-er
-·-tor \T1/lmtt/m/n/12 NOT \T1/lmr/m/n/12 pdporuje),|
- []
-
-
-Overfull \hbox (11.61832pt too wide) in paragraph at lines 488--489
-\T1/lmr/m/n/12 tak, nebo¥ ve chvÌli, kdy p∞eklada£ pod-poruje \T1/lmtt/m/n/12 N
-OT \T1/lmr/m/n/12 op-er·-tor, zaru£uje|
+Overfull \hbox (11.90222pt too wide) in paragraph at lines 556--557
+[]\T1/lmtt/m/n/12 SQLStringVisitor \T1/lmr/m/n/12 (-20) je roz≤Ì∞enÌm z·k-ladnÌ
+ ab-strak-tnÌ t∞Ìdy \T1/lmtt/m/n/12 Abstract
  []
 
 [28]
-Overfull \hbox (69.25842pt too wide) in paragraph at lines 500--501
-\T1/lmr/m/n/12 jeho \T1/lmtt/m/n/12 visit \T1/lmr/m/n/12 metod pro parame-try t
-ypu \T1/lmtt/m/n/12 ColumnReference \T1/lmr/m/n/12 a \T1/lmtt/m/n/12 Expression
-ValueSource\T1/lmr/m/n/12 . |
+Overfull \hbox (13.01874pt too wide) in paragraph at lines 568--569
+[]\T1/lmr/m/n/12 (-20) Tato metoda je p∞etÌ∫ena kv∑li nut-nosti odstranit atrib
+ut \T1/lmtt/m/n/12 itemName()
  []
 
 
-Overfull \hbox (16.41139pt too wide) in paragraph at lines 502--503
-\T1/lmr/m/n/12 sloupc∑. PotÈ se p∞i n·v≤t•v• \T1/lmtt/m/n/12 ExpressionValueSou
-rce \T1/lmr/m/n/12 (ek-vi-va-lent klauzuli|
- []
-
-
-Overfull \hbox (0.58128pt too wide) in paragraph at lines 504--505
-\T1/lmtt/m/n/12 ColumnsValuesMap(Insert insert)\T1/lmr/m/n/12 , ta in-stan-ci-u
-je vlastnÌ t∞Ìdu p∞ed·|
- []
-
-
-Overfull \hbox (7.07909pt too wide) in paragraph at lines 507--508
-\T1/lmr/m/n/12 nav≤t•vov·nÌ polo∫ek p∞Ìkazu spu≤t•no v kon-struk-toru, tedy p∞i
- vytvo∞enÌ|
+Overfull \hbox (4.31355pt too wide) in paragraph at lines 571--572
+\T1/lmtt/m/n/12 'tabulka'.'sloupec'\T1/lmr/m/n/12 (-20) , co∫ pro Sim-pleDB nen
+Ì ∫·-doucÌ a je pot∞eba
  []
 
 [29]
-Overfull \hbox (0.21774pt too wide) in paragraph at lines 518--519
-[]\T1/lmr/m/n/12 HlavnÌm ˙kolem metody \T1/lmtt/m/n/12 visit(Comparison obj) \T
-1/lmr/m/n/12 je zÌsk·nÌ hod-|
+Overfull \hbox (6.96416pt too wide) in paragraph at lines 587--588
+\T1/lmr/m/n/12 (-20) metod pro parame-try typu \T1/lmtt/m/n/12 ColumnReference 
+\T1/lmr/m/n/12 (-20) a \T1/lmtt/m/n/12 ExpressionValueSource\T1/lmr/m/n/12 (-20
+) . 
  []
 
 
-Overfull \hbox (21.09534pt too wide) in paragraph at lines 534--535
-\T1/lmr/m/n/12 in-stance nav≤t•vo-vanÈho ob-jektu p∞i-jÌm· takÈ API t∞Ìdu \T1/l
-mtt/m/n/12 SimpleDBAPIClass|
+Overfull \hbox (11.78265pt too wide) in paragraph at lines 589--590
+\T1/lmr/m/n/12 (-20) sloupc∑. PotÈ se p∞i n·v≤t•v• \T1/lmtt/m/n/12 ExpressionVa
+lueSource \T1/lmr/m/n/12 (-20) (ek-vi-va-lent klauzuli
+ []
+
+[30]
+Overfull \hbox (15.75656pt too wide) in paragraph at lines 621--622
+\T1/lmr/m/n/12 (-20) in-stance nav≤t•vo-vanÈho ob-jektu p∞i-jÌm· takÈ API t∞Ìdu
+ \T1/lmtt/m/n/12 SimpleDBAPIClass
  []
 
 
-Overfull \hbox (12.83081pt too wide) in paragraph at lines 540--541
-\T1/lmr/m/n/12 datab·ze Sim-pleDB jednoduch˝m \T1/lmtt/m/n/12 SELECT \T1/lmr/m/
-n/12 p∞Ìkazem s \T1/lmtt/m/n/12 WHERE \T1/lmr/m/n/12 klauzulÌ|
+Overfull \hbox (7.6792pt too wide) in paragraph at lines 627--628
+\T1/lmr/m/n/12 (-20) datab·ze Sim-pleDB jednoduch˝m \T1/lmtt/m/n/12 SELECT \T1/
+lmr/m/n/12 (-20) p∞Ìkazem s \T1/lmtt/m/n/12 WHERE \T1/lmr/m/n/12 (-20) klauzulÌ
+
+ []
+
+[31] <mavenStructure.pdf, id=455, 199.21928pt x 270.33498pt>
+File: mavenStructure.pdf Graphic file (type pdf)
+
+<use mavenStructure.pdf>
+Package pdftex.def Info: mavenStructure.pdf used on input line 634.
+(pdftex.def)             Requested size: 199.2188pt x 270.3343pt.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.639 
+       <./mavenStructure.pdf>]
+Overfull \hbox (2.98366pt too wide) in paragraph at lines 645--646
+\T1/lmr/m/n/12 (-20) v pom.xml z·vis-losti, rodi£ovskÈ pom.xml a v rodi£ovskÈm 
+pom.xml
  []
 
 
-Overfull \hbox (30.7896pt too wide) in paragraph at lines 540--541
-\T1/lmr/m/n/12 danÈho \T1/lmtt/m/n/12 DELETE \T1/lmr/m/n/12 p∞Ìkazu (vy-gen-ero
-vanou po-mocÌ \T1/lmtt/m/n/12 SimpleDBSQLVisitor\T1/lmr/m/n/12 ). |
+Overfull \hbox (6.36266pt too wide) in paragraph at lines 655--656
+\T1/lmr/m/n/12 (-20) (\T1/lmtt/m/n/12 org.jboss.teiid:connectors\T1/lmr/m/n/12 
+(-20) ) a v rodi£i byl pro-jekt \T1/lmtt/m/n/12 translator
  []
 
-[30] <mavenStructure.pdf, id=128, 199.21928pt x 270.33498pt> [31]
-Overfull \hbox (9.67851pt too wide) in paragraph at lines 558--559
-\T1/lmr/m/n/12 v pom.xml z·vis-losti, rodi£ovskÈ pom.xml a v rodi£ovskÈm pom.xm
-l|
+[33]
+Overfull \hbox (4.78224pt too wide) in paragraph at lines 663--664
+[]\T1/lmtt/m/n/12 Teiid Embedded \T1/lmr/m/n/12 (-20) je odle-h£en· verze Tei-i
+du pro pou∫itÌ bez ap-lika£nÌho
  []
 
-
-Overfull \hbox (17.51003pt too wide) in paragraph at lines 563--565
-\T1/lmr/m/n/12 tavenÌ pro-jektu jako \T1/lmtt/m/n/12 rar \T1/lmr/m/n/12 je pou∫
-it z·-su-vn˝ modul \T1/lmtt/m/n/12 maven-rar-plugin|
- []
-
-
-Overfull \hbox (127.92989pt too wide) in paragraph at lines 568--569
-\T1/lmr/m/n/12 jis-tit, aby v souboru \T1/lmtt/m/n/12 pom.xml \T1/lmr/m/n/12 by
-l defi-nov·n spr·vn˝ rodi£ (\T1/lmtt/m/n/12 org.jboss.teiid:connectors\T1/lmr/m
-/n/12 )|
- []
-
-[32]
-Overfull \hbox (9.71065pt too wide) in paragraph at lines 576--577
-[]\T1/lmtt/m/n/12 Teiid Embedded \T1/lmr/m/n/12 je odle-h£en· verze Tei-idu pro
- pou∫itÌ bez ap-lika£nÌho|
- []
-
-
-Overfull \hbox (7.71275pt too wide) in paragraph at lines 585--586
-\T1/lmr/m/n/12 z to-hoto kon-figua£nÌho souboru (tzv. as-sem-bly de-scrip-tor).
- V tomto|
- []
-
-[33] [34]
+[34] [35]
 Kapitola 7.
-<relationStructure.pdf, id=142, 470.9846pt x 185.5432pt>
-Overfull \hbox (15.43819pt too wide) in paragraph at lines 640--641
- [][] |
+<relationStructure.pdf, id=479, 470.9846pt x 185.5432pt>
+File: relationStructure.pdf Graphic file (type pdf)
+
+<use relationStructure.pdf>
+Package pdftex.def Info: relationStructure.pdf used on input line 728.
+(pdftex.def)             Requested size: 376.78818pt x 148.43474pt.
+
+Overfull \hbox (15.43819pt too wide) in paragraph at lines 728--729
+ [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<simpledbStructure.pdf, id=143, 215.85645pt x 152.44453pt>
+<simpledbStructure.pdf, id=481, 215.85645pt x 152.44453pt>
+File: simpledbStructure.pdf Graphic file (type pdf)
+
+<use simpledbStructure.pdf>
+Package pdftex.def Info: simpledbStructure.pdf used on input line 736.
+(pdftex.def)             Requested size: 172.68538pt x 121.95578pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35
+[36
 
-] <kompromisStructure.pdf, id=147, 362.30357pt x 170.46184pt>
+] <kompromisStructure.pdf, id=490, 362.30357pt x 170.46184pt>
+File: kompromisStructure.pdf Graphic file (type pdf)
+
+<use kompromisStructure.pdf>
+Package pdftex.def Info: kompromisStructure.pdf used on input line 745.
+(pdftex.def)             Requested size: 289.84323pt x 136.36964pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
-[37]
+ [37pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.751 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+7.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.751 
+       <./relationStructure.pdf> <./simpledbStructure.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./simpledbStructure.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>] [38pdfTeX warning (ext4): destination with the same identifier (name{figure.
+7.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.755 \chapter
+              {Z√°vƒõr} <./kompromisStructure.pdf>]
 Kapitola 8.
-(./thesis.bbl [38
+(./thesis.bbl [39
 
-] [39
+] [40
 
-]) [40]
+]) [41]
 P\v {r}\'{\i }loha A.
-
-Overfull \hbox (6.97598pt too wide) in paragraph at lines 701--702
-[]\T1/lmr/m/n/12 The JBoss En-ter-prise Ap-pli-ca-tion Plat-form (EAP) 6.1 (and
- higher)|
- []
-
-[41
+[42
 
 ]
-Overfull \hbox (17.0159pt too wide) in paragraph at lines 714--715
-\T1/lmr/m/n/12 will be demon-strated us-ing Squir-rel SQL client - http://squir
-rel-|
+Overfull \hbox (8.605pt too wide) in paragraph at lines 803--804
+\T1/lmr/m/n/12 (-20) will be demon-strated us-ing Squir-rel SQL client - http:/
+/squirrel-
  []
 
 
-Overfull \hbox (76.09306pt too wide) in paragraph at lines 721--721
-\T1/lmr/m/n/10 https://community.jboss.org/wiki/TeiidEclipseDevEnvironmentSetUp
-AndBuildingRuntimeArtifacts| |
+Overfull \hbox (67.27748pt too wide) in paragraph at lines 810--810
+\T1/lmr/m/n/10 (-20) https://community.jboss.org/wiki/TeiidEclipseDevEnvironmen
+tSetUpAndBuildingRuntimeArtifacts| 
  []
 
 
-Overfull \hbox (53.73436pt too wide) in paragraph at lines 725--726
-[]\T1/lmr/m/n/12 Download lat-est Teiid Run-time from http://www.jboss.org/teii
-d/downloads|
+Overfull \hbox (46.26155pt too wide) in paragraph at lines 814--815
+[]\T1/lmr/m/n/12 (-20) Download lat-est Teiid Run-time from http://www.jboss.or
+g/teiid/downloads
  []
 
-[42]
-Overfull \hbox (28.07204pt too wide) in paragraph at lines 768--769
-[]\T1/lmr/m/n/12 Save this file to your AS de-ploy folder (\T1/lmtt/m/n/12 $AS_
-ROOT_DIRECTORY/|
- []
-
-
-Overfull \hbox (41.26749pt too wide) in paragraph at lines 776--777
-[]\T1/lmr/m/n/12 Clone git repos-i-tory https://github.com/rhopp/teiidSimpleDBQ
-uickstart |
- []
-
-<exampleStructure.png, id=170, 295.504pt x 286.671pt> [43]
-Overfull \hbox (91.36786pt too wide) in paragraph at lines 797--798
-[]\T1/lmr/m/n/12 Download Teiid JDBC driver from http://www.jboss.org/teiid/dow
-nloads |
+[43]
+Overfull \hbox (23.35658pt too wide) in paragraph at lines 857--858
+[]\T1/lmr/m/n/12 (-20) Save this file to your AS de-ploy folder (\T1/lmtt/m/n/1
+2 $AS_ROOT_DIRECTORY/
  []
 
 
-Overfull \hbox (6.54146pt too wide) in paragraph at lines 801--802
-[]\T1/lmr/m/n/12 As class name put org.teiid.jdbc.TeiidDriver as shown|
+Overfull \hbox (33.655pt too wide) in paragraph at lines 865--866
+[]\T1/lmr/m/n/12 (-20) Clone git repos-i-tory https://github.com/rhopp/teiidSim
+pleDBQuickstart 
  []
 
-<driver.png, id=175, 554.07pt x 408.77719pt>
-Overfull \hbox (26.49637pt too wide) in paragraph at lines 805--807
- [][] |
+<exampleStructure.png, id=569, 295.504pt x 286.671pt>
+File: exampleStructure.png Graphic file (type png)
+
+<use exampleStructure.png>
+Package pdftex.def Info: exampleStructure.png used on input line 877.
+(pdftex.def)             Requested size: 295.50327pt x 286.67029pt.
+ [44]
+Overfull \hbox (84.10535pt too wide) in paragraph at lines 886--887
+[]\T1/lmr/m/n/12 (-20) Download Teiid JDBC driver from http://www.jboss.org/tei
+id/downloads 
+ []
+
+
+Overfull \hbox (1.44017pt too wide) in paragraph at lines 890--891
+[]\T1/lmr/m/n/12 (-20) As class name put org.teiid.jdbc.TeiidDriver as shown
+ []
+
+<driver.png, id=579, 554.07pt x 408.77719pt>
+File: driver.png Graphic file (type png)
+ <use driver.png>
+Package pdftex.def Info: driver.png used on input line 894.
+(pdftex.def)             Requested size: 387.84636pt x 286.14207pt.
+
+Overfull \hbox (26.49637pt too wide) in paragraph at lines 894--896
+ [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[44] [45] <newAlias.png, id=183, 444.15938pt x 336.50719pt> [46] [47]
+[45 <./exampleStructure.png>] [46pdfTeX warning (ext4): destination with the sa
+me identifier (name{figure.A.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.913  \end{itemize}
+                     <./driver.png>]
+<newAlias.png, id=596, 444.15938pt x 336.50719pt>
+File: newAlias.png Graphic file (type png)
+ <use newAlias.png>
+Package pdftex.def Info: newAlias.png used on input line 916.
+(pdftex.def)             Requested size: 355.32797pt x 269.2061pt.
+ [47pdfTeX warning (ext4): destination with the same identifier (name{figure.A.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.938  \end{Verbatim}
+                      <./newAlias.png>] [48]
 P\v {r}\'{\i }loha B.
-
-Overfull \hbox (2.183pt too wide) in paragraph at lines 870--871
-[]\T1/lmr/m/n/12 Slo∫ka \T1/lmtt/m/n/12 teiid-fork \T1/lmr/m/n/12 s kom-plet-nÌ
-mi zdro-jov˝mi kÛdy pro-jektu Teiid|
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 876.
-[48
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 965.
+[49
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 876.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 965.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 876.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 876.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 876.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 965.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 965.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: A5517B41A33162B2CA3EE8DE90C2CAAF;6822.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 965.
  ) 
 Here is how much of TeX's memory you used:
- 13732 strings out of 495034
- 196305 string characters out of 6181678
- 292748 words of memory out of 5000000
- 16761 multiletter control sequences out of 15000+600000
- 61361 words of font info for 44 fonts, out of 8000000 for 9000
+ 14302 strings out of 495034
+ 204529 string characters out of 6181678
+ 304887 words of memory out of 5000000
+ 17018 multiletter control sequences out of 15000+600000
+ 66706 words of font info for 101 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 30i,8n,35p,1262b,733s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./fi-logo.514pk></usr/share/te
-xlive/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/lm/lmro12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (53 pages, 381929 bytes).
+ 35i,9n,35p,1262b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive
+/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./fi-logo.514pk></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/lm/lmro12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (54 pages, 678229 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 744 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 20862 words of extra memory for PDF output out of 24883 (max. 10000000)
 

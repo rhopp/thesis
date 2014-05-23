@@ -1,4 +1,4 @@
-\documentclass[oneside,12pt, draft]{fithesis2}  
+\documentclass[oneside,12pt]{fithesis2}  
 \usepackage[czech]{babel}
 \usepackage[utf8x]{inputenc} 
 \usepackage[T1]{fontenc}  
@@ -15,6 +15,11 @@
 \usepackage[T1]{fontenc} % část bodu a) [vhodné kódování fontů]
 \usepackage{lmodern}	 % část bodu a) [vhodný font]
 \usepackage{listings}
+\usepackage{float}
+
+\floatstyle{plain}
+\newfloat{ukazka}{bh}{lop}
+\floatname{ukazka}{Ukázka}
 
  
 \thesistitle{Relační přístup k~Amazon SimpleDB} 
@@ -80,9 +85,9 @@ JBoss Teiid je otevřený software pro virtualizaci dat z~více zdrojů. Tento p
 Firma Red Hat nabízí také plně podporovanou a certifikovanou verzi pod názvem Red Hat JBoss Data Virtualization (dříve nazývaný Red Hat JBoss Enterprise Data Services Platform). Tento produkt kromě mírně upraveného komunitního projektu Teiid v~sobě obsahuje také JBoss Enterprise Application Platform (aplikační server založený na komunitním projektu WildFly) a další produkty\footnote{kompletní seznam produktů a projektů obsažených v~Red Hat JBoss Data Virtualization i s~použitými verzemi k~naleznutí na https://access.redhat.com/site/articles/703673}
 
 \section{Systémy datové federace}
-Datová federace úzce souvisí s datovou virtualizací (resp. je její specializací).
+Datová federace úzce souvisí s datovou virtualizací (přesněji řečeno je její specializací).
 \begin{quotation}
- Datová virtualizace je pojem popisující jakýkoliv přístup k řízení dat, který umožňuje aplikaci získávat a manipulovat s daty bez znalosti technických detailů, jako třeba jak jsou formátována či kde jsou fyzicky uložena. \cite[volně přeloženo]{virtualizaceDat}
+ Datová virtualizace je pojem popisující jakýkoliv přístup k řízení dat, který umožňuje aplikaci získávat data a manipulovat s nimi bez znalosti technických detailů, jako třeba jak jsou formátována či kde jsou fyzicky uložena. \cite[volně přeloženo]{virtualizaceDat}
 \end{quotation}
 Takto definovaná virtualizace dat neříká nic o dílčích databázích či systémech, pouze říká, že existuje abstraktní vrstva, která zastiňuje strukturu, implementaci nebo třeba jazyk komunikace s databází. Takovouto vrstvou může být například aplikace komunikující s databází a vnějšku poskytující REST rozhraní. 
 
@@ -104,9 +109,12 @@ Software zajišťující manipulaci s dílčími databázovými systémy v rámc
 \end{itemize} 
 
 \section{JBoss Teiid a datová federace}
+Datové federace v nástroji JBoss Teiid je dosaženo pomocí agregace jednotlivých datových zdrojů do virtuálních databází (VDB). Tyto virtuální databáze jsou definovány pomocí XML souborů jejichž tvorba je jedním z hlavních případů užití nástroje Teiid Designer. Ten poskytuje sadu nástrojů pro snadnou tvorbu i složitějších virtuálních databází a jejich schémat. Druhý možný přístup je tvorba takzvaných dynamických virtuálních databází (Dynamic VDB). Takto definované virtuální databáze načítají své schéma samostatně pomocí překladačů (pomocí metody \verb'getMetadata()' popsané v kapitole \ref{getMetadata}). Od verze 8.0 projektu Teiid je možné v dynamických VDB definovat schéma také pomocí jazyka pro definici dat\footnote{DDL - Data Definition Language} \cite[Reference Guide$\rightarrow$VDBs$\rightarrow$DDL Metadata]{teiidDoc}.
 
+Konflikty v pojmenování mezi jednotlivými zdroji jsou v projektu Teiid řešeny odkazováním nejen na tabulku, respektive tabulku a sloupec, ale také na schéma. 
 
 \section{Části projektu JBoss Teiid}
+V této části budou stručně popsány hlavní části projektu JBoss Teiid. Přímé součásti projektu jsou: Query engine, JDBC ovladač, server, konektory a překladače. Tyto části spolu poskytují vše potřebné k virtualizaci a integraci dat z různých zdrojů. Dále je v rámci projektu Teiid distribuována webová konzole, zásuvný modul pro RHQ\footnote{RQH je komunitní projekt vedený pod jboss.org pro správu více serverů, http://www.jboss.org/rhq} a AdminShell, které usnadňují vývoj a práci s nástrojem Teiid. Také zde bude krátká zmínka o samostatném projektu JBoss Teiid Designer.
 \begin{itemize}
  \item \textbf{Query engine}
  
@@ -135,7 +143,7 @@ Software zajišťující manipulaci s dílčími databázovými systémy v rámc
   
   \item Nástroje pro monitorování a správu
   
-  Dvěmi hlavními nástroji pro monitorování a správu jsou Teiid Web Console (v~zásadě jde o~rozšíření webové konzole aplikačního serveru o~položky pro správu a monitorování Teiid instance) a zásuvný modul pro RHQ\footnote{RQH je komunitní projekt vedený pod jboss.org pro správu více serverů, http://www.jboss.org/rhq} pro kontrolu více serverů či clusterů Teiidu.
+  Dvěmi hlavními nástroji pro monitorování a správu jsou Teiid Web Console (v~zásadě jde o~rozšíření webové konzole aplikačního serveru o~položky pro správu a monitorování Teiid instance) a zásuvný modul pro RHQ pro kontrolu více serverů či clusterů Teiidu.
   
   \item Skriptování
   
@@ -145,9 +153,88 @@ Software zajišťující manipulaci s dílčími databázovými systémy v rámc
 
 \end{itemize}
 
+\section{Příklad datové federace v projektu Teiid}
+Zde bude uveden velmi jednoduchý příklad agregace dat z více zdrojů do jedné virtuální databáze. Příklad zjednodušeně simuluje systém pro prodej produktů jednotlivým osobám. 
+Jako jeden zdroj mějme jednoduchý textový soubor uchovávající informace o osobách ve formátu:
+\begin{table}[h]
+\centering
+ \begin{tabular}{|c|c|}
+ \hline
+ \multicolumn{2}{|c|}{Person} \\
+ \hline
+ id & name \\
+ \hline
+\end{tabular}
+  \caption{Schéma tabulky Person}
+ \label{personTable}
+\end{table}
+
+Jako další zdroj v tomto příkladu poslouží databáze SimpleDB se dvěma doménami (význam domén je  blíže popsán v kapitole \ref{simpleDBArchitecture}) Product a Transaction:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+ \hline
+ \multicolumn{3}{|c|}{Product} \\
+ \hline
+ id & name & price \\
+ \hline
+\end{tabular}
+  \caption{Schéma tabulky Product}
+ \label{productTable}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+ \hline
+ \multicolumn{3}{|c|}{Transaction} \\
+ \hline
+ id\_person & id\_product &  quantity \\
+ \hline
+\end{tabular}
+\caption{Schéma tabulky Transaction}
+\label{transactionTable}
+\end{table}
+
+V této chvíli je možno použít buď Teiid Designer pro nadefinování virtuální databáze (vytvoření XML souboru definující tuto virtuální databázi) nebo vytvořit XML soubor ručně, který definuje dynamickou virtuální databázi. V tomto příkladě bude zvolena druhá možnost a daný XML souboru je uveden v ukázce \ref{xmlSoubor}
+\begin{ukazka}[h]
+\begin{Verbatim}[frame=leftline,fontsize=\small]
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vdb name="Transactions" version="1">
+ <model name="person">
+  <source name="text-connector" translator-name="file"
+            connection-jndi-name="java:/person-file"/>
+ </model>
+ <model name="product_transaction">
+  <source name="simpledb-connector" translator-name="simpledb"
+            connection-jndi-name="java:/simpledb"/>
+ </model>
+</vdb>
+\end{Verbatim}
+\caption{Ukázka XML souboru my-vdb.xml}
+\label{xmlSoubor}
+\end{ukazka}
+
+\vspace{150}
+Takto nadefinovaná virtuální databáze může již být předložena nástroji Teiid a následně již může být nástroj Teiid dotazován na data z obou zdrojů jako například dotaz uvedený v ukázce \ref{SQLExample}
+\begin{ukazka}[h]
+\begin{Verbatim}[frame=leftline,fontsize=\small]
+ SELECT person.name, prod.name, trans.quantity 
+ FROM person.person as person
+ INNER JOIN product_transaction.transaction as trans 
+            ON trans.id_person=person.id
+ INNER JOIN product_transaction.product as prod 
+            ON prod.id=trans.id_product
+ WHERE per.id=5
+\end{Verbatim}
+\label{SQLExample}
+\caption{Ukázka SQL dotazu na virtuální databázi}
+\end{ukazka}
+
+Tento příklad slouží pouze k základnímu pochopení datové federace v nástroji JBoss Teiid. Rozsáhlejší příklad i s detailnějším popisem postupu od návrhu virtuální databáze, přes nasazení až k fungování virtuální databáze je popsán v kapitole \ref{quickstart} a příloze \ref{tutorial}
+
 \chapter{Amazon SimpleDB}
 SimpleDB je databáze z~dílen firmy Amazon a patří do skupiny produktů Amazon Web Services. Tato databáze je takzvaná NoSQL, což znamená, že data v~ní jsou uložená ve formátu, jaký není běžný pro relační databáze (tabulky, sloupce, řádky) a nepodporuje relace. SimpleDB je poskytována firmou Amazon jako služba a tudíž není možné nasadit databázi SimpleDB na vlastním serveru, ale běží pouze na serverech firmy Amazon. 
-\section{Struktura databáze SimpleDB}
+\section{Struktura databáze SimpleDB}\label{simpleDBArchitecture}
 Strukturu SimpleDB databází je možno přirovnat k~tabulkovému procesoru.
 \begin{itemize}
  \item \textbf{Uživatelský účet (Customer Account)}
@@ -365,7 +452,7 @@ supportsLikeCriteria
 \end{verbatim}
 Zbylé funkce obstarává logika Teiidu.
 
-Dále tato třída obsahuje metodu \texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (ukázaná na obrázku \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String} a také nezapomenout na atribut \texttt{itemName()}. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
+Dále tato třída obsahuje metodu \label{getMetadata}\texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (ukázaná na obrázku \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String} a také nezapomenout na atribut \texttt{itemName()}. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
 
 \begin{figure}[h]
  \begin{Verbatim}[fontsize=\small,numbers=left]
@@ -617,6 +704,7 @@ Z~pohledu SimpleDB konektoru a překladače bylo potřeba zajistit 3 věci:
 
 
 \chapter{Quickstart}
+\label{quickstart}
 Jelikož se SimpleDB profiluje jako velmi rychlá, velmi dobře škálovatelná databáze s~omezeními co se týče struktury, velikosti dat a konzistence, je její nasazení vhodné v~prostředích:
 \begin{itemize}
  \item Kde je poměr čtení-zápis výrazně ve prospěch čtení -- čte se často a je požadována rychlost odpovědi, zapisuje se zřídka (kvůli konzistenci)
@@ -679,6 +767,7 @@ Dalším krokem ve vývoji Teiid modulu pro komunikaci se SimpleDB by bylo zamě
 
 \appendix
 \chapter{Tutoriál}
+\label{tutorial}
 \section*{This is quickstart for SimpleDB connector and translator for Teiid - https://github.com/teiid/teiid}
 \subsection*{System Requirements}
 To run this quickstart with the provided build scripts, you need the following:
