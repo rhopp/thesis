@@ -256,7 +256,7 @@ Pro pochopení struktury databáze SimpleDB je vhodné si ji představit jako so
  
 \end{itemize}
 Navíc má každý prvek domény (řádek tabulky) povinný atribut \verb<ItemName<, který musí být v~dané doméně unikátní.
-
+\label{allStrings}
 SimpleDB nepoužívá žádné jiné datové typy kromě typu \verb<String<, takže i čísla jsou v~databázi uloženy a je s~nimi nakládáno jako s~textovými řetězci. Toto na jednu stranu řeší spoustu problémů na straně databáze, ovšem přidává to zátěž na vývojáře aplikací pracujících se SimpleDB. Typickým příkladem takového problému je, že čísla nejdou řadit lexikograficky (lexikograficky: 10<2, což je špatně). Příklad řešení tohoto problému je doplnění nul před čísla (00010>00002, což je správně). Literatura uvádí více typických problémů s čísly a jejich řešení \cite[strana 46, Working with Numerical Data]{simpledbDeveloper}
 
 \section{Vlastnosti databáze Amazon SimpleDB}
@@ -446,7 +446,7 @@ Tento modul je rozdělen na tři logicky oddělené části. V~první je pouze t
 \subsection{SimpleDBExecutionFactory}
 Základním kamenem SimpleDB překladače je třída \texttt{SimpleDBExecution Factory} rozšiřující abstraktní třídu \texttt{ExecutionFactory<F,C>}, kde \texttt{F} je factory třída konektoru a \texttt{C} je třída připojení -- v~našem případě se jedná o~\texttt{ConnectionFactory} a \texttt{SimpleDBConnection}.
 
-Nejprve v~této třídě najdeme metody definující schopnosti překladače. Jedná se o~metody s~prefixem \texttt{supports} vracející boolean hodnotu podle toho zda překladač danou schopnost podporuje, či ne. Pro překladač SimpleDB byla zvolena tato množina podporovaných funkcí: 
+Nejprve v~této třídě najdeme metody definující schopnosti překladače. Jedná se o~metody s~prefixem \texttt{supports} vracející boolean hodnotu podle toho, zda překladač danou schopnost podporuje, či ne. Pro překladač SimpleDB byla zvolena tato množina podporovaných funkcí: 
 \begin{verbatim}
 supportsCompareCriteriaEquals
 supportsCompareCriteriaOrdered
@@ -457,9 +457,9 @@ supportsNotCriteria
 supportsOrCriteria
 supportsLikeCriteria
 \end{verbatim}
-Zbylé funkce obstarává logika Teiidu.
+Zbylé funkce obstarává logika projektu Teiid.
 
-Dále tato třída obsahuje metodu \label{getMetadataChapter}\texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (zobrazena v ukázce \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String} a také nezapomenout na atribut \texttt{itemName()}. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
+Dále tato třída obsahuje metodu \label{getMetadataChapter}\texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (zobrazena v ukázce \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String}. Tím je stejně jako při práci se samostatnou SimpleDB databází přenesena povinnost vypořádávat se s tímto faktem (popsaný v kapitole \ref{allStrings} na straně \pageref{allStrings}) na vývojáře aplikací. Taktéž se nesmí zapomenout toto provést i pro atribut  \texttt{itemName()}, jak je vidět na řádcích 7--10. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
 
 \begin{ukazka}[h]
  \begin{Verbatim}[fontsize=\small,numbers=left]
@@ -493,28 +493,25 @@ public void getMetadata(MetadataFactory metadataFactory,
 \label{getMetadata}
 \end{ukazka}
 
-Poslední dvě implementované metody v~této třídě jsou metody \texttt{createResultSetExecution} a \texttt{createUpdateExecution}, kde obě mají ve vstupních parametrech příkaz (\texttt{SELECT}, \texttt{UPDATE}, \dots), kontext, metadata a připojení. Obě tyto metody vrací instanci třídy implementující rozhraní \texttt{Execution}. Z~tohoto rozhraní je pro implementaci SimpleDB překladače nejdůležitější metoda \texttt{void execute()}, jejíž implementace je odpovědná za provádění konkrétního příkazu.
+Poslední dvě implementované metody v~této třídě jsou metody \texttt{createResultSetExecution} a \texttt{createUpdateExecution}, kde obě mají ve vstupních parametrech příkaz (\texttt{SELECT}, \texttt{UPDATE}, \dots), kontext, metadata a připojení. Obě tyto metody vrací instanci třídy implementující rozhraní \texttt{Execution}. Z~tohoto rozhraní je pro implementaci SimpleDB překladače nejdůležitější metoda \texttt{void execute()}, jejíž implementace je odpovědná za provádění konkrétního příkazu. Zde níže jsou dané metody popsány:
 
 \begin{itemize}
  \item \texttt{createResultSetExecution}
 
-Tato metoda je zodpovědná za veškeré příkazy určené k~získávání dat -- tedy primárně příkaz \texttt{SELECT}. Metoda
-\texttt{createResultSet\allowbreak Execution} vrací nově vytvořenou anonymní třídu s~implementovanými metodami \texttt{void execute()} a \texttt{List<?> next()}. Metoda \texttt{execute} pouze pomocí třídy \texttt{SimpleDBSQLVisitor} získá seznam sloupců, poté pomocí stejné třídy získá textový řeťězec odpovídající příkazu \texttt{SELECT} a nad těmito daty zavolá metodu \texttt{performSelect} API třídy, která získá data z~databáze a vrátí je jako seznam. Ten je uložen do interní proměnne a v~metodě \texttt{next()} jsou tyto data pomocí iterátoru předávána Teiidu.
+Tato metoda je zodpovědná za veškeré příkazy určené k~získávání dat -- tedy primárně příkaz \texttt{SELECT}. Jelikož není na tomto místě nutné umístit mnoho logiky, bylo zvoleno vytvoření anonymní třídy uvnitř metody \texttt{createResultSet\allowbreak Execution}, která je touto metodou vrácena. Tato anonymní třída implementující rozhraní \texttt{ResultSetExecution} implementuje metody \texttt{void execute()} a \texttt{List<?> next()}. Metoda \texttt{execute} pouze pomocí třídy \texttt{SimpleDB\allowbreak SQLVisitor} získá seznam sloupců, poté pomocí stejné třídy získá textový řeťězec odpovídající příkazu \texttt{SELECT} a nad těmito daty zavolá metodu \texttt{performSelect} API třídy, která získá data z~databáze a vrátí je jako seznam. Ten je uložen do interní proměnne a v~metodě \texttt{next()} jsou tyto data pomocí iterátoru předávána Teiidu.
 
 \item \texttt{createUpdateExecution}
 
-Zde se obstarává vykonávaní všech metod manipulujících s~daty -- \texttt{INSERT}, \texttt{UPDATE}, \texttt{DELETE} a BatchedUpdate (který ovšem překladač simpledb nepodporuje).
-
-Opět, podobně jako u~\texttt{createResultSetExecution} je zde potřeba vrátit třídu implementující rozhraní \texttt{UpdateExecution}, které se od \texttt{ResultSetExecution} liší pouze v~metodě získávání dat. Místo \texttt{List<?> next()} je zde \texttt{int[] getUpdateCounts()}. 
+Zde se obstarává vykonávaní všech metod manipulujících s~daty -- \texttt{INSERT}, \texttt{UPDATE}, \texttt{DELETE} a BatchedUpdate (který ovšem překladač simpledb nepodporuje). Pokud by zde byl zvolen stejný přístup jako v případě \texttt{createResult\allowbreak SetExecution}, byla by tato metoda obrovská. Proto byly vytvořeny třídy starající se o jednotlivé příkazy a tato metoda pouze podle zvoleného příkazu vytvoří instanci dané třídy. Všechny tyto třídy a jejich vazby jsou zobrazeny na obrázku \ref{translatorStructure} a blíže popsány v následující sekci.
 \end{itemize}
 \subsection{Executory}
 Jelikož je v metodě \texttt{createUpdateExecution} situace složitější než v metodě \texttt{createResultSetExecution} a řešení pomocí anonymní třídy by bylo velmi rozsáhlé, byla zde implementace rozdělena do 3 samostatných tříd podle příkazu, který zpracovávají -- \texttt{SimpleDBInsertExecute}, \texttt{SimpleDBDeleteExecute} a \texttt{SimpleDBUpdateExecute}.
 
-Všechny tyto tři třídy využívají visitory (třídy vytvořené podle návrhového vzoru Visitor, budou popsány v kapitole \ref{visitory}) pro získání relevantních dat ze zadaného příkazu. 
+Všechny tyto tři třídy využívají visitory (třídy vytvořené podle návrhového vzoru Visitor, česky Návštěvník, budou popsány v samostatné kapitole \ref{visitory}) pro získání relevantních dat ze zadaného příkazu. 
 \begin{itemize}
-\item \texttt{SimpleDBInsertExecute} je nejjednodušší z~trojice executorů. Pouze pomocí \texttt{SimpleDBInsertVisitor} získá kolekci dvojic\\ \texttt{<jménoAtributu, hodnota\allowbreak Atributu>}, kde hodnota může být ve formátu \verb|^\[.+\]$|, což značí vícehodnotový atribut. Tuto kolekci poté předá metodě \texttt{perform Insert()} API třídy. O~správné zpracování vícehodnotových atributů se postará tato metoda.
+\item \texttt{SimpleDBInsertExecute} je nejjednodušší z~trojice executorů. Pouze pomocí \texttt{SimpleDBInsertVisitor} získá kolekci dvojic\\ \texttt{<jménoAtributu, hodnota\allowbreak Atributu>}, kde hodnota může být ve formátu odpovídajícímu regulárnímu výrazu \verb|^\[.+\]$|, což značí vícehodnotový atribut. Tuto kolekci poté předá metodě \texttt{perform Insert()} API třídy. O~správné zpracování vícehodnotových atributů se postará tato metoda.
 
-\item \texttt{SimpleDBUpdateExecute} je opět poměrně jednoduchá třída -- mezivrstva mezi visitorem a API třídou vykonávající samotný dotaz na SimpleDB. Pomocí visitoru zjistí, které položky odpovídají porovnání v~dotazu. Přesněji řečeno získá hodnotu atributu \texttt{itemName()} všech položek odpovídajících podmínce \texttt{WHERE}. Dále zkonstruuje mapu map \texttt{Map<String, Map<String, String>} -- pro každý název položky získá pomocí visitoru \texttt{SimpleDBUpdate\allowbreak Visitor} mapu \texttt{<jménoAtributu, hodnotaAtributu>} a s~touto mapou map provede pomocí metody \texttt{performUpdate()} API třídy samotné upravení dat v~databázi.
+\item \texttt{SimpleDBUpdateExecute} je opět poměrně jednoduchá třída -- mezivrstva mezi visitor třídou \texttt{SimpleDB\allowbreak UpdateVisitor} a API třídou vykonávající samotný dotaz na SimpleDB. Pomocí visitoru zjistí, které položky odpovídají porovnání v~dotazu. Přesněji řečeno získá hodnotu atributu \texttt{itemName()} všech položek odpovídajících podmínce \texttt{WHERE}. Dále zkonstruuje mapu map \texttt{Map<String, Map<String, String>} -- pro každý název položky získá pomocí visitoru \texttt{SimpleDBUpdate\allowbreak Visitor} mapu \texttt{<jméno\allowbreak Atributu, hodnotaAtributu>} a s~touto mapou map provede pomocí metody \texttt{performUpdate()} API třídy samotné upravení dat v~databázi.
 
 \item V~případě \texttt{SimpleDBDeleteExecute} je zde pro jednoduchost a efektivnost rozděleno vykonávání do tří nezávislých větví podle situací, které mohou nastat:
 \begin{itemize}
@@ -537,14 +534,11 @@ Všechny tyto executory mají povinnost pamatovat si počet upravených, přidan
 Tato sekce obsahuje 4 visitory. Každý ze 4 příkazů \texttt{SELECT, UPDATE, DELETE, INSERT} má jiné požadavky, proto pro každý z~nich byl vytvořen samostatný visitor.
 
 Nejprve je ale třeba vysvětlit návrhový vzor Visitor, na kterém je celá tato sekce postavená.
-\subsubsection*{Návrhový vzor Visitor}
 
-Návrhový vzor visitor (někdy též návštěvník) je jedním ze základních návrhových vzorů popsaných již roku 1994 v~knize Design Patterns: Elements of Reusable Object-Oriented Software. Jedná se o~návrhový vzor, pomocí kterého je možné přidat skupině tříd dodatečnou funkcionalitu bez nutnosti změnit všechny tyto třídy. Také umožňuje funkcionalitu rozšířit za běhu programu.
+Návrhový vzor visitor (někdy též návštěvník) je jedním ze základních návrhových vzorů popsaných již roku 1994 v~knize Design Patterns: Elements of Reusable Object-Oriented Software\cite{designPatterns}. Jedná se o~návrhový vzor, pomocí kterého je možné přidat skupině tříd dodatečnou funkcionalitu bez nutnosti změnit všechny tyto třídy. Také umožňuje funkcionalitu rozšířit za běhu programu.
 
 V~tomto návrhovém vzoru jsou třídy rozdělené do dvou skupin -- navštěvované třídy a navštěvující třídy. Navštěvované třídy poskytují pouze základní funkcionalitu a navíc musí implementovat metodu, která příjme návštěvníka a předá mu data nutná k~jeho správnému fungování. Návštěvníci pro každou třídu, které chce rozšířit funkcionalitu, implementuje metodu \texttt{visit} se vstupním parametrem navštěvované třídy.
 
-
-\subsubsection*{Jazykový visitor v~Teiidu}
 Teiid disponuje rozhraním pro procházení a získávání dat ze stromů objektů jazyka založené na návrhovém vzoru visitor.
 
 Každý Teiid příkaz je reprezentován stromem jazykových objektů -- tříd implementujících rozhraní \texttt{LanguageObject}. Toto rozhraní definuje jedinou metodu: 
@@ -559,10 +553,12 @@ Teiid kromě základních rozhraní poskytuje i 3 základní implementace, kter�
 \begin{itemize}
  \item \texttt{AbstractLanguageVisitor} je prázdnou implementací rozhraní \texttt{Language\allowbreak ObjectVisitor} poskytující nástroje pro procházení stromu jazykových objektů (sama ale žádné procházení nedělá). Tato třída není určena pro přímé použití, proto je definována jako abstraktní a je určena pouze pro použití jako rodičovská třída k rozšíření.
  \item \texttt{HierarchyVisitor} je podtřídou \texttt{AbstractLanguageVisitor} a je oproti její nadtřídě schopna projít všechny uzly stromu jazykových objektů. Nad těmito objekty ovšem neprovádí žádnou akci, pouze poskytuje jakýsi návod jak projít celý strom. Tato třída je také definována jako abstraktní a je určena k~rozšiřování.
- \item \texttt{DelegatingHierarchyVisitor} je rozšířením \texttt{HierarchyVisitor} o~možnost projít strom před a po projití hlavního visitoru. Tento nástroj není v~případě SimpleDB nutné využívat, proto se jím nebudeme zabývat dále.
+ \item \texttt{DelegatingHierarchyVisitor} je rozšířením \texttt{HierarchyVisitor} o~možnost projít strom před a po projití hlavního visitoru. Tento nástroj nebylo nutné v~případě konektoru pro SimpleDB využívat, proto se jím nebudeme zabývat dále.
  \item \texttt{SQLStringVisitor} je rozšířením základní abstraktní třídy \texttt{Abstract\allowbreak LanguageVisitor}, která dokáže daný objekt Teiid jazyka převést na textový řetězec řetězec odpovídající SQL příkazu.
  \item \texttt{CollectorVisitor} je třída vhodná pro získání všech objektů určitého typu z~jazykového stromu.
 \end{itemize}
+
+Dále budou popsány jednotlivé visitory implementované v rámci této práce. Diagram těchto tříd je zobrazen na obrázku \ref{translatorStructure}.
 
 \subsubsection*{SimpleDBSQLVisitor}
 \texttt{SimpleDBSQLVisitor} není v~této práci použit pouze pro příkaz \texttt{SELECT}, ale využívají jej i ostatní visitory pro získání jmen položek vyhovující podmínce. 
@@ -572,14 +568,14 @@ Jelikož má SimpleDB příkaz \texttt{SELECT} mírně odlišnou strukturu a ně
 \begin{itemize}
  \item \texttt{public void visit(Select obj)}
  
- Tato metoda je přetížena kvůli nutnosti odstranit atribut \texttt{itemName()} ze seznamu sloupců (\texttt{itemName()} je vracen automaticky a není třeba se na něj dotazovat)
+ Tato metoda je přetížena kvůli nutnosti odstranit atribut \texttt{itemName()} ze seznamu sloupců (\texttt{itemName()} je vracen automaticky a při dotazování se na něj je vrácena chyba)
  \item \texttt{public void visit(ColumnReference obj)}
  
  Implementace v~\texttt{SQLStringVisitor} vypisuje sloupec ve formátu \texttt{'tabulka'\allowbreak.'sloupec'}, což pro SimpleDB není žádoucí a je potřeba vypisovat sloupec bez tabulky.
  
  \item \texttt{public void visit(Comparison obj)}
  
- Jelikož Teiid podporuje operátor \texttt{NOT} (a v~\texttt{SimpleDBExecution\allowbreak Factory} bylo definováno, že náš překladač operátor \texttt{NOT} pdporuje), zdálo by se, že v~této oblasti je vše v~pořádku. Není tomu ovšem tak, neboť ve chvíli, kdy překladač podporuje \texttt{NOT} operátor, zaručuje také podporu negovaných operátorů. Jedním z~těchto negovaných operátorů je operátor \uv{nerovná se -- <>}, a jelikož jej databáze SimpleDB nepodporuje, musí být při generování SQL řetězce převeden na \uv{NOT =}
+ Jelikož Teiid podporuje operátor \texttt{NOT} (a v~\texttt{SimpleDBExecution\allowbreak Factory} bylo definováno, že náš překladač operátor \texttt{NOT} podporuje), zdálo by se, že v~této oblasti je vše v~pořádku. Není tomu ovšem tak, neboť ve chvíli, kdy překladač podporuje \texttt{NOT} operátor, zaručuje také podporu negovaných operátorů. Jedním z~těchto negovaných operátorů je operátor \uv{nerovná se -- <>}, a jelikož ten databáze SimpleDB nepodporuje, musí být při generování SQL řetězce převeden na \uv{NOT =}, jak je ukázáno níže.
  \begin{Verbatim}[fontsize=\small,numbers=left]
 if (obj.getOperator().equals(Operator.NE)){
   Comparison c = new Comparison(obj.getLeftExpression(), 
@@ -595,16 +591,16 @@ Vše co je potřeba na vykonání SimpleDB příkazu \texttt{PutAttributes} je j
 
 Při návštěvě \texttt{ColumnReference} (sloupců) se tvoří seznam názvů sloupců. Poté se při návštěvě \texttt{ExpressionValueSource} (ekvivalent klauzuli \texttt{VALUES}) tvoří mapa, kde jako klíč poslouží jméno atributu a jako hodnota hodnota atributu. Jelikož \texttt{HierarchyVisitor} prochází pomyslný strom Teiid příkazu do hloubky, je zajištěno, že seznam jmen atributů bude sestaven před začátkem zpracovávání vkládaných hodnot.
 
-Pro získání těchto hodnot je implementována statická metoda \texttt{get\allowbreak Columns\allowbreak ValuesMap(Insert insert)}, ta instanciuje vlastní třídu předá ji objektu \texttt{Insert} jako návštěvníka, který ji projde. Následně vrátí získané hodnoty.
+Pro získání těchto hodnot je implementována statická metoda \texttt{get\allowbreak Columns\allowbreak ValuesMap(Insert insert)}, ta instanciuje vlastní třídu a předá ji objektu \texttt{Insert} jako návštěvníka, který ji projde. Následně vrátí získané hodnoty.
 
 \subsubsection*{SimpleDBUpdateVisitor}
 I když je i tento visitor založen na \texttt{HierarchyVisitor} je zde situace poněkud složitější, než v~případě \texttt{SimpleDBInsertVisitor} a to hlavně protože pokud v~příkazu existuje podmínka, je nutné zjistit jména všech položek odpovídajících podmínce. Proto je zde zvolen jiný přístup, než u~\texttt{SimpleDBInsertVisitor} (statické třídy pro získávání dat). Zde je navštěvování položek příkazu spuštěno v~konstruktoru, tedy při vytvoření instance, a následně lze \texttt{get} metodami získat \uv{vydolované} data.
 
-Konstruktor je parametrický a kromě instance \texttt{Update} přijímá i instanci připojení a to z~kvůli možné podmínce (je potom potřeba dotázat se databáze na jména položek vyhovující podmínce).
+Konstruktor je parametrický a kromě instance \texttt{Update} přijímá i instanci připojení a to kvůli možné podmínce (je potom potřeba dotázat se databáze na jména položek vyhovující podmínce).
 
 Požadované data zde jsou: název domény, mapa jmen atributů a jejich hodnot a seznam jmen položek odpovídajících podmínce.
 
-Přetížené metody \texttt{visit} jsou pro objekty typu \texttt{Update}, \texttt{SetClause} a \texttt{Comparison}
+Přetížené metody \texttt{visit} jsou pro objekty typu \texttt{Update}, \texttt{SetClause} a \texttt{Comparison}, jak je popsáno níže:
 
 \begin{itemize}
  \item \texttt{Update} kromě implicitního zavolání metod \texttt{visit} pro objekty níže ve stromu příkazu (\texttt{SetClause, Condition}) si také uloží jméno domény do privátní proměnné.
@@ -635,7 +631,7 @@ Je zde potřeba rozlišovat mezi třemi základními situacemi:
 \end{itemize}
 \section{Sestavení}
 \label{sestaveni}
-Pro kompilaci a sestavení celého projektu je použit projekt Apache Maven. Maven kromě usnadnění a zautomatizování procesu sestavení také obstarává správu závislostí. Schopnosti mavenu je dále možné rozšířit pomocí zásuvných modulů (plug-inů).
+Pro kompilaci a sestavení celého projektu je použit projekt Apache Maven. Maven kromě usnadnění a zautomatizování procesu sestavení také obstarává správu závislostí. Schopnosti mavenu je dále možné rozšířit pomocí zásuvných modulů (plug-inů). Detailní popis fungování nástroje Maven není součástí práce a čtenáři je doporučováno pro hlubší porozumění témat probíraných v této kapitole nastudoval alespoň základní principy fungování nástroje Maven\footnote{Jako zdroj může například posloužit kniha Maven: the definitive guide\cite{maven}}.
 \begin{figure}[h]
  \centering
  \includegraphics[scale=1]{mavenStructure}
@@ -646,6 +642,7 @@ Projekt Teiid je rozdělen do takzvaných modulů. Moduly jsou jednotlivé logic
 
 \subsection{Konfigurace jednotlivých SimpleDB modulů}
 \label{konfigurace}
+V této sekci budou popsány moduly SimpleDB konektoru, překladače a API z hlediska nastavení sestavení pomocí projektu Maven.
 \begin{itemize}
  \item \textbf{simpledb-api}
  
@@ -669,12 +666,12 @@ Projekt Teiid je dodáván v~distribucích \texttt{Teiid Runtime} nebo \texttt{T
 
 \texttt{Teiid Embedded} je odlehčená verze Teiidu pro použití bez aplikačního serveru, schopna běžet jako samostatná java aplikace. Tímto bohužel přichází o~vlastnosti jako například autentizace, přístup přes administrační rozhraní  nebo správu připojení (connection pooling).
 
-Sestavení těchto distribucí ze zkompilovaných artefaktů do finálních \texttt{.zip} souborů má na starosti Maven Assembly Plugin. 
+Sestavení těchto distribucí ze zkompilovaných artefaktů do finálních \texttt{.zip} souborů má na starosti Maven Assembly Plugin\footnote{Popis zásuvného modulu a jeho dokumentace dostupný na http://maven.apache.org/plugins/maven-assembly-plugin/}. 
 
 Z~pohledu SimpleDB konektoru a překladače bylo potřeba zajistit 3 věci:
 
 \begin{itemize}
- \item Upravit kostru konfiguračního souboru aplikačního serveru. To znamená přidat do souboru \texttt{standalone-teiid.xml} definici resource adapteru konektoru SimpleDB a zajistit, aby překladač byl uveden v~subsystému teiidu.
+ \item Upravit kostru konfiguračního souboru aplikačního serveru. To znamená přidat do souboru \texttt{standalone-teiid.xml} definici resource adapteru konektoru SimpleDB a zajistit, aby překladač byl uveden v~subsystému projektu Teiid.
  \item Vytvořit konfigurační soubory modulů (\texttt{module descriptor}) pro každý modul překladače simpledb (api, konektor, překladač)
  \item Upravit konfigurační soubor, podle kterého zásuvný modul maven assembly zkompletuje výsledné \texttt{.zip} soubory. Níže je výňatek z~tohoto konfiguačního souboru (tzv. assembly descriptor). V~tomto konkrétním případě se jedná o~instalaci artefaktu \texttt{simpledb-api} jako modulu aplikačního serveru JBoss AS (jak je vidět na řádcích 21-22):
  \begin{Verbatim}[fontsize=\small,numbers=left]
@@ -703,7 +700,6 @@ Z~pohledu SimpleDB konektoru a překladače bylo potřeba zajistit 3 věci:
     <fileMode>0644</fileMode>
   </binaries>
 </moduleSet>  
-...
 \end{Verbatim}
     
 \end{itemize}
@@ -737,7 +733,7 @@ Na obrázku \ref{relationStructure} je znázorněno, jakou strukturu by měla kl
  \label{relationStructure}
 \end{figure}
 
-Na druhou stranu obrázek \ref{simpledbStructure} ukazuje jak by s~velkou pravděpodobností byla uložena data v~databázi SimpleDB. Normalizace databáze zde nehraje roli, duplikáty nejsou na škodu. Je zde kladen důraz na jednoduchost a rychlost.
+Na druhou stranu obrázek \ref{simpledbStructure} ukazuje jak by s~velkou pravděpodobností byla uložena data v~databázi SimpleDB. Normalizace databáze zde nehraje roli a duplikáty nejsou na škodu. Je zde kladen důraz na jednoduchost a rychlost.
 \begin{figure}[h]
  \centering
  \includegraphics[scale=0.8]{simpledbStructure}

@@ -63,7 +63,7 @@ Amazon SimpleDB, JBoss Teiid, JBoss, databáze, relační přístup, NoSQL
 \chapter{Úvod}
 Opensource projekt JBoss Teiid je silným nástrojem pro usnadnění a zkvalitnění práce aplikací nad více heterogenními zdroji dat. Aplikacím poskytuje jednotné rozhraní pro práci s daty a zajišťuje komunikaci s jednotlivými zdroji dat. 
 
-Teiid již umí komunikovat s nejčastěji používanými zdroji dat, jakými jsou například relační databáze, LDAP či data uložena v souborech na disku. Bohužel ale nebyl prozatím vytvořen žádný modul do projektu Teiid pro komunikaci s NoSQL databází Amazon SimpleDB ikdyž po takovémto modulu byla poptávka už v roce 2010\footnote{V připomínkovacím systému JIRA projektu Teiid byl vytvořen požadavek už v dubnu 2010 -- https://issues.jboss.org/browse/TEIID-1070}. 
+Teiid již umí komunikovat s nejčastěji používanými zdroji dat, jakými jsou například relační databáze, LDAP či data uložena v souborech na disku. Bohužel ale nebyl prozatím vytvořen žádný modul do projektu Teiid pro komunikaci s NoSQL databází Amazon SimpleDB i když po takovémto modulu byla poptávka už v roce 2010\footnote{V připomínkovacím systému JIRA projektu Teiid byl vytvořen požadavek už v dubnu 2010 -- https://issues.jboss.org/browse/TEIID-1070}. 
 
 Jedním z důvodů, proč tento modul ještě nebyl vytvořen může být jeho netriviálnost. Jelikož je SimpleDB takzvanou NoSQL databází, což znamená, že nevychází z klasického modelu tabulek a relací mezi nimi, a jelikož Teiid ze své přirozenosti přistupuje k datům relačně, vyvstává zde několik možných problémů, které se tato práce snaží řešit.
 
@@ -256,7 +256,7 @@ Pro pochopení struktury databáze SimpleDB je vhodné si ji představit jako so
  
 \end{itemize}
 Navíc má každý prvek domény (řádek tabulky) povinný atribut \verb<ItemName<, který musí být v~dané doméně unikátní.
-
+\label{allStrings}
 SimpleDB nepoužívá žádné jiné datové typy kromě typu \verb<String<, takže i čísla jsou v~databázi uloženy a je s~nimi nakládáno jako s~textovými řetězci. Toto na jednu stranu řeší spoustu problémů na straně databáze, ovšem přidává to zátěž na vývojáře aplikací pracujících se SimpleDB. Typickým příkladem takového problému je, že čísla nejdou řadit lexikograficky (lexikograficky: 10<2, což je špatně). Příklad řešení tohoto problému je doplnění nul před čísla (00010>00002, což je správně). Literatura uvádí více typických problémů s čísly a jejich řešení \cite[strana 46, Working with Numerical Data]{simpledbDeveloper}
 
 \section{Vlastnosti databáze Amazon SimpleDB}
@@ -299,7 +299,7 @@ Základní rozdíl mezi konzistentním a eventuálně konzistentním čtením lz
 Pro potřeby této práce je tento příklad dostatečný. Detailnější popis konzistence s více příklady je dostupný v dokumentaci Amazon SimpleDB \cite[strana 7, Consistency]{simpledbDeveloper}
 
 \subsection{Omezení databáze SimpleDB}
-Kromě výše zmíněného chování, které by se v~jistých situacích dalo považovat za omezení, je asi největším omezením velikost domény, jak co se místa na disku týče, tak také omezení maximálního počtu atributů. Konkrétní hranice jsou: 10 GB pro data a 1 miliarda atributů na jednu doménu. Domén je možno vytvořit až 250 na jeden uživatelský účet. Pro malé aplikace je toto dostatečné, ale velké aplikace s těmito omezeními již mohou mít problém. také proto se SimpleDB často používá jako doplňková databáze k jiné databázi.
+Kromě výše zmíněného chování, které by se v~jistých situacích dalo považovat za omezení, je asi největším omezením velikost domény, jak co se místa na disku týče, tak také omezení maximálního počtu atributů. Konkrétní hranice jsou: 10 GB pro data a 1 miliarda atributů na jednu doménu. Domén je možno vytvořit až 250 na jeden uživatelský účet. Pro malé aplikace je toto dostatečné, ale velké aplikace s těmito omezeními již mohou mít problém. také proto se SimpleDB často používá jako doplňková databáze k jiné databázi\cite{nosqlNetflix}.
 
 
 \chapter{Komunikace s~databází Amazon SimpleDB}
@@ -343,7 +343,7 @@ Existují tři hlavní způsoby komunikace s databází SimpleDB v jazyce Java a
 
 Nejprve se budu věnovat JDBC ovladači. Tento poměrně běžný a standartní způsob komunikace Java programů s databázemi by se mohl zdát jako nejlepší a nejjednodušší řešení. Toto tvrzení by podporoval i fakt, že jedna ze základních funkcionalit projektu Teiid je i konektor a překladač pro JDBC drivery. Lze tak \uv{podstrčit} projektu Teiid \verb&jar& soubor s JDBC ovladačem pro Amazon SimpleDB a vlastnosti nutné pro připojení (ID přístupového klíče a tajný přístupový klíč) a Teiid se již postará o vše ostatní. Hlavním argumentem proti použití JDBC ovladače je fakt, že se jedná o již prakticky mrtvý projekt\footnote{Webová stránka projektu: https://code.google.com/p/simpledb-jdbc/ a https://github.com/beacon50/SimpleJDBC}, který byl vyvíjen pouze jedním člověkem. O \uv{mrtvosti} projektu svědčí déle než  4 roky netknuté bugy v připomínkovacím systému (anglicky Issue tracker, dostupný na stránce projektu). Tento přístup také za ostatními dvěma alternativami zaostává na poli podpory. Kdežto Java API i REST API jsou podporovány přímo firmou Amazon, není zde, u JDBC ovladače, žádné záruky, že bude podporován do budoucna. Z těchto důvodů nebyl JDBC ovladač v této práci použit.
 
-Po zavrhnutí použití JDBC ovladače zbývá rozhodnout, zda přistupovat k SimpleDB přímo pomocí volání REST API nebo pomocí Java API. Co se týče podpory, jsou na tom oba tyto přístupy stejně (oba oficiálně podporované firmou Amazon). V této práci bylo nakonec zvoleno Java API, převážně kvůli komfortu práce s kódem a následné čitelnosti kódu. Kdyby bylo použito přímé volání REST API, bylo by vhodné sepsat si vlastní Java API, což by zbytečně rozšiřovalo kódovou základnu projektu. Použití Java API z pohledu rozšíření kódu znamená pouze pár řádků v Maven konfiguraci, neboť je tato knihovna přítomna v Maven centrále\footnote{Detailně popsáno v kapitole \ref{sestaveni}}
+Po zavrhnutí použití JDBC ovladače zbývá rozhodnout, zda přistupovat k SimpleDB přímo pomocí volání REST API nebo pomocí Java API. Co se týče podpory, jsou na tom oba tyto přístupy stejně (oba oficiálně podporované firmou Amazon). V této práci bylo nakonec zvoleno Java API, převážně kvůli komfortu práce s kódem a následné čitelnosti kódu. Kdyby bylo použito přímé volání REST API, bylo by vhodné sepsat si vlastní Java API, což by zbytečně rozšiřovalo kódovou základnu projektu (spoustu kódu obsluhující autentizaci, kód \uv{obalující} volání REST rozhraní, ...). Použití Java API z pohledu rozšíření kódu znamená pouze pár řádků v Maven konfiguraci, neboť je tato knihovna přítomna v Maven centrále\footnote{Detailně popsáno v kapitole \ref{sestaveni}}
 
 \chapter{Mapování Teiid dotazů na SimpleDB dotazy}
 V~této kapitole bude obecně ukázáno, jakým způsobem byly mapovány Teiid dotazy na dotazy databáze SimpleDB. Konkrétně se jedná o~příkazy \verb<SELECT<, \verb<INSERT<, \verb<UPDATE< a \verb<DELETE<.
@@ -356,7 +356,7 @@ Teiid přistupuje k~datům jako běžná relační databáze, tedy jednomu řád
 Ve finální implementaci byl zvolen druhý přístup a hlouběji bude probrán v kapitole \ref{implementace}.
 
 \section{SELECT}
-Jelikož SimpleDB podporuje mírně omezený \verb|SELECT|, stačí vždy pouze poupravit řetězec příkazu \verb|SELECT| generovaný Teiidem, aby byl srozumitelný pro SimpleDB. Naštěstí lze pro každý překladač nadefinovat sadu podporovaných vlastností. Nepodporované vlastnosti obslouží sám Query Engine (např. překladač nepodporuje \verb<JOIN< klauzuli. Query Engine tedy rozloží dotaz s~\verb<JOIN< klauzulí na dva jednoduché dotazy, ty poté předá překladači a výsledné data zpracuje programově v~paměti).
+Jelikož SimpleDB podporuje mírně omezený \verb|SELECT|, stačí vždy pouze poupravit řetězec příkazu \verb|SELECT| generovaný Teiidem, aby byl srozumitelný pro SimpleDB. Naštěstí lze pro každý překladač nadefinovat sadu podporovaných vlastností\cite[kapitola Developer's Guide$\rightarrow$Translator Development$\rightarrow$Translator capabilities]{teiidDoc}. Nepodporované vlastnosti obslouží sám Query Engine (např. pokud překladač nepodporuje \verb<JOIN< klauzuli Query Engine rozloží dotaz s~\verb<JOIN< klauzulí na dva jednoduché dotazy, ty poté předá překladači a výsledné data zpracuje programově v~paměti).
 
 Struktura příkazu SELECT databáze SimpleDB:
 \begin{Verbatim}[frame=leftline,fontsize=\small]
@@ -368,23 +368,23 @@ limit [limit]
 \end{Verbatim}
 Ze struktury je zřejmé, že žádné velké změny nebude třeba provádět. Je nutné definovat, že překladač nepodporuje \verb<JOIN< klauzuli a poté zajistit, aby byly korektně prováděny jednoduché SQL dotazy na které byl původní dotaz rozložen. Zde vyvstává pár problémů:
 \begin{enumerate}
- \item Dotazu obsahujícímu atribut \verb<itemName()< (povinný unikátní atribut, který má každá položka) musí být tento atribut odebrán -- tento atribut je automaticky vracen v~odpovědi databáze ikdyž není specifikován. Naopak pokud je požadován spolu s~jinými atributy, databáze vrátí chybu. Toto platí s~výjimkou dotazu, kdy je \verb<itemName()< jediným požadovaným atributem.
+ \item Dotazu obsahujícímu atribut \verb<itemName()< (povinný unikátní atribut, který má každá položka) musí být tento atribut odebrán -- tento atribut je automaticky vracen v~odpovědi databáze i když není specifikován. Naopak pokud je požadován spolu s~jinými atributy, databáze vrátí chybu. Toto platí až na výjimku dotazu, kdy je \verb<itemName()< jediným požadovaným atributem.
  
- Tento dotaz je korektním dotazem na databázi SimpleDB a vrátí hodnoty atributu \verb<itemName()< všech položek v~doméně \verb<TestDomain<:
+ Například tento dotaz je korektním dotazem na databázi SimpleDB a vrátí hodnoty atributu \verb<itemName()< všech položek v~doméně \verb<TestDomain<:
  \begin{Verbatim}[fontsize=\small]
 SELECT itemName() FROM TestDomain
   \end{Verbatim}
- Tento dotaz vrátí chybovou hlášku \verb<InvalidQueryExpression<:
+ Oproti tomu, tento dotaz vrátí chybovou hlášku \verb<InvalidQueryExpression<:
   \begin{Verbatim}[fontsize=\small]
 SELECT itemName(), attribute1 FROM TestDomain
   \end{Verbatim}
- \item Další problém může vyvstat ve \texttt{WHERE} části výrazu. Těmto potížím se dá vyhnnout správným nastavením schopností překladače. 
+ \item Další problém může vyvstat ve \texttt{WHERE} části výrazu. Těmto potížím se dá vyhnnout správným nastavením schopností překladače (translator capabilities zmíněné na začátku této kapitoly). 
 \end{enumerate}
 
 \section{INSERT}
 Zde je situace stále celkem jednoduchá, neboť \verb<INSERT< vždy vkládá jeden nový řádek, což je téměř ekvivalentní příkazu \verb<PutAttributes<. Je zde akorát potřeba získat z~Teiid příkazu \verb<INSERT< seznam sloupců, jejich hodnot a název domény do které má proběhnout vložení. Vzhledem ke zvolenému řešení problému vícehodnotových atributů není nutné se jimi zaobírat zde (logika obsluhy vícehodnotových atributů je v implementaci extrahována do samostatného modulu).
 \section{UPDATE}
-U~\verb<UPDATE< je situace poněkud složitější, neboť je možné měnit více položek najednou (díky \verb<WHERE< klauzuli) a příkazy \verb<PutAttributes< a \verb<BatchPutAttributes< neumožňují měnit více položek specifikovaných pomocí kritéria najednou. Je tedy nutné nejprve pomocí \verb<SELECT< příkazu nad požadovanou doménou a kritérii z~Teiid \verb<UPDATE< dotazu získat jména všech upravovaných položek (atribut \verb<itemName()<). Teprve poté lze pomocí několika \verb<PutAttributes<, či jediného \verb<BatchPutAttributes< dané položky upravit.
+U~příkazu \verb<UPDATE< je situace poněkud složitější, neboť je možné měnit více položek najednou (díky \verb<WHERE< klauzuli) a příkazy \verb<PutAttributes< a \verb<BatchPutAttributes< neumožňují měnit více položek specifikovaných pomocí kritéria najednou. Je tedy nutné nejprve pomocí \verb<SELECT< příkazu nad požadovanou doménou a kritérii z~\verb<WHERE< klauzule Teiid dotazu \verb<UPDATE< získat jména všech upravovaných položek (atribut \verb<itemName()<). Teprve poté lze pomocí několika \verb<PutAttributes<, či jediného \verb<BatchPut< \verb<Attributes< dané položky upravit.
 \section{DELETE}
 Podobně jako u~příkazu \verb<UPDATE< je nejprve potřeba získat jména všech položek, které mají být smazány a ty následně pomocí \verb<DeleteAttributes< smazat z~databáze.
 \chapter{Implementace}
@@ -402,13 +402,13 @@ Tento modul reprezentuje API pro komunikaci s~databází SimpleDB a jako samosta
 Modul obsahuje pouze jedinou java třídu a jedno rozhraní a to \texttt{SimpleDB\allowbreak APIClas} a \verb<SimpleDBConnection<.
 \begin{itemize}
  \item \verb<SimpleDBConnection< je rozhraní rozšiřující rozhraní \verb<Connection< z~balíčku \verb<javax.resource.cci< (\verb<Connection< reprezentuje připojení na externí zdroj na aplikační vrstvě -- díky třídám implementující toto rozhraní je možné přistupovat k~požadovaným zdrojům).
- \item \verb<SimpleDBAPIClass< je třída zaobalující potřebné příkazy databáze SimpleDB. Za povšimnutí stojí hlavně metoda \texttt{Set<String> \\* getAttributeNames(String domainName)}, která vrací jména všech atributů v~doméně, ovšem jediný způsob jak toho docílit je provedení příkazu \texttt{SELECT * FROM <domainName>} a z~odpovědi získat jména všech atributů (nestačí dotázat se například na jednu položku, neboť kdyby daná položka neměla vyplněný nějaký atribut, tento atribut by v~odpovědi nebyl obsažen).
+ \item \verb<SimpleDBAPIClass< je třída zaobalující potřebné příkazy databáze SimpleDB. Za povšimnutí stojí hlavně metoda \texttt{getAttributeNames (String domainName)}, která vrací jména všech atributů v~doméně. Ovšem jediný způsob jak toho docílit je provedení příkazu \texttt{SELECT * FROM <domainName>} a z~odpovědi získat jména všech atributů (nestačí dotázat se například na jednu položku, neboť kdyby daná položka neměla vyplněný nějaký atribut, tento atribut by v~odpovědi nebyl obsažen). Toto řešení je sice zdrojově náročné (v odpovědi přichází kromě požadovaných dat také spoustu dat, které nebudou vůbec využity). Jelikož se ale tato metoda nevolá často a Amazon SimpleDB neposkytuje jinou možnost získání požadovaných dat (jmen všech atributů v doméně), můžeme si tento neoptimální způsob dovolit použít.
  
  Také je v této třídě obsažena veškerá logika manipulace s vícehodnotovými atributy.
 \end{itemize}
 \subsection{Modul connector-simpledb}
 \label{connector-simpledb}
-Jedná se o~plnohodnotný, ikdyž poměrně jednoduchý, Java EE konektor pro SimpleDB. Konektory jsou běžně baleny jako RAR (Resource Adapter Archive), které lze poté nasadit na aplikační server pouhým nakopírováním do složky \texttt{deploy} serveru. Teiid poskytuje základní implementaci rozhraní potřebných pro vytvoření zákadního konektoru. Zde bylo důležité uzpůsobit tuto základní implementaci potřebám databáze SimpleDB. 
+Jedná se o~plnohodnotný, i když poměrně jednoduchý, Java EE konektor pro SimpleDB. Konektory jsou běžně baleny jako RAR (Resource Adapter Archive), které lze poté nasadit na aplikační server pouhým nakopírováním do složky \texttt{deploy} serveru. Teiid poskytuje základní implementaci rozhraní potřebných pro vytvoření zákadního konektoru. Zde bylo důležité uzpůsobit tuto základní implementaci potřebám databáze SimpleDB. 
 \begin{itemize}
  \item Třída \texttt{SimpleDBManagedConnectionFactory} rozšiřuje abstraktní třídu \texttt{BasicManagedConnectionFactory} (základní Teiid implementace). V~této třídě je nutno definovat proměnné, které jsou potřebné pro připojení ke zdroji -- tedy proměnné ve kterých bude uložen ID přístupového klíče a tajný přístupový klíč spolu s~metodami pro jejich nastavení a získání (get a set metody). Požadované hodnoty budou aplikačním serverem získány z~konfiguračního souboru serveru (typicky třeba \texttt{standalone.xml}) a vloženy pomocí 
  \texttt{set} metod do těchto proměnných. Další důležitou částí je implementace abstraktní metody \texttt{creteConnectionFactory()}, pomocí které je vytvořena instance \texttt{ConnectionFactory}. Ta slouží ke~generování jednotlivých připojení ke zdroji dat (SimpleDB).
@@ -436,16 +436,17 @@ Dependencies: org.jboss.teiid.common-core,
 
 \section{Překladač}
 
-Tento modul je rozdělen na tři logicky oddělené části. V~první je pouze třída \texttt{SimpleDBExecutionFactory}, která je základní třídou překladače. V~další části jsou zde takzvané executory -- třídy zajišťující vykonávání jednotlivých příkazů. Jako poslední jsou takzvané visitory -- třídy, které prochází strukturu Teiid SQL příkazu a získávají data, jež jsou poté použita v~executorech. Každá z~těchto částí je v~samostatném java balíčku.
+Tento modul je rozdělen na tři logicky oddělené části. V~první je pouze třída \texttt{SimpleDBExecutionFactory}, která je základní třídou překladače. V~další části jsou zde takzvané executory -- třídy zajišťující vykonávání jednotlivých příkazů. Jako poslední jsou takzvané visitory -- třídy, které prochází strukturu Teiid SQL příkazu a získávají data, jež jsou poté použita v~executorech. Každá z~těchto částí je v~samostatném java balíčku. Struktura překladače spolu se závislostmi a vazbami na balíčky a třídy projektu JBoss Teiid je znázorněna na obrázku \ref{translatorStructure}.
 \begin{figure}[h]
  \centering
  \includegraphics[scale=0.8]{TranslatorStructure}
  \caption{Struktura překladače SimpleDB}
+ \label{translatorStructure}
 \end{figure}
 \subsection{SimpleDBExecutionFactory}
 Základním kamenem SimpleDB překladače je třída \texttt{SimpleDBExecution Factory} rozšiřující abstraktní třídu \texttt{ExecutionFactory<F,C>}, kde \texttt{F} je factory třída konektoru a \texttt{C} je třída připojení -- v~našem případě se jedná o~\texttt{ConnectionFactory} a \texttt{SimpleDBConnection}.
 
-Nejprve v~této třídě najdeme metody definující schopnosti překladače. Jedná se o~metody s~prefixem \texttt{supports} vracející boolean hodnotu podle toho zda překladač danou schopnost podporuje, či ne. Pro překladač SimpleDB byla zvolena tato množina podporovaných funkcí: 
+Nejprve v~této třídě najdeme metody definující schopnosti překladače. Jedná se o~metody s~prefixem \texttt{supports} vracející boolean hodnotu podle toho, zda překladač danou schopnost podporuje, či ne. Pro překladač SimpleDB byla zvolena tato množina podporovaných funkcí: 
 \begin{verbatim}
 supportsCompareCriteriaEquals
 supportsCompareCriteriaOrdered
@@ -456,9 +457,9 @@ supportsNotCriteria
 supportsOrCriteria
 supportsLikeCriteria
 \end{verbatim}
-Zbylé funkce obstarává logika Teiidu.
+Zbylé funkce obstarává logika projektu Teiid.
 
-Dále tato třída obsahuje metodu \label{getMetadataChapter}\texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (zobrazena v ukázce \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String} a také nezapomenout na atribut \texttt{itemName()}. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
+Dále tato třída obsahuje metodu \label{getMetadataChapter}\texttt{void getMetadata(Metadata\allowbreak Factory metadataFactory, SimpleDBConnection conn)} (zobrazena v ukázce \ref{getMetadata}), kterou Teiid volá při inicializaci pro každou uživatelem definovanou virtuální databázi. Úkolem této metody je načíst strukturu databáze (tabulky, sloupce, typy, \dots) a pomocí \texttt{metadataFactory} ji předat Teiidu. Toho je docíleno iterací přes všechny domény a na nich voláním metody \texttt{getAttributeNames()} (metoda třídy \texttt{SimpleDBAPIClass} k~jejíž instanci lze přistupovat přes třídu implementující připojení -- \texttt{SimpleDB\allowbreak Connection}). Je nutné nastavit všem sloupcům datový typ \texttt{String}. Tím je stejně jako při práci se samostatnou SimpleDB databází přenesena povinnost vypořádávat se s tímto faktem (popsaný v kapitole \ref{allStrings} na straně \pageref{allStrings}) na vývojáře aplikací. Taktéž se nesmí zapomenout toto provést i pro atribut  \texttt{itemName()}, jak je vidět na řádcích 7--10. Takto získané data poté stačí uložit do instance třídy \texttt{MetadataFactory}.
 
 \begin{ukazka}[h]
  \begin{Verbatim}[fontsize=\small,numbers=left]
@@ -492,7 +493,7 @@ public void getMetadata(MetadataFactory metadataFactory,
 \label{getMetadata}
 \end{ukazka}
 
-Poslední dvě implementované metody v~této třídě jsou metody \texttt{createResultSetExecution} a \texttt{createUpdateExecution}, kde obě mají ve vstupních parametrech příkaz (\texttt{SELECT}, \texttt{UPDATE}, \dots), kontext, metadata a připojení. Obě tyto metody vrací instanci třídy implementující rozhraní \texttt{Execution}. Z~tohoto rozhraní je pro implementaci SimpleDB překladače nejdůležitější metoda \texttt{void execute()}, jejíž implementace je odpovědná za provádění konkrétního příkazu.
+Poslední dvě implementované metody v~této třídě jsou metody \texttt{createResultSetExecution} a \texttt{createUpdateExecution}, kde obě mají ve vstupních parametrech příkaz (\texttt{SELECT}, \texttt{UPDATE}, \dots), kontext, metadata a připojení. Obě tyto metody vrací instanci třídy implementující rozhraní \texttt{Execution}. Z~tohoto rozhraní je pro implementaci SimpleDB překladače nejdůležitější metoda \texttt{void execute()}, jejíž implementace je odpovědná za provádění konkrétního příkazu. Zde níže jsou dané metody popsány:
 
 \begin{itemize}
  \item \texttt{createResultSetExecution}
@@ -597,7 +598,7 @@ Při návštěvě \texttt{ColumnReference} (sloupců) se tvoří seznam názvů 
 Pro získání těchto hodnot je implementována statická metoda \texttt{get\allowbreak Columns\allowbreak ValuesMap(Insert insert)}, ta instanciuje vlastní třídu předá ji objektu \texttt{Insert} jako návštěvníka, který ji projde. Následně vrátí získané hodnoty.
 
 \subsubsection*{SimpleDBUpdateVisitor}
-Ikdyž je i tento visitor založen na \texttt{HierarchyVisitor} je zde situace poněkud složitější, než v~případě \texttt{SimpleDBInsertVisitor} a to hlavně protože pokud v~příkazu existuje podmínka, je nutné zjistit jména všech položek odpovídajících podmínce. Proto je zde zvolen jiný přístup, než u~\texttt{SimpleDBInsertVisitor} (statické třídy pro získávání dat). Zde je navštěvování položek příkazu spuštěno v~konstruktoru, tedy při vytvoření instance, a následně lze \texttt{get} metodami získat \uv{vydolované} data.
+I když je i tento visitor založen na \texttt{HierarchyVisitor} je zde situace poněkud složitější, než v~případě \texttt{SimpleDBInsertVisitor} a to hlavně protože pokud v~příkazu existuje podmínka, je nutné zjistit jména všech položek odpovídajících podmínce. Proto je zde zvolen jiný přístup, než u~\texttt{SimpleDBInsertVisitor} (statické třídy pro získávání dat). Zde je navštěvování položek příkazu spuštěno v~konstruktoru, tedy při vytvoření instance, a následně lze \texttt{get} metodami získat \uv{vydolované} data.
 
 Konstruktor je parametrický a kromě instance \texttt{Update} přijímá i instanci připojení a to z~kvůli možné podmínce (je potom potřeba dotázat se databáze na jména položek vyhovující podmínce).
 

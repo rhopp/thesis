@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {6.2.2}\rmfamily Executory}{28}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}\rmfamily Visitory}{29}{subsection.6.2.3}
 \contentsline {section}{\numberline {6.3}\slshape Sestaven\IeC {\'\i }}{34}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}\rmfamily Konfigurace jednotliv\IeC {\'y}ch SimpleDB modul\IeC {\r u}}{34}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}\rmfamily Konfigurace jednotliv\IeC {\'y}ch SimpleDB modul\IeC {\r u}}{35}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}\rmfamily Nastaven\IeC {\'\i } z\IeC {\'a}suvn\IeC {\'e}ho modulu maven assembly plugin}{36}{subsection.6.3.2}
 \contentsline {chapter}{\numberline {7}\bfseries Quickstart}{38}{chapter.7}
 \contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{41}{chapter.8}
