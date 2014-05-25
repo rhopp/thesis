@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.4.3)  23 MAY 2014 19:44
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.4.3)  23 MAY 2014 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,11 +353,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@ukazka=\toks24
 \c@ukazka=\count116
- (./thesis.aux
-
-LaTeX Warning: Label `getMetadata' multiply defined.
-
-)
+ (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -377,7 +373,8 @@ LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 36.
- (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
@@ -552,18 +549,6 @@ Package hyperref Info: bookmark level for unknown ukazka defaults to 0 on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \vskip 
-l.217 \vspace{150}
-                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
 
 Underfull \vbox (badness 5741) has occurred while \output is active []
 
@@ -587,252 +572,279 @@ l.232
 l.232 
       ] [9]
 Kapitola 3.
+[10
 
+]
 Overfull \hbox (3.52127pt too wide) in paragraph at lines 258--259
 \T1/lmr/m/n/12 (-20) Navíc má kaºdý prvek domény (°ádek tab-ulky) povinný atrib
 ut []\T1/lmtt/m/n/12 ItemName\T1/lmr/m/n/12 (-20) ,
  []
 
-[10
-
-]
-Underfull \vbox (badness 2158) has occurred while \output is active []
-
- [11]
-<ConsistencyExample.pdf, id=326, 401.5pt x 160.6pt>
+[11] <ConsistencyExample.pdf, id=330, 401.5pt x 160.6pt>
 File: ConsistencyExample.pdf Graphic file (type pdf)
 
 <use ConsistencyExample.pdf>
-Package pdftex.def Info: ConsistencyExample.pdf used on input line 276.
+Package pdftex.def Info: ConsistencyExample.pdf used on input line 277.
 (pdftex.def)             Requested size: 361.34665pt x 144.53865pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-1}) has been already used, duplicate ignored
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12] [13pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.282 
-       <./ConsistencyExample.pdf>] [13pdfTeX warning (ext4): destination with t
-he same identifier (name{table.3.1}) has been already used, duplicate ignored
+l.303 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.3
+.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 \chapter
-              {Komunikace s~databÃ¡zÃ­ Amazon SimpleDB}]
+l.303 
+       <./ConsistencyExample.pdf>] [14]
 Kapitola 4.
 
-Overfull \hbox (7.09698pt too wide) in paragraph at lines 314--315
+Overfull \hbox (7.09698pt too wide) in paragraph at lines 317--318
 \T1/lmr/m/n/12 (-20) poloºky. Umoº¬uje speci-fiko-vat je-den, £i více poºadovan
 ých atribut·,
  []
 
-[14
+[15
 
 ]
-Overfull \vbox (2.92499pt too high) has occurred while \output is active []
+Overfull \vbox (2.25833pt too high) has occurred while \output is active []
 
 
-[15]
-Underfull \hbox (badness 7344) in paragraph at lines 338--338
+[16]
+Underfull \hbox (badness 7256) in paragraph at lines 344--344
 [][][]\T1/lmr/m/n/10 (+20) Webová stránka pro-jektu: https://code.google.com/p/
 simpledb-jdbc/ a
  []
 
-[16]
+
+Overfull \vbox (6.08328pt too high) has occurred while \output is active []
+
+
+[17] [18]
 Kapitola 5.
-[17
+[19
 
 ]
-Overfull \hbox (6.9519pt too wide) in paragraph at lines 365--366
+Overfull \hbox (6.9519pt too wide) in paragraph at lines 371--372
 []\T1/lmr/m/n/12 (-20) Dotazu ob-sahu-jícímu atribut []\T1/lmtt/m/n/12 itemName
 () \T1/lmr/m/n/12 (-20) (povinný unikátní atribut,
  []
 
-[18]
-Overfull \hbox (4.49944pt too wide) in paragraph at lines 383--384
+
+Overfull \hbox (7.9566pt too wide) in paragraph at lines 373--374
+\T1/lmr/m/n/12 (-20) pleDB a vrátí hod-noty atributu []\T1/lmtt/m/n/12 itemName
+() \T1/lmr/m/n/12 (-20) v²ech poloºek v domén¥
+ []
+
+
+Overfull \hbox (44.14731pt too wide) in paragraph at lines 377--378
+\T1/lmr/m/n/12 (-20) Oproti tomu, tento dotaz vrátí chy-bovou hlá²ku []\T1/lmtt
+/m/n/12 InvalidQueryExpression\T1/lmr/m/n/12 (-20) : 
+ []
+
+
+Overfull \hbox (0.40865pt too wide) in paragraph at lines 381--382
+\T1/lmr/m/n/12 (-20) se dá vy-hn-nout správným nas-tavením schop-ností p°eklada
+£e (trans-
+ []
+
+[20]
+Overfull \hbox (4.49944pt too wide) in paragraph at lines 389--390
 \T1/lmr/m/n/12 (-20) poloºek, které mají být smazány a ty následn¥ po-mocí []\T
 1/lmtt/m/n/12 DeleteAttributes
  []
 
-[19]
+[21]
 Kapitola 6.
 
-Overfull \hbox (13.10992pt too wide) in paragraph at lines 399--400
-\T1/lmtt/m/n/12 getAttributeNames(String domainName)\T1/lmr/m/n/12 (-20) , kter
-á vrací jména v²ech
+Overfull \hbox (4.5381pt too wide) in paragraph at lines 405--406
+\T1/lmr/m/n/12 (-20) Sim-pleDB. Za pov²im-nutí stojí hlavn¥ metoda \T1/lmtt/m/n
+/12 getAttributeNames
  []
 
-[20
+
+Overfull \hbox (2.31325pt too wide) in paragraph at lines 405--406
+\T1/lmtt/m/n/12 (String domainName)\T1/lmr/m/n/12 (-20) , která vrací jména v²e
+ch atribut· v domén¥.
+ []
+
+[22
 
 ]
-Overfull \hbox (1.7129pt too wide) in paragraph at lines 410--411
+Overfull \hbox (1.7129pt too wide) in paragraph at lines 416--417
 []\T1/lmr/m/n/12 (-20) Jako im-ple-men-tace rozhraní \T1/lmtt/m/n/12 Connection
  \T1/lmr/m/n/12 (-20) zde slouºí t°ída \T1/lmtt/m/n/12 SimpleDB
  []
 
-[21]
-Overfull \hbox (3.39032pt too wide) in paragraph at lines 426--427
+[23]
+Overfull \hbox (3.39032pt too wide) in paragraph at lines 432--433
 \T1/lmr/m/n/12 (-20) t°ídu im-ple-men-tu-jící rozhraní \T1/lmtt/m/n/12 ManagedC
 onnectionFactory \T1/lmr/m/n/12 (-20) a defin-
  []
 
-<TranslatorStructure.pdf, id=399, 430.48328pt x 381.8767pt>
+<TranslatorStructure.pdf, id=418, 430.48328pt x 381.8767pt>
 File: TranslatorStructure.pdf Graphic file (type pdf)
 
 <use TranslatorStructure.pdf>
-Package pdftex.def Info: TranslatorStructure.pdf used on input line 436.
+Package pdftex.def Info: TranslatorStructure.pdf used on input line 442.
 (pdftex.def)             Requested size: 344.38708pt x 305.50177pt.
- [22] [23pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.6.1}) has been already used, duplicate ignored
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.443 \begin{verbatim}
-                       <./TranslatorStructure.pdf>]
-Overfull \hbox (15.89935pt too wide) in paragraph at lines 455--456
+l.448 
+       <./TranslatorStructure.pdf>]
+Overfull \hbox (15.89935pt too wide) in paragraph at lines 462--463
 []\T1/lmr/m/n/12 (-20) Dále tato t°ída ob-sahuje metodu []\T1/lmtt/m/n/12 void 
 getMetadata(MetadataFactory
- []
-
-
-Overfull \hbox (11.6864pt too wide) in paragraph at lines 455--456
-\T1/lmr/m/n/12 (-20) voláním metody \T1/lmtt/m/n/12 getAttributeNames() \T1/lmr
-/m/n/12 (-20) (metoda t°ídy \T1/lmtt/m/n/12 SimpleDBAPIClass
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (11.11546pt too wide) in paragraph at lines 494--496
+Overfull \hbox (11.11546pt too wide) in paragraph at lines 501--503
 \T1/lmr/m/n/12 (-20) jící p°íkazu \T1/lmtt/m/n/12 SELECT \T1/lmr/m/n/12 (-20) a
  nad t¥mito daty za-volá metodu \T1/lmtt/m/n/12 performSelect
  []
 
-[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.6.2}) has been already used, duplicate ignored
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.502 \end{itemize}
-                   ] [26]
-Overfull \hbox (2.08502pt too wide) in paragraph at lines 524--525
+ [27]
+[28]
+Overfull \hbox (2.08502pt too wide) in paragraph at lines 531--532
 \T1/lmtt/m/n/12 itemName() \T1/lmr/m/n/12 (-20) poloºek, jeº odpoví-dají pod-mí
 nce klauzule \T1/lmtt/m/n/12 WHERE\T1/lmr/m/n/12 (-20) .
  []
 
-[27]
-Overfull \hbox (12.79868pt too wide) in paragraph at lines 553--554
+[29]
+Overfull \hbox (12.79868pt too wide) in paragraph at lines 560--561
 \T1/lmtt/m/n/12 LanguageObjectVisitor \T1/lmr/m/n/12 (-20) posky-tu-jící nástro
 je pro procházení stromu
  []
 
 
-Overfull \hbox (11.90222pt too wide) in paragraph at lines 556--557
+Overfull \hbox (11.90222pt too wide) in paragraph at lines 563--564
 []\T1/lmtt/m/n/12 SQLStringVisitor \T1/lmr/m/n/12 (-20) je roz²í°ením zák-ladní
  ab-strak-tní t°ídy \T1/lmtt/m/n/12 Abstract
  []
 
-[28]
-Overfull \hbox (13.01874pt too wide) in paragraph at lines 568--569
+[30]
+Overfull \hbox (13.01874pt too wide) in paragraph at lines 575--576
 []\T1/lmr/m/n/12 (-20) Tato metoda je p°etíºena kv·li nut-nosti odstranit atrib
 ut \T1/lmtt/m/n/12 itemName()
  []
 
 
-Overfull \hbox (4.31355pt too wide) in paragraph at lines 571--572
+Overfull \hbox (4.31355pt too wide) in paragraph at lines 578--579
 \T1/lmtt/m/n/12 'tabulka'.'sloupec'\T1/lmr/m/n/12 (-20) , coº pro Sim-pleDB nen
 í ºá-doucí a je pot°eba
  []
 
-[29]
-Overfull \hbox (6.96416pt too wide) in paragraph at lines 587--588
+[31]
+Overfull \hbox (6.96416pt too wide) in paragraph at lines 594--595
 \T1/lmr/m/n/12 (-20) metod pro parame-try typu \T1/lmtt/m/n/12 ColumnReference 
 \T1/lmr/m/n/12 (-20) a \T1/lmtt/m/n/12 ExpressionValueSource\T1/lmr/m/n/12 (-20
 ) . 
  []
 
 
-Overfull \hbox (11.78265pt too wide) in paragraph at lines 589--590
+Overfull \hbox (11.78265pt too wide) in paragraph at lines 596--597
 \T1/lmr/m/n/12 (-20) sloupc·. Poté se p°i náv²t¥v¥ \T1/lmtt/m/n/12 ExpressionVa
 lueSource \T1/lmr/m/n/12 (-20) (ek-vi-va-lent klauzuli
  []
 
-[30]
-Overfull \hbox (15.75656pt too wide) in paragraph at lines 621--622
+[32]
+Overfull \hbox (15.75656pt too wide) in paragraph at lines 628--629
 \T1/lmr/m/n/12 (-20) in-stance nav²t¥vo-vaného ob-jektu p°i-jímá také API t°ídu
  \T1/lmtt/m/n/12 SimpleDBAPIClass
  []
 
-
-Overfull \hbox (7.6792pt too wide) in paragraph at lines 627--628
+[33]
+Overfull \hbox (7.6792pt too wide) in paragraph at lines 634--635
 \T1/lmr/m/n/12 (-20) databáze Sim-pleDB jednoduchým \T1/lmtt/m/n/12 SELECT \T1/
 lmr/m/n/12 (-20) p°íkazem s \T1/lmtt/m/n/12 WHERE \T1/lmr/m/n/12 (-20) klauzulí
 
  []
 
-[31] <mavenStructure.pdf, id=455, 199.21928pt x 270.33498pt>
+<mavenStructure.pdf, id=475, 199.21928pt x 270.33498pt>
 File: mavenStructure.pdf Graphic file (type pdf)
 
 <use mavenStructure.pdf>
-Package pdftex.def Info: mavenStructure.pdf used on input line 634.
+Package pdftex.def Info: mavenStructure.pdf used on input line 641.
 (pdftex.def)             Requested size: 199.2188pt x 270.3343pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
-3}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.639 
-       <./mavenStructure.pdf>]
-Overfull \hbox (2.98366pt too wide) in paragraph at lines 645--646
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (2.98366pt too wide) in paragraph at lines 652--653
 \T1/lmr/m/n/12 (-20) v pom.xml závis-losti, rodi£ovské pom.xml a v rodi£ovském 
 pom.xml
  []
 
-
-Overfull \hbox (6.36266pt too wide) in paragraph at lines 655--656
+[34]
+Overfull \hbox (6.36266pt too wide) in paragraph at lines 662--663
 \T1/lmr/m/n/12 (-20) (\T1/lmtt/m/n/12 org.jboss.teiid:connectors\T1/lmr/m/n/12 
 (-20) ) a v rodi£i byl pro-jekt \T1/lmtt/m/n/12 translator
  []
 
-[33]
-Overfull \hbox (4.78224pt too wide) in paragraph at lines 663--664
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.663 \end{itemize}
+                    <./mavenStructure.pdf>]
+Overfull \hbox (4.78224pt too wide) in paragraph at lines 670--671
 []\T1/lmtt/m/n/12 Teiid Embedded \T1/lmr/m/n/12 (-20) je odle-h£ená verze Tei-i
 du pro pouºití bez ap-lika£ního
  []
 
-[34] [35]
+[36] [37]
 Kapitola 7.
-<relationStructure.pdf, id=479, 470.9846pt x 185.5432pt>
+<relationStructure.pdf, id=498, 470.9846pt x 185.5432pt>
 File: relationStructure.pdf Graphic file (type pdf)
 
 <use relationStructure.pdf>
-Package pdftex.def Info: relationStructure.pdf used on input line 728.
+Package pdftex.def Info: relationStructure.pdf used on input line 735.
 (pdftex.def)             Requested size: 376.78818pt x 148.43474pt.
 
-Overfull \hbox (15.43819pt too wide) in paragraph at lines 728--729
+Overfull \hbox (15.43819pt too wide) in paragraph at lines 735--736
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<simpledbStructure.pdf, id=481, 215.85645pt x 152.44453pt>
+<simpledbStructure.pdf, id=500, 215.85645pt x 152.44453pt>
 File: simpledbStructure.pdf Graphic file (type pdf)
 
 <use simpledbStructure.pdf>
-Package pdftex.def Info: simpledbStructure.pdf used on input line 736.
+Package pdftex.def Info: simpledbStructure.pdf used on input line 743.
 (pdftex.def)             Requested size: 172.68538pt x 121.95578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36
+[38
 
-] <kompromisStructure.pdf, id=490, 362.30357pt x 170.46184pt>
+] <kompromisStructure.pdf, id=510, 362.30357pt x 170.46184pt>
 File: kompromisStructure.pdf Graphic file (type pdf)
 
 <use kompromisStructure.pdf>
-Package pdftex.def Info: kompromisStructure.pdf used on input line 745.
+Package pdftex.def Info: kompromisStructure.pdf used on input line 752.
 (pdftex.def)             Requested size: 289.84323pt x 136.36964pt.
 
 
@@ -841,147 +853,140 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
+ [39pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.751 
+l.758 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 7.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.751 
+l.758 
        <./relationStructure.pdf> <./simpledbStructure.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./simpledbStructure.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
->] [38pdfTeX warning (ext4): destination with the same identifier (name{figure.
+>] [40pdfTeX warning (ext4): destination with the same identifier (name{figure.
 7.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.755 \chapter
+l.762 \chapter
               {ZÃ¡vÄ›r} <./kompromisStructure.pdf>]
 Kapitola 8.
-(./thesis.bbl [39
+(./thesis.bbl [41
 
-] [40
+] [42
 
-]) [41]
+]) [43]
 P\v {r}\'{\i }loha A.
-[42
+[44
 
 ]
-Overfull \hbox (8.605pt too wide) in paragraph at lines 803--804
+Overfull \hbox (8.605pt too wide) in paragraph at lines 810--811
 \T1/lmr/m/n/12 (-20) will be demon-strated us-ing Squir-rel SQL client - http:/
 /squirrel-
  []
 
 
-Overfull \hbox (67.27748pt too wide) in paragraph at lines 810--810
+Overfull \hbox (67.27748pt too wide) in paragraph at lines 817--817
 \T1/lmr/m/n/10 (-20) https://community.jboss.org/wiki/TeiidEclipseDevEnvironmen
 tSetUpAndBuildingRuntimeArtifacts| 
  []
 
 
-Overfull \hbox (46.26155pt too wide) in paragraph at lines 814--815
+Overfull \hbox (46.26155pt too wide) in paragraph at lines 821--822
 []\T1/lmr/m/n/12 (-20) Download lat-est Teiid Run-time from http://www.jboss.or
 g/teiid/downloads
  []
 
-[43]
-Overfull \hbox (23.35658pt too wide) in paragraph at lines 857--858
+[45]
+Overfull \hbox (23.35658pt too wide) in paragraph at lines 864--865
 []\T1/lmr/m/n/12 (-20) Save this file to your AS de-ploy folder (\T1/lmtt/m/n/1
 2 $AS_ROOT_DIRECTORY/
  []
 
 
-Overfull \hbox (33.655pt too wide) in paragraph at lines 865--866
+Overfull \hbox (33.655pt too wide) in paragraph at lines 872--873
 []\T1/lmr/m/n/12 (-20) Clone git repos-i-tory https://github.com/rhopp/teiidSim
 pleDBQuickstart 
  []
 
-<exampleStructure.png, id=569, 295.504pt x 286.671pt>
+<exampleStructure.png, id=586, 295.504pt x 286.671pt>
 File: exampleStructure.png Graphic file (type png)
 
 <use exampleStructure.png>
-Package pdftex.def Info: exampleStructure.png used on input line 877.
+Package pdftex.def Info: exampleStructure.png used on input line 884.
 (pdftex.def)             Requested size: 295.50327pt x 286.67029pt.
- [44]
-Overfull \hbox (84.10535pt too wide) in paragraph at lines 886--887
+ [46]
+Overfull \hbox (84.10535pt too wide) in paragraph at lines 893--894
 []\T1/lmr/m/n/12 (-20) Download Teiid JDBC driver from http://www.jboss.org/tei
 id/downloads 
  []
 
 
-Overfull \hbox (1.44017pt too wide) in paragraph at lines 890--891
+Overfull \hbox (1.44017pt too wide) in paragraph at lines 897--898
 []\T1/lmr/m/n/12 (-20) As class name put org.teiid.jdbc.TeiidDriver as shown
  []
 
-<driver.png, id=579, 554.07pt x 408.77719pt>
+<driver.png, id=595, 554.07pt x 408.77719pt>
 File: driver.png Graphic file (type png)
  <use driver.png>
-Package pdftex.def Info: driver.png used on input line 894.
+Package pdftex.def Info: driver.png used on input line 901.
 (pdftex.def)             Requested size: 387.84636pt x 286.14207pt.
 
-Overfull \hbox (26.49637pt too wide) in paragraph at lines 894--896
+Overfull \hbox (26.49637pt too wide) in paragraph at lines 901--903
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45 <./exampleStructure.png>] [46pdfTeX warning (ext4): destination with the sa
+[47 <./exampleStructure.png>] [48pdfTeX warning (ext4): destination with the sa
 me identifier (name{figure.A.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.913  \end{itemize}
+l.920  \end{itemize}
                      <./driver.png>]
-<newAlias.png, id=596, 444.15938pt x 336.50719pt>
+<newAlias.png, id=612, 444.15938pt x 336.50719pt>
 File: newAlias.png Graphic file (type png)
  <use newAlias.png>
-Package pdftex.def Info: newAlias.png used on input line 916.
+Package pdftex.def Info: newAlias.png used on input line 923.
 (pdftex.def)             Requested size: 355.32797pt x 269.2061pt.
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.A.
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.A.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.938  \end{Verbatim}
-                      <./newAlias.png>] [48]
+l.945  \end{Verbatim}
+                      <./newAlias.png>] [50]
 P\v {r}\'{\i }loha B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 965.
-[49
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 972.
+[51
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 965.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 972.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 965.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 965.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 972.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 972.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A5517B41A33162B2CA3EE8DE90C2CAAF;6822.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 965.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 972.
  ) 
 Here is how much of TeX's memory you used:
- 14302 strings out of 495034
- 204529 string characters out of 6181678
- 304887 words of memory out of 5000000
- 17018 multiletter control sequences out of 15000+600000
+ 14305 strings out of 495034
+ 204568 string characters out of 6181678
+ 304951 words of memory out of 5000000
+ 17020 multiletter control sequences out of 15000+600000
  66706 words of font info for 101 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 35i,9n,35p,1262b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
+ 35i,9n,35p,1322b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not ex
 ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
-t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1038,10 +1043,10 @@ ive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/lm/lmro12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (54 pages, 678229 bytes).
+Output written on thesis.pdf (56 pages, 681592 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 605 compressed objects within 7 object streams
- 180 named destinations out of 1000 (max. 500000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 622 compressed objects within 7 object streams
+ 181 named destinations out of 1000 (max. 500000)
  20862 words of extra memory for PDF output out of 24883 (max. 10000000)
 

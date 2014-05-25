@@ -10,33 +10,33 @@
 \contentsline {section}{\numberline {3.2}\slshape Vlastnosti datab\IeC {\'a}ze Amazon SimpleDB}{11}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}\rmfamily SimpleDB jako slu\IeC {\v z}ba}{11}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}\rmfamily Flexibilita}{11}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}\rmfamily Indexov\IeC {\'a}n\IeC {\'\i }}{11}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}\rmfamily Indexov\IeC {\'a}n\IeC {\'\i }}{12}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}\rmfamily Konzistence}{12}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}\rmfamily Omezen\IeC {\'\i } datab\IeC {\'a}ze SimpleDB}{13}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}\bfseries Komunikace s~datab\IeC {\'a}z\IeC {\'\i } Amazon SimpleDB}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}\slshape P\IeC {\v r}ehled p\IeC {\v r}\IeC {\'\i }kaz\IeC {\r u} SimpleDB}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}\slshape Podm\IeC {\'\i }n\IeC {\v e}n\IeC {\'e} vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a maz\IeC {\'a}n\IeC {\'\i } dat}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}\slshape Bezpe\IeC {\v c}nost}{15}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}\rmfamily Proces autentizace}{15}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}\slshape V\IeC {\'y}b\IeC {\v e}r knihovny pro komunikaci s datab\IeC {\'a}z\IeC {\'\i } SimpleDB}{16}{section.4.4}
-\contentsline {chapter}{\numberline {5}\bfseries Mapov\IeC {\'a}n\IeC {\'\i } Teiid dotaz\IeC {\r u} na SimpleDB dotazy}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}\slshape V\IeC {\'\i }cehodnotov\IeC {\'e} atributy}{17}{section.5.1}
-\contentsline {section}{\numberline {5.2}\slshape SELECT}{17}{section.5.2}
-\contentsline {section}{\numberline {5.3}\slshape INSERT}{18}{section.5.3}
-\contentsline {section}{\numberline {5.4}\slshape UPDATE}{19}{section.5.4}
-\contentsline {section}{\numberline {5.5}\slshape DELETE}{19}{section.5.5}
-\contentsline {chapter}{\numberline {6}\bfseries Implementace}{20}{chapter.6}
-\contentsline {section}{\numberline {6.1}\slshape Konektor}{20}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}\rmfamily Modul simpledb-api}{20}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}\rmfamily Modul connector-simpledb}{21}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}\slshape P\IeC {\v r}eklada\IeC {\v c}}{22}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}\rmfamily SimpleDBExecutionFactory}{23}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}\rmfamily Executory}{26}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}\rmfamily Visitory}{27}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}\slshape Sestaven\IeC {\'\i }}{32}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}\rmfamily Konfigurace jednotliv\IeC {\'y}ch SimpleDB modul\IeC {\r u}}{33}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}\rmfamily Nastaven\IeC {\'\i } z\IeC {\'a}suvn\IeC {\'e}ho modulu maven assembly plugin}{33}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}\bfseries Quickstart}{36}{chapter.7}
-\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{39}{chapter.8}
-\contentsline {chapter}{\numberline {A}\bfseries Tutori\IeC {\'a}l}{42}{appendix.A}
-\contentsline {chapter}{\numberline {B}\bfseries Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD disku}{49}{appendix.B}
+\contentsline {chapter}{\numberline {4}\bfseries Komunikace s~datab\IeC {\'a}z\IeC {\'\i } Amazon SimpleDB}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}\slshape P\IeC {\v r}ehled p\IeC {\v r}\IeC {\'\i }kaz\IeC {\r u} SimpleDB}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}\slshape Podm\IeC {\'\i }n\IeC {\v e}n\IeC {\'e} vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a maz\IeC {\'a}n\IeC {\'\i } dat}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}\slshape Bezpe\IeC {\v c}nost}{16}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\rmfamily Proces autentizace}{16}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}\slshape V\IeC {\'y}b\IeC {\v e}r knihovny pro komunikaci s datab\IeC {\'a}z\IeC {\'\i } SimpleDB}{17}{section.4.4}
+\contentsline {chapter}{\numberline {5}\bfseries Mapov\IeC {\'a}n\IeC {\'\i } Teiid dotaz\IeC {\r u} na SimpleDB dotazy}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}\slshape V\IeC {\'\i }cehodnotov\IeC {\'e} atributy}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}\slshape SELECT}{19}{section.5.2}
+\contentsline {section}{\numberline {5.3}\slshape INSERT}{20}{section.5.3}
+\contentsline {section}{\numberline {5.4}\slshape UPDATE}{21}{section.5.4}
+\contentsline {section}{\numberline {5.5}\slshape DELETE}{21}{section.5.5}
+\contentsline {chapter}{\numberline {6}\bfseries Implementace}{22}{chapter.6}
+\contentsline {section}{\numberline {6.1}\slshape Konektor}{22}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\rmfamily Modul simpledb-api}{22}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}\rmfamily Modul connector-simpledb}{23}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}\slshape P\IeC {\v r}eklada\IeC {\v c}}{25}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}\rmfamily SimpleDBExecutionFactory}{26}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\rmfamily Executory}{28}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}\rmfamily Visitory}{29}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}\slshape Sestaven\IeC {\'\i }}{34}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}\rmfamily Konfigurace jednotliv\IeC {\'y}ch SimpleDB modul\IeC {\r u}}{34}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}\rmfamily Nastaven\IeC {\'\i } z\IeC {\'a}suvn\IeC {\'e}ho modulu maven assembly plugin}{36}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}\bfseries Quickstart}{38}{chapter.7}
+\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{41}{chapter.8}
+\contentsline {chapter}{\numberline {A}\bfseries Tutori\IeC {\'a}l}{44}{appendix.A}
+\contentsline {chapter}{\numberline {B}\bfseries Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD disku}{51}{appendix.B}
