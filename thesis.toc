@@ -17,7 +17,6 @@
 \contentsline {section}{\numberline {4.1}\slshape P\IeC {\v r}ehled p\IeC {\v r}\IeC {\'\i }kaz\IeC {\r u} SimpleDB}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}\slshape Podm\IeC {\'\i }n\IeC {\v e}n\IeC {\'e} vkl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a maz\IeC {\'a}n\IeC {\'\i } dat}{15}{section.4.2}
 \contentsline {section}{\numberline {4.3}\slshape Bezpe\IeC {\v c}nost}{16}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}\rmfamily Proces autentizace}{16}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}\slshape V\IeC {\'y}b\IeC {\v e}r knihovny pro komunikaci s datab\IeC {\'a}z\IeC {\'\i } SimpleDB}{17}{section.4.4}
 \contentsline {chapter}{\numberline {5}\bfseries Mapov\IeC {\'a}n\IeC {\'\i } Teiid dotaz\IeC {\r u} na SimpleDB dotazy}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}\slshape V\IeC {\'\i }cehodnotov\IeC {\'e} atributy}{19}{section.5.1}

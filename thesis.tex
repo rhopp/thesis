@@ -97,7 +97,7 @@ Software zajišťující manipulaci s dílčími databázovými systémy v rámc
 \begin{itemize}
  \item Virtualizace dat
  
- Jelikož je datová federace specializací datové virtualizace, měl by také software pro datovou federaci odstiňovat aplikace k němu přistupjící od implementačních, strukturních či jiných detailů jednotlivých databází a databázových systémů.
+ Jelikož je datová federace specializací datové virtualizace, měl by také software pro datovou federaci odstiňovat aplikace k němu přistupující od implementačních, strukturních či jiných detailů jednotlivých databází a databázových systémů.
  
  \item Samostatnost dílčích systémů
  
@@ -126,7 +126,7 @@ V této části budou stručně popsány hlavní části projektu JBoss Teiid. P
  
  \item \textbf{Server}
  
- Tato část je zodpovědná za běh query enginu v~rámci aplikačního serveru (WildFly nebo Red Hat JBoss Enterprise Application Platform) a zaručuje škálovatelnost a snadnou správu. Součástí je administrační konzole, ve které je možno jednoduše nastavit například nasazenou virtuální databázi nebo nastavení vláken query enginu.
+ Tato část je zodpovědná za běh query engine v~rámci aplikačního serveru (WildFly nebo Red Hat JBoss Enterprise Application Platform) a zaručuje škálovatelnost a snadnou správu. Součástí je administrační konzole, ve které je možno jednoduše nastavit například nasazenou virtuální databázi nebo nastavení vláken query enginu.
 
  \item \textbf{Konektory a překladače}
 
@@ -143,11 +143,11 @@ V této části budou stručně popsány hlavní části projektu JBoss Teiid. P
   
   \item Nástroje pro monitorování a správu
   
-  Dvěmi hlavními nástroji pro monitorování a správu jsou Teiid Web Console (v~zásadě jde o~rozšíření webové konzole aplikačního serveru o~položky pro správu a monitorování Teiid instance) a zásuvný modul pro RHQ pro kontrolu více serverů či clusterů Teiidu.
+  Dvěma hlavními nástroji pro monitorování a správu jsou Teiid Web Console (v~zásadě jde o~rozšíření webové konzole aplikačního serveru o~položky pro správu a monitorování Teiid instance) a zásuvný modul pro RHQ pro kontrolu více serverů či clusterů nástroje Teiid.
   
   \item Skriptování
   
-  V~rámci Teiidu je také distribuován Teiid AdminShell, což je skriptovací nástroj založený na jazyku Groovy. AdminShell umožňuje spravovat Teiid z~příkazové řádky či pomocí skriptu, což uživateli velmi usnadní provádění často se opakujících činností.
+  V~rámci projektu Teiid je také distribuován Teiid AdminShell, což je skriptovací nástroj založený na jazyku Groovy. AdminShell umožňuje spravovat Teiid z~příkazové řádky či pomocí skriptu, což uživateli velmi usnadní provádění často se opakujících činností.
   
   \end{itemize}
 
@@ -257,7 +257,7 @@ Pro pochopení struktury databáze SimpleDB je vhodné si ji představit jako so
 \end{itemize}
 Navíc má každý prvek domény (řádek tabulky) povinný atribut \verb<ItemName<, který musí být v~dané doméně unikátní.
 \label{allStrings}
-SimpleDB nepoužívá žádné jiné datové typy kromě typu \verb<String<, takže i čísla jsou v~databázi uloženy a je s~nimi nakládáno jako s~textovými řetězci. Toto na jednu stranu řeší spoustu problémů na straně databáze, ovšem přidává to zátěž na vývojáře aplikací pracujících se SimpleDB. Typickým příkladem takového problému je, že čísla nejdou řadit lexikograficky (lexikograficky: 10<2, což je špatně). Příklad řešení tohoto problému je doplnění nul před čísla (00010>00002, což je správně). Literatura uvádí více typických problémů s čísly a jejich řešení \cite[strana 46, Working with Numerical Data]{simpledbDeveloper}
+SimpleDB nepoužívá žádné jiné datové typy kromě typu \verb<String<, takže i čísla jsou v~databázi uložena a je s~nimi nakládáno jako s~textovými řetězci. Toto na jednu stranu řeší spoustu problémů na straně databáze, ovšem přidává to zátěž na vývojáře aplikací pracujících se SimpleDB. Typickým příkladem takového problému je, že čísla nejdou řadit lexikograficky (lexikograficky: 10<2, což je špatně). Příklad řešení tohoto problému je doplnění nul před čísla (00010>00002, což je správně). Literatura uvádí více typických problémů s čísly a jejich řešení \cite[strana 46, Working with Numerical Data]{simpledbDeveloper}
 
 \section{Vlastnosti databáze Amazon SimpleDB}
 V této oblasti bude čitatel seznámen se základními principy a fungováním databáze Amazon SimpleDB. Pochopení těchto principů umožní čtenáři lépe pochopit některé rozhodnutí a postupy při implementaci konektoru a překladače pro tuto databázi do projektu Teiid.
@@ -279,7 +279,7 @@ Na obrázku \ref{consistencyExample} je uveden příklad, kdy se překrývají d
  \label{consistencyExample}
 \end{figure}
 
-Jak bylo ukázáno, konzistentní čtení v~tomto případě mohlo vrátit jak výsledek \verb<W1<, tak výsledek \verb<W2<. Oproti tomu, výsledek eventuálně konzitentního čtení může být kromě \verb<W1< či \verb<W2< také \verb<nic<. Pravděpodobnost prázdného výsledku se s~časem minimalizuje, neboli čím déle po zápisu je čteno, tím větší je pravděpodobnost korektního výsledku.
+Jak bylo ukázáno, konzistentní čtení v~tomto případě mohlo vrátit jak výsledek \verb<W1<, tak výsledek \verb<W2<. Oproti tomu, výsledek eventuálně konzistentního čtení může být kromě \verb<W1< či \verb<W2< také \verb<nic<. Pravděpodobnost prázdného výsledku se s~časem minimalizuje, neboli čím déle po zápisu je čteno, tím větší je pravděpodobnost korektního výsledku.
 
 %\includegraphics{ConsistencyExample}
 
@@ -312,7 +312,7 @@ V této kapitole jsou popsány základní kameny komunikace s databází Amazon 
  \item \textbf{DeleteDomain} vymaže danou doménu.
  \item \textbf{ListDomains} vrátí seznam domén asociovaných s~daným uživatelským účtem.
  \item \textbf{DomainMetadata} slouží k~získání informací o~doméně (datum vytvoření, počet položek v~doméně, počet atributů, \dots)
- \item \textbf{PutAttributes} vloží novou položku s~danými hotnotami atributů, či upraví již stávající položku.
+ \item \textbf{PutAttributes} vloží novou položku s~danými hodnotami atributů, či upraví již stávající položku.
  \item \textbf{Select} se podobá běžnému \verb<SELECT< příkazu, který je dobře známý z~SQL jazyků. Je ovšem mírně omezen a to například absencí \verb<JOIN< klauzule. Přesný přehled možností příkazu \verb<SELECT< databáze SimpleDB je uveden v~dokumentaci\cite[strana 37, Using Select to Create Amazon SimpleDB Queries]{simpledbDeveloper}
  \item \textbf{GetAttributes} vrátí hodnoty požadovaných atributů jedné dané položky. Umožňuje specifikovat jeden, či více požadovaných atributů, nebo také všechny atributy dané položky.
 \end{itemize}
@@ -329,8 +329,7 @@ Dále se této vlastnosti nebudeme věnovat, neboť není v této práci nijak v
 \section{Bezpečnost}
 Pro autentizaci má každý uživatel \uv{ID přístupového klíče} (20 alfanumerických znaků) a \uv{tajný přístupový klíč} (40 alfanumerických znaků), kterými podepisuje každý požadavek vůči SimpleDB. Sama Amazon SimpleDB nemá nástroj pro autorizaci, ten je ovšem integrován do správy identit a přístupu AWS (AWS Identity and Access Management - systém pro správu uživatelů a jejich práv v~rámci celého AWS), takže je možné omezit práva jednotlivým uživatelům. Jediným problémem může být skutečnost, že nelze definovat přístupové práva pro jiný AWS účet -- pro každého uživatele domény musí být vytvořen uživatel v~rámci AWS účtu vlastnícího doménu\cite{simpledb}.
 
-\subsection{Proces autentizace}
-Zde bude zjednodušeně popsán postup autentizace. Tři základní kroky jsou:
+Dále je třeba alespoň zjednodušeně popsat postup autentizace. Tři základní kroky jsou:
 \begin{enumerate}
  \item Vytvoření řetězce dotazu
  \item Kanonizování řetězce dotazu (seřazení parametrů, zakódování parametrů a jejich hodnot URL kódováním\footnote{Podle RFC 3986, kapitola 2 -- http://tools.ietf.org/html/rfc3986}), \dots)
@@ -341,7 +340,7 @@ Zde je ukázán proces autentizace pouze zjednodušeně. Přesný návod jak ses
 \section{Výběr knihovny pro komunikaci s databází SimpleDB}
 Existují tři hlavní způsoby komunikace s databází SimpleDB v jazyce Java a to přímé volání REST API (popsaném v kapitole \ref{komunikace}), použití oficiálního Java API poskytovaného a podporovaného přímo společností Amazon nebo použití JDBC ovladače.
 
-Nejprve se budu věnovat JDBC ovladači. Tento poměrně běžný a standartní způsob komunikace Java programů s databázemi by se mohl zdát jako nejlepší a nejjednodušší řešení. Toto tvrzení by podporoval i fakt, že jedna ze základních funkcionalit projektu Teiid je i konektor a překladač pro JDBC drivery. Lze tak \uv{podstrčit} projektu Teiid \verb&jar& soubor s JDBC ovladačem pro Amazon SimpleDB a vlastnosti nutné pro připojení (ID přístupového klíče a tajný přístupový klíč) a Teiid se již postará o vše ostatní. Hlavním argumentem proti použití JDBC ovladače je fakt, že se jedná o již prakticky mrtvý projekt\footnote{Webová stránka projektu: https://code.google.com/p/simpledb-jdbc/ a https://github.com/beacon50/SimpleJDBC}, který byl vyvíjen pouze jedním člověkem. O \uv{mrtvosti} projektu svědčí déle než  4 roky netknuté bugy v připomínkovacím systému (anglicky Issue tracker, dostupný na stránce projektu). Tento přístup také za ostatními dvěma alternativami zaostává na poli podpory. Kdežto Java API i REST API jsou podporovány přímo firmou Amazon, není zde, u JDBC ovladače, žádné záruky, že bude podporován do budoucna. Z těchto důvodů nebyl JDBC ovladač v této práci použit.
+Nejprve se budu věnovat JDBC ovladači. Tento poměrně běžný a standardní způsob komunikace Java programů s databázemi by se mohl zdát jako nejlepší a nejjednodušší řešení. Toto tvrzení by podporoval i fakt, že jedna ze základních funkcionalit projektu Teiid je i konektor a překladač pro JDBC ovladače. Lze tak \uv{podstrčit} projektu Teiid \verb&jar& soubor s JDBC ovladačem pro Amazon SimpleDB a vlastnosti nutné pro připojení (ID přístupového klíče a tajný přístupový klíč) a Teiid se již postará o vše ostatní. Hlavním argumentem proti použití JDBC ovladače je fakt, že se jedná o již prakticky mrtvý projekt\footnote{Webová stránka projektu: https://code.google.com/p/simpledb-jdbc/ a https://github.com/beacon50/SimpleJDBC}, který byl vyvíjen pouze jedním člověkem. O \uv{mrtvosti} projektu svědčí déle než  4 roky netknuté bugy v připomínkovacím systému (anglicky Issue tracker, dostupný na stránce projektu). Tento přístup také za ostatními dvěma alternativami zaostává na poli podpory. Kdežto Java API i REST API jsou podporovány přímo firmou Amazon, není zde, u JDBC ovladače, žádné záruky, že bude podporován do budoucna. Z těchto důvodů nebyl JDBC ovladač v této práci použit.
 
 Po zavrhnutí použití JDBC ovladače zbývá rozhodnout, zda přistupovat k SimpleDB přímo pomocí volání REST API nebo pomocí Java API. Co se týče podpory, jsou na tom oba tyto přístupy stejně (oba oficiálně podporované firmou Amazon). V této práci bylo nakonec zvoleno Java API, převážně kvůli komfortu práce s kódem a následné čitelnosti kódu. Kdyby bylo použito přímé volání REST API, bylo by vhodné sepsat si vlastní Java API, což by zbytečně rozšiřovalo kódovou základnu projektu (spoustu kódu obsluhující autentizaci, kód \uv{obalující} volání REST rozhraní, ...). Použití Java API z pohledu rozšíření kódu znamená pouze pár řádků v Maven konfiguraci, neboť je tato knihovna přítomna v Maven centrále\footnote{Detailně popsáno v kapitole \ref{sestaveni}}
 
@@ -374,7 +373,7 @@ Ze struktury je zřejmé, že žádné velké změny nebude třeba provádět. J
  \begin{Verbatim}[fontsize=\small]
 SELECT itemName() FROM TestDomain
   \end{Verbatim}
- Oproti tomu, tento dotaz vrátí chybovou hlášku \verb<InvalidQueryExpression<:
+ Oproti tomu, tento dotaz vrátí chybovou hlášku \verb<InvalidQuery< \verb<Expression<:
   \begin{Verbatim}[fontsize=\small]
 SELECT itemName(), attribute1 FROM TestDomain
   \end{Verbatim}
@@ -397,7 +396,7 @@ Java EE Connector Architecture (JCA) je standardizované řešení pro připojen
 
 Specifikace JCA je vyvíjena v~rámci Java Community Process pod číslem JSR 322\footnote{Dostupné na webu Java Community Process -- http://www.jcp.org}
 \subsection{Modul simpledb-api}
-Tento modul reprezentuje API pro komunikaci s~databází SimpleDB a jako samostatný modul vzniknul hlavně kvůli oddělení závislostí na java knihovnu pro komunikaci se SimpleDB (aws-java-sdk) od ostatních modulů.
+Tento modul reprezentuje API pro komunikaci s~databází SimpleDB a jako samostatný modul vznikl hlavně kvůli oddělení závislostí na java knihovnu pro komunikaci se SimpleDB (aws-java-sdk) od ostatních modulů.
 
 Modul obsahuje pouze jedinou java třídu a jedno rozhraní a to \texttt{SimpleDB\allowbreak APIClas} a \verb<SimpleDBConnection<.
 \begin{itemize}
@@ -498,7 +497,7 @@ Poslední dvě implementované metody v~této třídě jsou metody \texttt{creat
 \begin{itemize}
  \item \texttt{createResultSetExecution}
 
-Tato metoda je zodpovědná za veškeré příkazy určené k~získávání dat -- tedy primárně příkaz \texttt{SELECT}. Jelikož není na tomto místě nutné umístit mnoho logiky, bylo zvoleno vytvoření anonymní třídy uvnitř metody \texttt{createResultSet\allowbreak Execution}, která je touto metodou vrácena. Tato anonymní třída implementující rozhraní \texttt{ResultSetExecution} implementuje metody \texttt{void execute()} a \texttt{List<?> next()}. Metoda \texttt{execute} pouze pomocí třídy \texttt{SimpleDB\allowbreak SQLVisitor} získá seznam sloupců, poté pomocí stejné třídy získá textový řeťězec odpovídající příkazu \texttt{SELECT} a nad těmito daty zavolá metodu \texttt{performSelect} API třídy, která získá data z~databáze a vrátí je jako seznam. Ten je uložen do interní proměnne a v~metodě \texttt{next()} jsou tyto data pomocí iterátoru předávána Teiidu.
+Tato metoda je zodpovědná za veškeré příkazy určené k~získávání dat -- tedy primárně příkaz \texttt{SELECT}. Jelikož není na tomto místě nutné umístit mnoho logiky, bylo zvoleno vytvoření anonymní třídy uvnitř metody \texttt{createResultSet\allowbreak Execution}, která je touto metodou vrácena. Tato anonymní třída implementující rozhraní \texttt{ResultSetExecution} implementuje metody \texttt{void execute()} a \texttt{List<?> next()}. Metoda \texttt{execute} pouze pomocí třídy \texttt{SimpleDB\allowbreak SQLVisitor} získá seznam sloupců, poté pomocí stejné třídy získá textový řeťězec odpovídající příkazu \texttt{SELECT} a nad těmito daty zavolá metodu \texttt{performSelect} API třídy, která získá data z~databáze a vrátí je jako seznam. Ten je uložen do interní proměnné a v~metodě \texttt{next()} jsou tyto data pomocí iterátoru předávána Teiidu.
 
 \item \texttt{createUpdateExecution}
 
@@ -741,7 +740,7 @@ Na druhou stranu obrázek \ref{simpledbStructure} ukazuje jak by s~velkou pravd�
  \label{simpledbStructure}
 \end{figure}
 
-Aby byly ukázány aspekty obou přístupů -- jak relačního, tak přístupu z~pohledu SimpleDB -- jsou vzorová data uloženy v~databázi se strukturou ukázanou na obrázku \ref{kompromisStructure}. Takto bude možnost demonstrovat například schopnost spojování výsledků ze dvou a více vstupních množin (klauzule \texttt{JOIN} -- jedna ze základních schpností relačních databází, která databáze SimpleDB nepodporuje), nebo schopnost pracovat s~vícehodnotovými atributy (což je výsadou databáze SimpleDB oproti relačním databázím).
+Aby byly ukázány aspekty obou přístupů -- jak relačního, tak přístupu z~pohledu SimpleDB -- jsou vzorová data uloženy v~databázi se strukturou ukázanou na obrázku \ref{kompromisStructure}. Takto bude možnost demonstrovat například schopnost spojování výsledků ze dvou a více vstupních množin (klauzule \texttt{JOIN} -- jedna ze základních schopností relačních databází, která databáze SimpleDB nepodporuje), nebo schopnost pracovat s~vícehodnotovými atributy (což je výsadou databáze SimpleDB oproti relačním databázím).
 
 \begin{figure}[h]
  \centering
@@ -750,13 +749,13 @@ Aby byly ukázány aspekty obou přístupů -- jak relačního, tak přístupu z
  \label{kompromisStructure}
 \end{figure}
 \vspace{30mm}
-V~rámci přípravy tutoriálu byl vytvořen java program \texttt{impotData}, který dokáže umístit vzorové data do uživatelovy instance databáze SimpleDB. Pro snadné použití byl projekt mavenizován a pro snadnou dostupnost byl spolu s~tutoriálem umístěn na server GitHub, který je určen k~hostování a verzování projektů pomoví verzovacího systému Git.
+V~rámci přípravy tutoriálu byl vytvořen java program \texttt{impotData}, který dokáže umístit vzorové data do uživatelovy instance databáze SimpleDB. Pro snadné použití byl projekt mavenizován a pro snadnou dostupnost byl spolu s~tutoriálem umístěn na server GitHub, který je určen k~hostování a verzování projektů pomocí verzovacího systému Git.
 
-Do stejného repozitáře byl také umístěn soubor \texttt{README.md} (formátovaný pomocí Markdown) obsahující vlastní tutoriál, který uživatele provede (v anglickém jazyce) nainstalováním Teiidu, vytvořením virtuální databáze, připojením k lokálně běžící instanci Teiidu a několika vzorovými dotazy na SimpleDB pomocí JDBC ovladače Teiidu.
+Do stejného repozitáře byl také umístěn soubor \texttt{README.md} (formátovaný pomocí Markdown) obsahující vlastní tutoriál, který uživatele provede (v anglickém jazyce) nainstalováním projektu Teiid, vytvořením virtuální databáze, připojením k lokálně běžící instanci Teiidu a několika vzorovými dotazy na SimpleDB pomocí JDBC ovladače pro projekt Teiid.
 
 Příloha A je pouze tutoriál převedený z Markdown do latexu. Originální Markdown soubor je v GitHub repozitáři, nebo na přiloženém CD.
 \chapter{Závěr}
-Výsledkem práce je funkční konektor (resource adapter) pro připojení k SimpleDB. Dále byl vytvořen modul Teiid překladače (translator) pro SimpleDB ve kterém se povedlo zvládnout problematiku mapování Teiid SQL dotazů na dotazy databáze SimpleDB. Také zde byl úspěšně řešen problém multihodnotových atributů databáze SimpleDB. Tyto části dohromady tvoří funkční modul projektu Teiid a již byly zařazeny do hlavní vývojové větve projektu. Teiid 8.7 již v sobě bude obsahovat modul pro komunikaci s databází SimpleDB vytvořený v rámci této práce.
+Výsledkem práce je funkční konektor (resource adapter) pro připojení k SimpleDB. Dále byl vytvořen modul Teiid překladače (translator) pro SimpleDB ve kterém se povedlo zvládnout problematiku mapování Teiid SQL dotazů na dotazy databáze SimpleDB. Také zde byl úspěšně řešen problém multihodnotových atributů databáze SimpleDB. Tyto části dohromady tvoří funkční modul projektu Teiid a již byly zařazeny do hlavní vývojové větve projektu. Teiid 8.7 v sobě obsahuje modul pro komunikaci s databází SimpleDB vytvořený v rámci této práce. V rámci dalších verzí již modul prošel úpravami ze strany jednoho z hlavních vývojářů projektu Teiid Rameshe Reddyho.
 
 Druhým výstupem je tutoriál v anglickém jazyce, hostovaný veřejně na serveru GitHub, který slouží jako uvedení do problematiky pro nové uživatele a demonstruje schopnosti vyvinutého Teiid modulu.
 
@@ -959,7 +958,7 @@ DELETE FROM movies WHERE "itemName()"='00021'
 
 \chapter{Obsah přiloženého CD disku}
 \begin{itemize}
- \item Složka \texttt{teiid-fork} s kompletními zdrojovými kódy projektu Teiid obsahující již změny provedené v rámci této práce.
+ \item Složka \texttt{teiid-fork} s kompletními zdrojovými kódy projektu Teiid již obsahující změny provedené v rámci této práce.
  \item Soubor \texttt{teiidDiff} -- soubor obsahující všechny změny provedené v rámci této práce (výstup příkazu \texttt{git diff})
  \item Složka \texttt{importData} obsahující v sobě zdrojová data, projekt pro import dat do SimpleDB a soubor \texttt{README.md}, ve kterém je obsažen tutoriál
 \end{itemize}
